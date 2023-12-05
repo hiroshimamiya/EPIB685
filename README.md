@@ -54,13 +54,10 @@ of Epidemiological Terms”; “Dictionary of environmental health”
 ## Grading Scheme
 Assignment | Grade
 -----------|------
-[Data Wrangling and Descriptive Statistics](https://github.com/walkabilly/chep801_usask/blob/main/Assignments/Data%20Wrangling/Data-Wrangling-Assignment.md) | 10%
-[Bias](https://github.com/walkabilly/chep801_usask/blob/main/Assignments/Bias/Bias-Assignment.md) |	15%
-[DAG (Directed Acyclic Graphs)](https://github.com/walkabilly/chep801_usask/blob/main/Assignments/DAGs/Assignment-3--DAG.md) |	15%
-[Logistic Regression – Focus on confounding](https://github.com/walkabilly/chep801_usask/blob/main/Assignments/Logistic%20Regression/Logistic-Regression-Assignment.md) |	15%
-[Linear Regression](https://github.com/walkabilly/chep801_usask/blob/main/Assignments/Linear%20Regression/Linear-Regression-Assignment.md) – Focus on effect measure modification | 15%
-[Epi Communication](https://github.com/walkabilly/chep801_usask/blob/main/Assignments/Epi%20Communication%201/Epi_Communication_Assignment.md) – Part 1 (One Pager)	| 15%
-[Epi Communication](https://github.com/walkabilly/chep801_usask/blob/main/Assignments/Epi%20Communication%202/Epi_Communication_Assignment.md) – Part 2 (Oral Presentation)	| 15%
+Critical reviews | 20%
+Policy briefing |	15%
+Project report | 15%
+Project presentation |	15%
 Total	| 100%
 
 
@@ -68,17 +65,17 @@ Total	| 100%
 ## Class Schedule 
 Week |	Date |	Topic |	Data Work
 -----|-------|--------|-----------
-1	| January  5	| Introduction/motivation/Effect measures |  [Intro R/Stata](https://github.com/walkabilly/chep801_usask/blob/main/Data%20Work/Week1_data_work.md)
-2	| January 12	| Study Design I (cohort study)           | [Data Wrangling](https://github.com/walkabilly/chep801_usask/blob/main/Data%20Work/Week2_data_work_R.md)
-3	| January 19	| Bias	                                                        | [Data Visualization](https://github.com/walkabilly/chep801_usask/blob/main/Data%20Work/Week3_data_work_R.md)
-4	| January 26	| Confounding	                                        | [Logistic Regression](https://github.com/walkabilly/chep801_usask/blob/main/Data%20Work/Week4_data_work_R.md)
-5	| February 2	| Case-control study             |	[Linear Regression](https://github.com/walkabilly/chep801_usask/blob/main/Data%20Work/Week5_data_work_R.md)
-6	| February 9	| Assignment 1 and Cross-sectional study                                 |	[Average Treatment Effect (causal inference)](https://github.com/walkabilly/chep801_usask/blob/main/Data%20Work/Week6_data_work_R.md)
+1	| January  5	| Introduction/motivation/Effect measures |  
+2	| January 12	| Study Design I (cohort study)           | 
+3	| January 19	| Bias	                                                        | 
+4	| January 26	| Confounding	                                        | 
+5	| February 2	| Case-control study             |	
+6	| February 9	| Assignment 1 and Cross-sectional study                                 |	
 7	| February 16	| Epi Communication and Ecological study 	                         | 
 8	| February 23	| Statistical analysis 	                                | 
-9	| March 1	        | Measurement Error | [Model Assumptions](https://github.com/walkabilly/chep801_usask/blob/main/Lecture_mis/Lecture_Regression1/Regression_AssumptionOLS.md)
-10	| March 8	        | Measurement Error | [Confounding](https://github.com/walkabilly/chep801_usask/blob/main/Data%20Work/Week7_data_work_R.md)
-11	| March 15	        | DAG| [Effect Measure Modification](https://github.com/walkabilly/chep801_usask/blob/main/Data%20Work/Week8_data_work_R.md)
+9	| March 1	        | Measurement Error | 
+10	| March 8	        | Measurement Error | 
+11	| March 15	        | DAG| 
 12	| March 22	        | DAG| 
 13	| March 29	        |TBA|
 
