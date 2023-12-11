@@ -54,10 +54,10 @@ of Epidemiological Terms”; “Dictionary of environmental health”
 ## Grading Scheme
 Assignment | Grade
 -----------|------
-Critical reviews | 20%
-Policy briefing |	15%
-Project report | 15%
-Project presentation |	15%
+Critical reviews 1 |25%
+Critical reviews 2 |25%
+Project report | 25%
+Project presentation |	25%
 Total	| 100%
 
 
@@ -67,11 +67,11 @@ Week |	Date |	Topic |	Data Work
 -----|-------|--------|-----------
 1	| January  5	| Introduction |  
 2	| January 12	| Study Design 1: cohort study (introduction) | 
-3	| January 19	| Study dESIGN 1: Cohort study 	                                                        | 
+3	| January 19	| Study dESIGN 1: Cohort study 	              | 
 4	| January 26	| Statistical analysis in environmental epidemiology 	                                        | 
 5	| February 2	| Study design 2: Case-control study             |	
-6	| February 9	| Ecological and Cross-sectional study                                 |	
-7	| February 16	| Assignment 1 Presentation 	                         | 
+6	| February 9	| Ecological and Cross-sectional study           |	
+7	| February 16	| Assignment 1 Presentation 	                   | 
 8	| February 23	| Causal inference  | 
 9	| March 1	    | Measurement Error | 
 10	| March 8	        | NO CLASS | 
@@ -89,8 +89,9 @@ Week |	Date |	Topic |	Data Work
 
 ### Class participation 3%
 
-### Assignment 1:  Data Wrangling and Descriptive Statistics   
+### Assignment 1:  Literature Critique 1 
+### Assignment 2:  Literature critique presentation   
+### Assignment 3:  Project presentation 
+### Assignment 4:  Project writing  
 
 
-13	| Apr 05 |Project|
-13	| Apr 12	|Project |
