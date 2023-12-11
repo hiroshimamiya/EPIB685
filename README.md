@@ -65,19 +65,19 @@ Total	| 100%
 ## Class Schedule 
 Week |	Date |	Topic |	Data Work
 -----|-------|--------|-----------
-1	| January  5	| Introduction/motivation/Effect measures |  
-2	| January 12	| Study Design I (cohort study)           | 
-3	| January 19	| Bias	                                                        | 
-4	| January 26	| Confounding	                                        | 
-5	| February 2	| Case-control study             |	
-6	| February 9	| Assignment 1 and Cross-sectional study                                 |	
-7	| February 16	| Epi Communication and Ecological study 	                         | 
-8	| February 23	| Statistical analysis 	                                | 
-9	| March 1	        | Measurement Error | 
-10	| March 8	        | Measurement Error | 
-11	| March 15	        | DAG| 
-12	| March 22	        | DAG| 
-13	| March 29	        |TBA|
+1	| January  5	| Introduction |  
+2	| January 12	| Study Design 1: cohort study (introduction) | 
+3	| January 19	| Study dESIGN 1: Cohort study 	                                                        | 
+4	| January 26	| Statistical analysis in environmental epidemiology 	                                        | 
+5	| February 2	| Study design 2: Case-control study             |	
+6	| February 9	| Ecological and Cross-sectional study                                 |	
+7	| February 16	| Assignment 1 Presentation 	                         | 
+8	| February 23	| Causal inference  | 
+9	| March 1	    | Measurement Error | 
+10	| March 8	        | NO CLASS | 
+11	| March 15	| Project Introduction| 
+12	| March 22	| Project presentation| 
+13	| March 29	        |NO CLASS|
 
 
 
