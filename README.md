@@ -153,3 +153,8 @@ McGill University values academic integrity. Therefore, all students must unders
 meaning and consequences of cheating, plagiarism and other academic offences under the Code 
 of Student Conduct and Disciplinary Procedures (see www.mcgill.ca/students/srr/honest/ for 
 more information).
+
+## Honor code 
+McGill University values academic integrity. Therefore, all students must understand the meaning and consequences of cheating, plagiarism and other academic offences under the Code of Student Conduct and Disciplinary Procedures (see www.mcgill.ca/students/srr/honest/ for more information).
+
+
