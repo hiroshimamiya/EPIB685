@@ -15,15 +15,10 @@ The primary outcome is to appreciate and interpret environmental epidemiological
 
 Specific learning objectives are:    
 - To understand the design and interpretation of the main study designs in environmental epidemiology: cohort, case-control, and cross-sectional studies.
-- 
 - To understand threads to the validity of population health research: bias and confounding
-
 - To construct an appropriate epidemiologic research question and devise an appropriate study design using available data.    
-
 - To understand essential concepts in quantitative reasoning and causal inference.    
-
 - To Effectively communicate policy-relevant public health evidence, both orally and in writing.     
-
 - Time permitting, a sample of advanced research methods will be covered, including exposure mixture analysis, time-series analysis, geospatial analysis and disease mapping, and location tracking.     
   
 
