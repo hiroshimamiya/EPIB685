@@ -54,29 +54,30 @@ of Epidemiological Terms”; “Dictionary of environmental health”
 ## Grading Scheme
 Assignment | Grade
 -----------|------
-Critical reviews 1 |25%
-Critical reviews 2 |25%
-Project report | 25%
-Project presentation |	25%
+Exposure mapping using GIS software (individual work)   |5%
+Critical reviews presentation (group of 3-4 students)   |15%
+Critical reviews written report (group of 3-4 students) |25%
+Project presentation (group of 2-3 students)            |15%
+Project writing  (group of 2-3 students)                |30%
 Total	| 100%
 
 
 
 ## Class Schedule 
-Week |	Date |	Topic |	Data Work
+Week |	Date |	Topic |	Assignment
 -----|-------|--------|-----------
-1	| January  5	| Introduction |  
-2	| January 12	| Study Design 1: cohort study (introduction) | 
-3	| January 19	| Study dESIGN 1: Cohort study 	              | 
-4	| January 26	| Statistical analysis in environmental epidemiology | Presentation Group 1| 
-5	| February 2	| Study design 2: Case-control study | Presentation Group 2	|
-6	| February 9	| Ecological and Cross-sectional study | Presentation Group 3|	
-7	| February 16	| Presentation of critical review 1 | Presentation Group 4| 
-8	| February 23	| Causal inference  | 
-9	| March 1	    | Measurement Error | 
+1	| January  5	| Introduction | overview of assignments and class work|
+2	| January 12	| Study Design 1: cohort study (introduction) | |
+3	| January 19	| Study Design 1: Cohort study and Geographic Information Systems | Assignment of spatial exposure to individual students|
+4	| January 26	| Study design 2: Case-control study | Assignment of papers to groups| 
+5	| February 2	| Ecological and Cross-sectional study| Presentation of exposure visualization|
+6	| February 9	| Statistical analysis in environmental epidemiology | DIscussion about projects|	
+7	| February 16	| Causal inference 1 | Presentation of critical reviews (group presentation) 1|
+8	| February 23	| Causal inference 2 | Presentation of critical reviews (group presentation) 2|
+9	| March 1	    | Measurement Error  | 
 10	| March 8	        | NO CLASS | 
-11	| March 15	| Presentation of Critical Review 2| 
-12	| March 22	| Project presentation| 
+11	| March 15	| Presentation of project proposal (group presentation, 15 min each with 5 min questions)|| 
+12	| March 22	| Presentation of project proposal  (group presentation, 15 min each with 5 min questions)||
 13	| March 29	        |NO CLASS|
 
 
@@ -85,7 +86,7 @@ Week |	Date |	Topic |	Data Work
 ## Evaluation Components
 
 
-### Assignment 1:  Literature Critique 1 
+### Assignment 1:  Critical review of environmental epidemology study  
 
 Students will be asked to provide: 
   A written description and critique that we will assign to you of an environmental epidemiological study, completed by each student. 
@@ -157,4 +158,5 @@ more information).
 ## Honor code 
 McGill University values academic integrity. Therefore, all students must understand the meaning and consequences of cheating, plagiarism and other academic offences under the Code of Student Conduct and Disciplinary Procedures (see www.mcgill.ca/students/srr/honest/ for more information).
 
-
+## Support services 
+Accommodations for Students with Disabilities
