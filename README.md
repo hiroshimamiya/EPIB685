@@ -33,13 +33,13 @@ Lecture slides will be available in MyCourses.
 
 **Supplementary readings**
 There is no one text for this course – lectures benefit articles provided in the class. Students wishing to pursue employment as an epidemiologist and/or conduct independent epidemiological research may wish to obtain the following resources from course reserve or purchase: 
-*Environmental Epidemiology: Principles and Methods* , RM Merrill (Jones & Bartlett 
-Learning, 2008);
-• “Exposure assessment in occupational and environmental epidemiology”, M Nieuwenhuijsen et al. (Oxford University Press, 2015);
-January 1, 2022 9
-• “A biological approach to environmental assessment and epidemiology”, TJ Smith and D Kriebel (Oxford University Press, 2010); and,
-• “EPA - Guidelines for Exposure Assessment”. Other books also on the class web page including “A pocket guide to epidemiology”; “Glossary 
-of Epidemiological Terms”; “Dictionary of environmental health”
+
+*Environmental Epidemiology: Principles and Methods* , RM Merrill (Jones & Bartlett Learning, 2008); 
+• “Exposure assessment in occupational and environmental epidemiology”, M Nieuwenhuijsen et al. (Oxford University Press, 2015);   
+• “A biological approach to environmental assessment and epidemiology”, TJ Smith and D Kriebel (Oxford University Press, 2010); and,   
+• “EPA - Guidelines for Exposure Assessment”. 
+
+Other books also on the class web page including “A pocket guide to epidemiology”; “Glossary of Epidemiological Terms”; “Dictionary of environmental health”    
 
 
 ## Grading Scheme
