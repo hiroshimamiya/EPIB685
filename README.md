@@ -64,17 +64,17 @@ Total	| 100%
 
 
 ## Class Schedule 
-Week |	Date |	Lecture |	Student activity
+Week |	Date |	Lecture |	Student task
 -----|-------|--------|-----------
 1	| January  5	| Introduction | overview of assignments and class work|
 2	| January 12	| Study Design 1: cohort study (introduction) | |
-3	| January 19	| Study Design 1: Cohort study and Geographic Information Systems | Assignment of spatial exposure to individual students|
-4	| January 26	| Study design 2: Case-control study | Assignment of papers to groups| 
+3	| January 19	| Study Design 1: Cohort study and Geographic Information Systems | Pick exposure to present (individual)|
+4	| January 26	| Study design 2: Case-control study | Pick paper to review (group)| 
 5	| February 2	| Ecological and Cross-sectional study| Presentation of exposure visualization|
-6	| February 9	| Statistical analysis in environmental epidemiology | DIscussion about projects|	
+6	| February 9	| Statistical analysis in environmental epidemiology | Brainstorming about projects (group)|	
 7	| February 16	| Causal inference 1 | Presentation of critical reviews (group presentation) 1|
 8	| February 23	| Causal inference 2 | Presentation of critical reviews (group presentation) 2|
-9	| March 1	    | Measurement Error  | 2 minute presentation of project |
+9	| March 1	    | Measurement Error  | 2 minute presentation of project (group) |
 10	| March 8	        | NO CLASS | 
 11	| March 15	|| Presentation of project proposal (group presentation, 15 min each with 5 min questions)| 
 12	| March 22	|| Presentation of project proposal  (group presentation, 15 min each with 5 min questions)|
