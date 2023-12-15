@@ -64,7 +64,7 @@ Total	| 100%
 
 
 ## Class Schedule 
-Week |	Date |	Topic |	Assignment
+Week |	Date |	Lecture |	Student activity
 -----|-------|--------|-----------
 1	| January  5	| Introduction | overview of assignments and class work|
 2	| January 12	| Study Design 1: cohort study (introduction) | |
@@ -74,10 +74,10 @@ Week |	Date |	Topic |	Assignment
 6	| February 9	| Statistical analysis in environmental epidemiology | DIscussion about projects|	
 7	| February 16	| Causal inference 1 | Presentation of critical reviews (group presentation) 1|
 8	| February 23	| Causal inference 2 | Presentation of critical reviews (group presentation) 2|
-9	| March 1	    | Measurement Error  | 
+9	| March 1	    | Measurement Error  | 2- miniute presentation of project |
 10	| March 8	        | NO CLASS | 
-11	| March 15	| Presentation of project proposal (group presentation, 15 min each with 5 min questions)|| 
-12	| March 22	| Presentation of project proposal  (group presentation, 15 min each with 5 min questions)||
+11	| March 15	|| Presentation of project proposal (group presentation, 15 min each with 5 min questions)| 
+12	| March 22	|| Presentation of project proposal  (group presentation, 15 min each with 5 min questions)|
 13	| March 29	        |NO CLASS|
 
 
