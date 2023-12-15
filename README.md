@@ -26,10 +26,6 @@ Specific learning objectives are:
 In-person at room: , Friday 9:30AM-12:30PM EST. 
 Audio and video will be recorded 
 
-
-## Learning Outcomes
-By the completion of this course, students will be able to
-
     
 ## Readings and lectures 
 Lecture slides will be available in MyCourses. 
