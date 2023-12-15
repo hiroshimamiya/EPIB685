@@ -85,10 +85,10 @@ Week |	Date |	Lecture |	Student task
 
 ## Evaluation Components
 
-
-### Assignment 1:  Critical review of environmental epidemology study  
-
-Students will be asked to provide: 
+### Assignment 1:  Simple mapping of exposures in Montreal using a GIS software
+### Assignment 2 and 3:  Critical review of environmental epidemiology study  
+  **Presentation**
+  Students will be asked to provide: 
   A written description and critique that we will assign to you of an environmental epidemiological study, completed by each student. 
   Class presentation by a group of 5 students, 
 
@@ -138,9 +138,7 @@ relationship to clinical practise, public health and/or policy. Do you agree wit
 interpretation of the results? Is the information presented sufficient for you to draw your 
 own conclusions? Do they differ from the authors’
 
-### Assignment 2:  Literature critique 2  
-### Assignment 3:  Project presentation 
-### Assignment 4:  Project writing  
+### Assignment 4 and 5: Project proposal 
 
 
 
