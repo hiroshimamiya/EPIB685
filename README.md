@@ -55,10 +55,10 @@ of Epidemiological Terms”; “Dictionary of environmental health”
 Assignment | Grade
 -----------|------
 Exposure mapping using GIS software (individual work)   |5%
-Critical reviews presentation (group of 3-4 students)   |15%
+Critical reviews presentation (group of 3-4 students)   |20%
 Critical reviews written report (group of 3-4 students) |25%
-Project presentation (group of 2-3 students)            |15%
-Project writing  (group of 2-3 students)                |30%
+Project presentation (group of 2-3 students)            |20%
+Project writing  (Individual work)                |30%
 Total	| 100%
 
 
@@ -74,11 +74,11 @@ Week |	Date |	Lecture |	Student activity
 6	| February 9	| Statistical analysis in environmental epidemiology | DIscussion about projects|	
 7	| February 16	| Causal inference 1 | Presentation of critical reviews (group presentation) 1|
 8	| February 23	| Causal inference 2 | Presentation of critical reviews (group presentation) 2|
-9	| March 1	    | Measurement Error  | 2- miniute presentation of project |
+9	| March 1	    | Measurement Error  | 2 minute presentation of project |
 10	| March 8	        | NO CLASS | 
 11	| March 15	|| Presentation of project proposal (group presentation, 15 min each with 5 min questions)| 
 12	| March 22	|| Presentation of project proposal  (group presentation, 15 min each with 5 min questions)|
-13	| March 29	        |NO CLASS|
+13	| March 29	        |NO CLASS||
 
 
 
