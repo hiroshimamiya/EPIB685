@@ -2,15 +2,15 @@
 
 
 
-## Student wellness **
+# Preamble   
+** Students wellness **  
 One out of every 5 students in Canada experiences some form of mental health issues during their academic journey. If you find yourself facing a mental health challenge or need to talk to someone, please find on- and off-campus resources and support: 
-Wellness Hub:  https://pgss.mcgill.ca/en/mental-health-resources    
-Specific needs for International students: https://www.mcgill.ca/internationalstudents/
-see "Community Resources" for 24/7/365 support: https://ssmu.ca/resources/mental-health/    
-https://ssmu.ca/wp-content/uploads/2021/12/SSMU-Services-Doc.pdf?x77765
+  - Wellness Hub:  https://pgss.mcgill.ca/en/mental-health-resources    
+  - Specific needs for International students: https://www.mcgill.ca/internationalstudents/
+  - See "Community Resources" for 24/7/365 support: https://ssmu.ca/resources/mental-health/    
+  - Information about available resources in the Faculty of Medicine and Health Sciences maybe obtained from the Local Wellness Advisors: https://www.mcgill.ca/wellness-hub/local-wellness-advisor-medicine-health-sciences-graduate-students
 
-
-
+# Course information 
 **Restriction(s)**: Open to graduate students in the Environmental Health Sciences or permission of the course instructors. Not open to students who have taken or are taking EXMD 671 or NRSC 671 or PHAR 671.
 
 This course is intended to build the foundational knowledge in population health approaches aimed at evaluating the impact of environmental exposures on health, with a focus on research design and critical appraisal.  
@@ -32,7 +32,7 @@ Specific learning objectives are:
   
 
 ## Course time and location
-All teaching is in person and lectures will be recorded by ZOOM.Friday 9:30AM-12:30PM EST. 
+All teaching is in-person (subject to COVID-related regulations) and lectures will be recorded by ZOOM.Friday 9:30AM-12:30PM EST. 
 
 
 Please arrive to class on time and stay until the end of the class. Chronically arriving late or leaving class early will disrupt the learning of peer students.
@@ -41,7 +41,7 @@ Please arrive to class on time and stay until the end of the class. Chronically 
 Lecture slides will be available in MyCourses. 
 There is no one text for this course – lectures benefit articles provided in the class. 
 
-**Supplementary readings**
+**Supplementary readings**   
 Students wishing to pursue employment as an epidemiologist and/or conduct environmental epidemiological research may wish to obtain the following resources from course reserve or purchase: 
 
 *Environmental Epidemiology: Principles and Methods* , RM Merrill (Jones & Bartlett Learning, 2008); 
@@ -84,8 +84,7 @@ Week |	Date |	Lecture |	Student task
 
 
 
-## Evaluation Components
-
+## Evaluation Components and student tasks
 ### Assignment 1:  Simple mapping of exposures in Montreal using GIS software
 
 
@@ -144,42 +143,34 @@ own conclusions? Do they differ from the authors’
 ### Assignment 4 and 5: Project proposal 
 
 
-## Policy around the use of AI technologies for class assginments and presentation
-Generative AI is a type of artificial intelligence that uses machine learning to create new types of media, including text, images, software codes, sound, and video in reponse to user prompts (inputs). Many tools exist that use generative AI to create new content. 
+## Policy around the use of AI technologies for class assignments and presentation
+Generative AI is a type of artificial intelligence that uses machine learning to create new types of media, including text, images, software codes, sound, and video in response to user prompts (inputs). Many tools exist that use generative AI to create new content. 
 Some examples include ChatGPT and Bing (text generation) and Midjourney and DALL-E (image generation).  
 
-Use of these tools are permitted as part of learning aids, as long as you : 
-    1) make acknowledgment. Specifically, you must cite ChatGPT in your reference section at the end of your assignment and presentions. Instruction for citation, which you may need for familiarize for future course and publication work is provided at https://style.mla.org/citing-generative-ai/ 
-    2) revise and checked responses from these tools carefully. In other words, you cannot copy and pate the crude (unedited) outputs from the these tools into your assignments or presentation slides, as the raw responses tend to be flawed. 
-    3) submit, as an appendix with their assignments, any content produced by an artificial intelligence tool, and the prompt (or chain of prompts) used to generate the content.
+Use of these tools to complete assignments and presentations is permitted as part of learning aids, as long as the three conditions are met:   
+    - Acknowledge the use of these tools. Specifically, you must cite ChatGPT in your reference section at the end of your assignment and presentations. Instruction for citation, which you may need to familiarize yourself for future course work, publication, and report writing is provided at https://style.mla.org/citing-generative-ai/    
+    - Revise and checked responses from these tools carefully. In other words, you cannot copy and paste the crude (unedited) outputs from these tools into your assignments or presentation slides, as the raw responses tend to be flawed.    
+    - Submit any content produced by an artificial intelligence tool and the prompt (or chain of prompts) used to generate the content as an appendix with their assignments.   
 
-Note: While the use of generative AI tools are permitted in this class, many classes and scientific journals do not permit the use of generative AI in any part of scientic work, as the raw outputs are often unreliable (hence, do not use unchecked outputs) and often propagate stigma and sytereotypes targed to vulnerable individuals. 
+Note: While the use of generative AI tools is permitted in this class, many classes and scientific journals do not allow the use of generative AI in writing and image creation, as their raw outputs are often unreliable (hence, do not use unchecked outputs in this class) and often propagate stigma and stereotypes targeted to vulnerable individuals. 
 
 
+# University regulations and support 
 ## Inclusiveness   
 I strive to provide an inclusive learning environment. However, if you experience barriers to learning in this course or have any impairments that could impediment your learning, do not hesitate to discuss them with me and/or the Student Accessibility & Achievement Register with Student Accessibility and Achievement -SAA (you can register at https://www.mcgill.ca/access-achieve/). Eligibility for SAA is: 
 >  Students who are experiencing academic or physical barriers and have a documented disability, mental health condition,chronic health condition, or other impairment. These may be temporary, permanent, or episodic.
 > Students with documented disabilities can register at any point in the year, but we recommend registering as early as possible. We encourage students new to McGill to make an appointment before their semester begins.* 
 
 
- to contact the 
-Students Service Office at: stuserv.macdonald@mcgill.ca or https://www.mcgill.ca/macdonaldstudentservices/ , or by telephone at 514-398-7992. Students already registered with SAA do need to 
-contact them, using the web form, to make arrangements for accommodations for any assessments 
-(midterms, lab exams, in-class essays/finals) that fall outside the official final examination period.
-
-
-## Accommodation for missed assignments and presentations 
+## Accommodations for missed assignments and presentations 
 If you need to seek accommodation for missing in-course exams, assessments, or assignments for medical and non-medical or other emergencies, please discuss the situation directly with the instructor as soon as possible. 
 
-## University guidelines
-In accord with McGill University’s Charter of Students’ Rights, students in this course have the 
+## Language of assessment 
+In accordance with McGill University’s Charter of Students’ Rights, students in this course have the 
 right to submit in English or in French any written work that is to be graded.
-McGill University values academic integrity. Therefore, all students must understand the 
-meaning and consequences of cheating, plagiarism and other academic offences under the Code 
-of Student Conduct and Disciplinary Procedures (see www.mcgill.ca/students/srr/honest/ for 
-more information).
 
 ## Honor code 
-McGill University values academic integrity. Therefore, all students must understand the meaning and consequences of plagiarism and other academic offences under the Code of Student Conduct and Disciplinary Procedures (see www.mcgill.ca/students/srr/honest/ for more information).
+ Academic integrity is crucial. Therefore, all students must understand the meaning and consequences of plagiarism and other academic offenses under the Code of Student Conduct and Disciplinary Procedures (see www.mcgill.ca/students/srr/honest/ for more information).
+
 
 
