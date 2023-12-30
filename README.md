@@ -196,15 +196,16 @@ Presentation and written project proposal (3a and 3c) should follow the followin
 
 # Policy around the use of AI technologies for class assignments and presentation  
 Generative AI is a type of artificial intelligence that uses machine learning to create new types of media, including text, images, software codes, sound, and video in response to user prompts (inputs). Many tools exist that use generative AI to create new content. 
-Some examples include ChatGPT and Bing (text generation) and Midjourney and DALL-E (image generation).  
+Some examples include ChatGPT and Bing (text generation) and Midjourney and DALL-E (image generation).   
 
 Use of these tools to complete assignments and presentations is permitted as part of learning aids, as long as the three conditions are met:   
+
     - Acknowledge the use of these tools. Specifically, you must cite ChatGPT in your reference section at the end of your assignment and presentations. Instruction for citation, which you may need to familiarize yourself for future course work, publication, and report writing is provided at https://style.mla.org/citing-generative-ai/    
 
     - Revise and checked responses from these tools carefully. In other words, you cannot copy and paste the crude (unedited) outputs from these tools into your assignments or presentation slides, as the raw responses tend to be flawed.    
 
     - Submit any content produced by an artificial intelligence tool and the prompt (or chain of prompts) used to generate the content as an appendix with their assignments.    
-    
+
 
 Note: While the use of generative AI tools is permitted in this class, many classes and scientific journals do not allow the use of generative AI in writing and image creation, as their raw outputs are often unreliable (hence, do not use unchecked outputs in this class) and often propagate stigma and stereotypes targeted to vulnerable individuals. 
 
