@@ -41,7 +41,7 @@ Specific learning objectives are:
 ## Course time and location
 Friday 9:35AM-12:35PM EST, interrupted by a 10-15minutes break. All teaching is in-person (subject to COVID-related regulations), and lectures will be recorded by ZOOM. 
 
-Please arrive to class on time and stay until the end of the class. Chronically arriving late or leaving class early will disrupt the learning of peer students.
+Please arrive to class on time. Chronically arriving late or leaving class early will disrupt the learning of peer students.
     
 ## Readings and lectures 
 Lecture slides will be available in MyCourses. 
@@ -66,22 +66,23 @@ https://www.qgis.org/en/site/forusers/download.html
 
 
 ## Class Schedule 
+Classes consist of lectures and instyruction for assignments and student-led presentations with a break.  
 Week |	Date |	Lecture |	Student task 
 -----|-------|--------|-----------
-1	| January  5	| Introduction | overview of assignments and lectures|
+1	| January  5	| Introduction and overview of assignments and lectures | |
 2	| January 12	| Study Design 1: cohort study I| |
 3	| January 19	| Study Design 1: Cohort study II and hands-on work for Geographic Information Systems | Instruction for Assginment 1|
 4	| January 26	| Study design 2: Case-control study | Q and A session for Assignment 1| 
 5	| February 2	| Ecological and Cross-sectional study|  Pick paper to review (group work, Assignment 2) AND the review of Assignment 1|
 6	| February 9	| Statistical analysis in environmental epidemiology | Introduction to project (Assignment 3)|	
-7	| February 16	| Measurement Error  | 3 minute presentation of project proposal|
+7	| February 16	| Measurement Error  | 3-minutes presentation of project proposal|
 8	| February 23	| Causal inference 1 | Presentation of paper review|
 9	| March 1	    | Causal inference 2 | Presentation of paper review|
 10	| March 8	  | NO CLASS | 
 11	| March 15	|| Presentation of projects | 
-12	| March 22	|Extra topics| Presentation of projects|
+12	| March 22	|Extra topics, if time permits| Presentation of projects|
 13	| March 29	|NO CLASS|   |
-* Extra topics include time-series analysis, mixture analysis, and/or Bayesian disease mapping
+* Extra topics include introduction to time-series analysis, mixture analysis, or Bayesian disease mapping
 
 
 
