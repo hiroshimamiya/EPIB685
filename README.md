@@ -66,7 +66,7 @@ https://www.qgis.org/en/site/forusers/download.html
 
 
 ## Class Schedule 
-Week |	Date |	Lecture |	Student task | Due date
+Week |	Date |	Lecture |	Student task 
 -----|-------|--------|-----------
 1	| January  5	| Introduction | overview of assignments and lectures|
 2	| January 12	| Study Design 1: cohort study I| |
@@ -77,10 +77,10 @@ Week |	Date |	Lecture |	Student task | Due date
 7	| February 16	| Measurement Error  | 3 minute presentation of project proposal|
 8	| February 23	| Causal inference 1 | Presentation of paper review|
 9	| March 1	    | Causal inference 2 | Presentation of paper review|
-10	| March 8	        | NO CLASS | 
+10	| March 8	  | NO CLASS | 
 11	| March 15	|| Presentation of projects | 
 12	| March 22	|Extra topics| Presentation of projects|
-13	| March 29	        |NO CLASS||
+13	| March 29	|NO CLASS|   |
 * Extra topics include time-series analysis, mixture analysis, and/or Bayesian disease mapping
 
 
