@@ -78,8 +78,8 @@ Week |	Date |	Lecture |	Student task | Due date
 8	| February 23	| Causal inference 1 | Presentation of paper review|
 9	| March 1	    | Causal inference 2 | Presentation of paper review|
 10	| March 8	        | NO CLASS | 
-11	| March 15	|| Presentation of project proposal | 
-12	| March 22	|Extra topics| Presentation of project proposal |
+11	| March 15	|| Presentation of projects | 
+12	| March 22	|Extra topics| Presentation of projects|
 13	| March 29	        |NO CLASS||
 * Extra topics include time-series analysis, mixture analysis, and/or Bayesian disease mapping
 
@@ -93,7 +93,7 @@ Assignment 2a: Presentation of critical review (nothing to submit) |20%| Class 8
 Assignment 2b: Sumission of written report |25%| February 22nd |
 Assignment 3a: Project presentation - All groups should submit thier slides before march 15th|15%| Before March 15|
 Assignment 3b: Written constructive review of other teams' projects                | 15% | March 30|
-Assignment 3c: Written project proposal  |20% | TBA, sometime in the end of April |
+Assignment 3c: Written project |20% | TBA, sometime in the end of April |
 Total	| 100%
 
 
@@ -138,7 +138,7 @@ objective is not in PICO format, please rewrite it accordingly.
 References can be used to support your points. 
 
 
-### Assignment 3a-c: Project proposal (Group work)
+### Assignment 3a-c: Project (group work)
 Using any of the exposure(s) mapped in Assignment 1 in Montreal, students will formulate a hypothetical study design integrating the materials learned from the course. 
 
 If your team is not proposing standard etiologic study designs (e.g., study other than case-control, cohort, ecological, time-series), you should first consult the instructor and TA. 
@@ -146,30 +146,25 @@ Literature can be used to rationalize study aim, study design, and data analysis
 
 **Format**: 
   - 3 min presentation of initial project proposal (ungraded)
-  - 15-20 min of presentation (3a), followd by  
+  - 15-20 min of presentation (3a), followd by 5 minutes questions
   - At least 5 suggestions to critique, per presentation  (3b)
-  - Single space document, 3 or 4 pages for written project proposal, excluding reference and tables/figures (optional) (3c)
+  - Single space document, 3 or 4 pages for written project, excluding reference and tables/figures (optional) (3c)
 
 
-Presentation of project proposal (3 minutes, ungraded) should provide: 
+**Presentation of project proposal** (3 minutes, ungraded, Week 7) should provide: 
   1. Research question and its public health importance.    
   2. Objective 
   3. Study design
   3. Population, exposure and outcome
 
 
-Review of other projects (Assignment 3b)
-Your group will be assigned two projects from other groups to review. Based on the presentation slides and oral presentation, your group will provide constructive review and suggestions. The details of this will be discussed in class. The submitted presentation and oral presentation will not be assessed, but the quality of your group's reviews of others’ will be. The course instructors will review and provide additional feedback of needed to make sure that everyone receives adequate and useful guidance in order to finalise their project proposals
+**Review of other projects** (Assignment 3b)   
+Your group will be assigned two projects from other groups to review. Based on the presentation slides and oral presentation, your group will provide constructive review and suggestions. The details of this will be discussed in class. The submitted presentation and oral presentation will not be assessed, but the quality of your group's reviews of others’ will be. The course instructors will review and provide additional feedback of needed to make sure that everyone receives adequate and useful guidance in order to finalise their project writings.
 
 
-Presentation and written project proposal (3a and 3c) should follow the following components: 
+**Presentation and written descripiton of project** (Assignment 3a and 3c) should follow the following components: 
 1. Background section including problem statement and the importance of the study design (justification). Why do you think your research question is important?   
-   - * E.g., The impact of your urban exposure(s) X on your health outcome Y on your population Z is not well known, so a study is needed to motivate further research.   
-   -You can find problem statment from journls such as: 
-
-   -*Environmental Health Perspectives, Environmental Health, Environment International, Epidemiology, Environmental Epidemiology, and Environmental Science & Technology*   
-
-
+   
    -**There is no need to perform a through review to identify your problem**. Any environmental issue of your interest that provides a valid hypothesis is fine. 
 
 2. Objective: Clearly state the study objective supporting your research question in the PICO format.The objective must be feasible and attainable
@@ -193,24 +188,25 @@ Presentation and written project proposal (3a and 3c) should follow the followin
 
 12. Table and figures (optional)
 
-
-
+You can find relevant research designs, problem statement and discussions to follow from journls such as: 
+   -*Environmental Health Perspectives, Environmental Health, Environment International, Epidemiology, Environmental Epidemiology, and Environmental Science & Technology*   
+Though you project proposal documentation will be much shorer than these full-length papers.    
 
 
 # Policy around the use of AI technologies for class assignments and presentation  
 Generative AI is a type of artificial intelligence that uses machine learning to create new types of media, including text, images, software codes, sound, and video in response to user prompts (inputs). Many tools exist that use generative AI to create new content. 
 Some examples include ChatGPT and Bing (text generation) and Midjourney and DALL-E (image generation).   
 
-Use of these tools to complete assignments and presentations is permitted as part of learning aids, as long as the three conditions are met:   
+Use of these tools to complete assignments and presentations is permitted as part of learning aids, as long as the three conditions are met:    
 
-    1.   Acknowledge the use of these tools. Specifically, you must cite ChatGPT in your reference section at the end of your assignment and presentations. Instruction for citation, which you may need to familiarize yourself for future course work, publication, and report writing is provided at https://style.mla.org/citing-generative-ai/    
+   1.   Acknowledge the use of these tools. Specifically, you must cite ChatGPT in your reference section at the end of your assignment and presentations. Instruction for citation, which you may need to familiarize yourself for future course work, publication, and report writing is provided at https://style.mla.org/citing-generative-ai/    
 
-    2.   Revise and checked responses from these tools carefully. In other words, you cannot copy and paste the crude (unedited) outputs from these tools into your assignments or presentation slides, as the raw responses tend to be flawed.    
+   2.   Revise and checked responses from these tools carefully. In other words, you cannot copy and paste the crude (unedited) outputs from these tools into your assignments or presentation slides, as the raw responses tend to be flawed.    
 
-    3.   Submit any content produced by an artificial intelligence tool and the prompt (or chain of prompts) used to generate the content as an appendix with their assignments.    
+   3.   Submit any content produced by an artificial intelligence tool and the prompt (or chain of prompts) used to generate the content as an appendix with their assignments.    
 
 
-Note: While the use of generative AI tools is permitted in this class, many classes and scientific journals do not allow the use of generative AI in writing and image creation, as their raw outputs are often unreliable (hence, do not use unchecked outputs in this class) and often propagate stigma and stereotypes targeted to vulnerable individuals. 
+Note: While the use of generative AI tools is permitted in this class, many classes and scientific journals do not allow the use of these tools to generate writing (and any audio and visual contents as well as citations), as their raw outputs are often unreliable and may propagate/amplify misinformation, stigma, and stereotypes. Fact checking is critical when using these tools.   
 
 
 # University regulations and support 
