@@ -42,6 +42,9 @@ Specific learning objectives are:
 Friday 9:35AM-12:35PM EST, interrupted by a 10-15minutes break. All teaching is in-person (subject to COVID-related regulations), and lectures will be recorded by ZOOM. 
 
 Please arrive to class on time. Chronically arriving late or leaving class early will disrupt the learning of peer students.
+
+## Office ours 
+After the class or by appoinment. Please email the instructor or TA. 
     
 ## Readings and lectures 
 Lecture slides will be available in MyCourses. 
@@ -194,7 +197,7 @@ You can find relevant research designs, problem statement and discussions to fol
 Though you project proposal documentation will be much shorer than these full-length papers.    
 
 
-# Policy around the use of AI technologies for class assignments and presentation  
+# Policy around the use of AI technologies for class assignments and presentations  
 Generative AI is a type of artificial intelligence that uses machine learning to create new types of media, including text, images, software codes, sound, and video in response to user prompts (inputs). Many tools exist that use generative AI to create new content. 
 Some examples include ChatGPT and Bing (text generation) and Midjourney and DALL-E (image generation).   
 
