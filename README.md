@@ -166,11 +166,11 @@ Presentation and written project proposal (3a and 3c) should follow the followin
 1. Background section including problem statement and the importance of the study design (justification). Why do you think your research question is important? 
   E.g., The impact of your urban exposure(s) X on your health outcome Y on your population Z is not well known, so a study is needed to motivate further research.   
   You can find problem statment from journls such as: 
-  
-  *Environmental Health Perspectives, Environmental Health, Environment International, Epidemiology, Environmental Epidemiology, and Environmental Science & Technology*    
+
+  ..*Environmental Health Perspectives, Environmental Health, Environment International, Epidemiology, Environmental Epidemiology, and Environmental Science & Technology*    
 
 
-  **There is no need to perform a through review to identify your problem**. Any environmental issue of your interest that provides a valid hypothesis is fine. 
+  ..**There is no need to perform a through review to identify your problem**. Any environmental issue of your interest that provides a valid hypothesis is fine. 
 
 2. Objective: Clearly state the study objective supporting your research question in the PICO format.The objective must be feasible and attainable
 
@@ -203,11 +203,11 @@ Some examples include ChatGPT and Bing (text generation) and Midjourney and DALL
 
 Use of these tools to complete assignments and presentations is permitted as part of learning aids, as long as the three conditions are met:   
 
-    - Acknowledge the use of these tools. Specifically, you must cite ChatGPT in your reference section at the end of your assignment and presentations. Instruction for citation, which you may need to familiarize yourself for future course work, publication, and report writing is provided at https://style.mla.org/citing-generative-ai/    
+    1.   Acknowledge the use of these tools. Specifically, you must cite ChatGPT in your reference section at the end of your assignment and presentations. Instruction for citation, which you may need to familiarize yourself for future course work, publication, and report writing is provided at https://style.mla.org/citing-generative-ai/    
 
-    - Revise and checked responses from these tools carefully. In other words, you cannot copy and paste the crude (unedited) outputs from these tools into your assignments or presentation slides, as the raw responses tend to be flawed.    
+    2.   Revise and checked responses from these tools carefully. In other words, you cannot copy and paste the crude (unedited) outputs from these tools into your assignments or presentation slides, as the raw responses tend to be flawed.    
 
-    - Submit any content produced by an artificial intelligence tool and the prompt (or chain of prompts) used to generate the content as an appendix with their assignments.    
+    3.   Submit any content produced by an artificial intelligence tool and the prompt (or chain of prompts) used to generate the content as an appendix with their assignments.    
 
 
 Note: While the use of generative AI tools is permitted in this class, many classes and scientific journals do not allow the use of generative AI in writing and image creation, as their raw outputs are often unreliable (hence, do not use unchecked outputs in this class) and often propagate stigma and stereotypes targeted to vulnerable individuals. 
