@@ -164,10 +164,10 @@ Your group will be assigned two projects from other groups to review. Based on t
 
 Presentation and written project proposal (3a and 3c) should follow the following components: 
 1. Background section including problem statement and the importance of the study design (justification). Why do you think your research question is important? 
-  E.g., The impact of your urban exposure(s) X on your health outcome Y on your population Z is not well known, so a study is needed to motivate further research.   
+  ..* E.g., The impact of your urban exposure(s) X on your health outcome Y on your population Z is not well known, so a study is needed to motivate further research.   
   You can find problem statment from journls such as: 
 
-  ..*Environmental Health Perspectives, Environmental Health, Environment International, Epidemiology, Environmental Epidemiology, and Environmental Science & Technology*    
+  ..* Environmental Health Perspectives, Environmental Health, Environment International, Epidemiology, Environmental Epidemiology, and Environmental Science & Technology    
 
 
   ..**There is no need to perform a through review to identify your problem**. Any environmental issue of your interest that provides a valid hypothesis is fine. 
@@ -232,3 +232,21 @@ right to submit in English or in French any written work that is to be graded.
 
 
 
+
+
+1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list. 
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
+
+⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
