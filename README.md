@@ -96,9 +96,9 @@ NA | March 29	  |NO CLASS (Good Friday)|  |
 Assignment | Grade | Deadline
 -----------|-------|------------------------
 Assignment 1: Submission of an exposure map |5% |January 30th 
-Assignment 2a: In-class presentation of critical review (nothing to submit) |25%| Class 10 and 11|
-Assignment 2b: Sumission of written critical review  |20%| March 29, Before Good Friday|
-Assignment 3a: Project presentation - All groups should submit thier presentaion slides before April 1st so that other groups can prepare for peer review |15%| before April 1st|
+Assignment 2a: In-class presentation of critical review (nothing to submit) |20%| Class 10 and 11|
+Assignment 2b: Sumission of written critical review  |25%| March 29, Before Good Friday|
+Assignment 3a: Project presentation - All groups should submit thier presentaion slides before April 1st so that other groups can prepare for peer review |15%| Class 12 and 13|
 Assignment 3b: Written constructive review of other teams' projects                | 15% | April 16|
 Assignment 3c: Written project |20% | Very end of April or early May (TBA)|
 Total	| 100%
@@ -161,7 +161,8 @@ Literature can be used to rationalize the study aim, study design, and data anal
   - 3 min presentation of preliminary project proposal (ungraded)
   - 15 min of presentation (3a), followed by 5 minutes of questions
   - At least 5 suggestions to critique, per presentation  (3b)Single-spaced document, 3 or 4 pages for written project, excluding reference and tables/figures (optional) (3c)
-NOte that the presentation may be shorter in duration, depending on class size. 
+  
+  - The presentation may be shorter in duration, depending on class size. 
 
 **Presentation of preliminary project proposal** (3 minutes, ungraded, Week 9) should provide: 
   1. Research question and its public health importance.    
@@ -201,8 +202,9 @@ Your group will be assigned two projects from other groups to review. Based on t
 12. Table and figures (optional)
 
 You can find relevant research designs, problem statements and discussions to follow from journls such as: 
-   -*Environmental Health Perspectives, Environmental Health, Environment International, Epidemiology, Environmental Epidemiology, and Environmental Science & Technology*   
-Though your project proposal documentation will be much shorter than these full-length papers.    
+   -*Environmental Health Perspectives, Environmental Health, Environment International, Epidemiology, Environmental Epidemiology, and Environmental Science & Technology*    
+
+Though your project proposal writing will be much shorter than these full-length papers.    
 
 
 # Policy around the use of AI technologies for class assignments and presentations  
@@ -211,11 +213,11 @@ Some examples include ChatGPT and Bing (text generation) and Midjourney and DALL
 
 Use of these tools to complete assignments and presentations is permitted as part of learning aids, as long as the three conditions are met:    
 
-   1.   Acknowledge the use of these tools. Specifically, you must cite ChatGPT in your reference section at the end of your assignment and presentations. Instruction for citation, which you may need to familiarize yourself with future course work, publication, and report writing is provided at https://style.mla.org/citing-generative-ai/    
+   1.   Acknowledge the use of these tools. Specifically, you must cite the creator and the tool in your reference section at the end of your assignment and presentations. Instruction for citation, which you may need to familiarize yourself with future course work, publication, and report writing is provided at https://style.mla.org/citing-generative-ai/    
 
-   2.   Revise and check outputs from these tools carefully. In other words, you cannot copy and paste the crude (unedited) outputs from these tools into your assignments or presentation slides, as the raw responses tend to be flawed.    
+   2.   Revise and check outputs from these tools carefully. In other words, you cannot copy and paste the crude (unedited) outputs from these tools into your assignments or presentation slides, as the raw responses from these tools tend to be flawed.    
 
-   3.   Submit any content produced by an artificial intelligence tool and the prompt (or chain of prompts) used to generate the content as an appendix with their assignments.    
+   3.   Submit and present any content produced by an artificial intelligence tool and the prompt (or chain of prompts) used to generate the content as an appendix with their assignments. In your presentation, you must also discuss how the tool was (or will be) used to assist in writing and/or slide making, such that other students can be informed with the effective use of these tools.      
 
 
 Note: While the use of generative AI tools is permitted in this class, many classes and scientific journals do not allow the use of these tools to generate writing (and any audio and visual contents as well as citations), as their raw outputs are often unreliable and may propagate/amplify misinformation, stigma, and stereotypes. Fact checking is critical when using these tools.   
