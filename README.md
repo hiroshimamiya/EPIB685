@@ -41,7 +41,7 @@ Specific learning objectives are:
 ## Course time and location
 Friday 9:35AM-12:35PM EST, interrupted by a 10-15 minutes break. All teaching is in-person (subject to COVID-related regulations), and lectures will be recorded by Zoom. 
 
-2001 McGill College Rm 1140
+2001 McGill College, 11th Floor, Rm 1140
 
 
 ## Office ours 
