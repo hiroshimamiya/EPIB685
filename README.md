@@ -82,10 +82,10 @@ Week |	Date |	Lecture |	Student task
 7	| February 16	| Measurement Error  |  |
 8	| February 23	| Causal inference 1 | Q and A for project proposal |
 9	| March 1	    | Causal inference 2 | 3-minutes presentation of project proposal (Assignment 3) |
-0	| March 8	    | NO CLASS (Winter break)| |
+NA	| March 8	    | NO CLASS (Winter break)| |
 10	| March 15	| Time-series and case-crossover analysis | Presentation of paper review (Assignment 2) | 
 11	| March 22	|Extra topics, if time permits   | Presentation of paper review (Assignment 2)|
- 0 | March 29	  |NO CLASS (Good Friday)|  |
+NA | March 29	  |NO CLASS (Good Friday)|  |
 12 | April 5	  |  Presentation of projects (Assignment 3) |   |
 13 | April 12   |  Presentation of projects (Assignment 3) |   |
 * Extra topics include an introduction to mixture analysis or Bayesian disease mapping
