@@ -22,27 +22,27 @@ Basic understanding in biostatistics and epidemiologic study design is helpful, 
 
 ## Course description
 This course is intended to build the foundational knowledge in epidemiologic approaches to investigate the population distribution and etiologic association of environmental risk factors on health, with a focus on research design and critical appraisal.  
-Methods of instruction will feature lectures, student-led presentations, and an interactive lab session. The focus will be on the understanding of modern epidemiological research that allows interpreting findings in environmental public health research. 
+
+Methods of instruction will feature lectures, student-led presentations, and an interactive lab session. The focus will be on the understanding and critical appraisal of modern epidemiological research. 
 
 ## Learning Objectives 
-The primary outcome is to appreciate and interpret environmental epidemiological study designs and research methods. By the end of the course, students should be able to read a published paper in environmental epidemiology and to appreciate the methods and interpret the findings, from a population health and policy intervention perspective. 
+The primary outcome is to appreciate and interpret environmental epidemiological study designs and research methods. By the end of the course, students should be able to read a published paper in environmental epidemiology and to appreciate the methods and interpret the findings from a population health perspective. 
 
 Specific learning objectives are:    
 - To understand the design and interpretation of the main study designs in environmental epidemiology: cohort, case-control, and cross-sectional studies.
-- To understand threads to the validity of population health research: bias and confounding
+- To understand threats to the validity of population health research: bias and confounding
 - To construct an appropriate epidemiologic research question and devise an appropriate study design using available data.    
-- To understand essential concepts in quantitative reasoning and causal inference.    
-- To Effectively communicate policy-relevant public health evidence, both orally and in writing.   
+- To understand essential concepts in quantitative reasoning, causal inference and measurement error.    
+- To Effectively communicate research design and findings, both orally and in writing.   
 - To gain hands-on skills to map the geospatial distribution of environmental risk factors.   
-- Time permitting, a sample of advanced research methods will be covered, including exposure mixture analysis, time-series analysis, geospatial analysis and disease mapping, and location tracking.     
+- Time permitting, a sample of advanced research methods will be covered, including exposure mixture analysis, geospatial analysis and Bayesian disease mapping, and Global Positioning Systems (GPS).     
   
 
 ## Course time and location
-Friday 9:35AM-12:35PM EST, interrupted by a 10-15 minutes break. All teaching is in-person (subject to COVID-related regulations), and lectures will be recorded by ZOOM. 
+Friday 9:35AM-12:35PM EST, interrupted by a 10-15 minutes break. All teaching is in-person (subject to COVID-related regulations), and lectures will be recorded by Zoom. 
 
-2001 McGill College 1140
+2001 McGill College Rm 1140
 
-Please arrive to class on time. Chronically arriving late or leaving class early will disrupt the learning of peer students.
 
 ## Office ours 
 After the class or by appointment. Please email the instructor or TA. 
@@ -54,15 +54,15 @@ There is no one text for this course – lectures benefit articles provided in t
 **Supplementary readings**   
 Students wishing to pursue employment as an epidemiologist and/or conduct environmental epidemiological research may wish to obtain the following resources from course reserve or purchase: 
 
-*Environmental Epidemiology: Principles and Methods* , RM Merrill (Jones & Bartlett Learning, 2008); 
-• “Exposure assessment in occupational and environmental epidemiology”, M Nieuwenhuijsen et al. (Oxford University Press, 2015);   
-• “A biological approach to environmental assessment and epidemiology”, TJ Smith and D Kriebel (Oxford University Press, 2010); and,   
-• “EPA - Guidelines for Exposure Assessment”. 
+*Environmental Epidemiology: Principles and Methods*, RM Merrill (Jones & Bartlett Learning, 2008); 
+*Exposure assessment in occupational and environmental epidemiology*, M Nieuwenhuijsen et al. (Oxford University Press, 2015);   
+*A biological approach to environmental assessment and epidemiology*, TJ Smith and D Kriebel (Oxford University Press, 2010); and,   
+*EPA - Guidelines for Exposure Assessment*. 
 
-Other books also on the class web page including “A pocket guide to epidemiology”; “Glossary of Epidemiological Terms”; “Dictionary of environmental health”    
+Other books also on the class web page including *A pocket guide to epidemiology*; *Glossary of Epidemiological Terms*; *Dictionary of environmental health*    
 
 ## Software
-Please download and install qGIS software by the beginning of the second class. We will need this software for the exposure mapping exercise. 
+Please download and install qGIS software by the beginning of the second class. We will need this tool for Assignment 1. 
 https://www.qgis.org/en/site/forusers/download.html  
  
 
@@ -70,24 +70,24 @@ https://www.qgis.org/en/site/forusers/download.html
 
 
 ## Class Schedule 
-Classes consist of lectures and instyruction for assignments and student-led presentations with a break.  
-Week |	Date |	Lecture |	Student task 
+Classes consist of lectures and instruction for assignments and student-led presentations with a break.  
+Week |	Date |	Lecture |	Student work abd lab 
 -----|-------|--------|-----------
-1	| January  5	| Introduction and overview of assignments and lectures ||
-2	| January 12	| Study Design 1: cohort study I | hands-on work for Geographic Information Systems |
+1	| January  5	| Course overview and introduction to environmental epidemiology ||
+2	| January 12	| Study Design 1: cohort study I | Introduction to Geographic Information Systems |
 3	| January 19	| Study Design 1: Cohort study II| hands-on work for Geographic Information Systems and instruction for Assginment 1|
 4	| January 26	| Study design 2: Case-control study | Q and A session for Assignment 1| 
 5	| February 2	| Ecological and Cross-sectional study |  Pick paper to review (Assignment 2) AND the review of Assignment 1|
 6	| February 9	| Statistical analysis in environmental epidemiology | Introduction to project (Assignment 3)|	
 7	| February 16	| Measurement Error  |  |
 8	| February 23	| Causal inference 1 | Q and A for project proposal |
-9	| March 1	    | Causal inference 2 | 3-minutes presentation of project proposal (Assignment 3) |
-NA	| March 8	    | NO CLASS (Winter break)| |
-10	| March 15	| Time-series and case-crossover analysis | Presentation of paper review (Assignment 2) | 
+9	| March 1	    | Causal inference 2 | 3-minutes presentation of prelimineary project proposal (Assignment 3) |
+NA	| March 8	  | NO CLASS (Winter break)| |
+10	| March 15	| Time-series and case-crossover study | Presentation of paper review (Assignment 2) | 
 11	| March 22	|Extra topics, if time permits   | Presentation of paper review (Assignment 2)|
 NA | March 29	  |NO CLASS (Good Friday)|  |
-12 | April 5	  |  Presentation of projects (Assignment 3) |   |
-13 | April 12   |  Presentation of projects (Assignment 3) |   |
+12 | April 5	  |  | Presentation of projects (Assignment 3)   |
+13 | April 12   |  | Presentation of projects (Assignment 3)   |
 * Extra topics include an introduction to mixture analysis or Bayesian disease mapping
 
 
@@ -121,14 +121,14 @@ Generative AI (e.g., ChatGPT) can be used to assist in writing, if you make appr
 **Length**: The critique should be about 2 pages (suggested, excluding references) with single space and can be written out using bullets if you prefer, ensuring that the flow is logical. 
 
 **Format**: 
-  - About 20 min of presentation (2a), followed by 5 minutes of questions
+  - About 20 min of presentation (2a), followed by 5 minutes of questions. the presentation may be shorter in duration, depending on class size.   
   - About 2 pages (suggested, can be longer, excluding references) with single space and can be written out using bullets if you prefer, ensuring that the flow is logical (3b). 
-Note that the presentation may be shorter in duration, depending on class size.    
+ 
 
 The presentation and written report should comprise the following elements: 
 
 1. Objectives: are the (if any) objectives clearly stated? Are they supported by the introduction and commensurate with the study design that follows? Justify your response. If the 
-objective is not in PICO format, please rewrite it accordingly.
+objective is not in PICO (PECO) format, please rewrite it accordingly.
 
 3. Population: Describe the target and study populations.
  
@@ -163,18 +163,18 @@ Literature can be used to rationalize the study aim, study design, and data anal
   - At least 5 suggestions to critique, per presentation  (3b)Single-spaced document, 3 or 4 pages for written project, excluding reference and tables/figures (optional) (3c)
 NOte that the presentation may be shorter in duration, depending on class size. 
 
-**Presentation of project proposal** (3 minutes, ungraded, Week 7) should provide: 
+**Presentation of preliminary project proposal** (3 minutes, ungraded, Week 9) should provide: 
   1. Research question and its public health importance.    
   2. Objective 
-  3. Study design
+  3. Proposed study design
   3. Population, exposure and outcome
 
 
 **Review of other projects** (Assignment 3b)   
-Your group will be assigned two projects from other groups to review. Based on the presentation slides and oral presentation, your group will provide constructive review and suggestions. The details of this will be discussed in class. The submitted presentation and oral presentation will not be assessed, but the quality of your group's reviews of others’ will be. The course instructors will review and provide additional feedback needed to make sure that everyone receives adequate and useful guidance in order to finalize their project writing. You should submit the review before the due data so that other groups can incorporate your review into their final writing. Groups who present Week 12 will review the projects in week 13 and vice versa (though all presentations may be completed in Week12, depending on class size). 
+Your group will be assigned two projects from other groups to review. Based on the presentation slides and oral presentation, your team  will provide constructive review and suggestions to your peer groups. The details of this will be discussed in class. The submitted presentation and oral presentation will not be assessed, but the quality of your group's reviews of others’ will be. The course instructors will review and provide additional feedback needed to make sure that everyone receives adequate and useful guidance in order to finalize their project writing. You should submit the review before the due date so that other groups can incorporate your review into their final writing. Groups who present Week 12 will review the projects in week 13 and vice versa (though all presentations may be completed in Week 12, depending on class size). 
 
 
-**Presentation **and written **description** of project**** (Assignment 3a and 3c) should follow the following components: 
+**Presentation and written description of project** (Assignment 3a and 3c) should follow the following components: 
 1. Background section including problem statement and the importance of the study design (justification). Why do you think your research question is important?   
    
    -**There is no need to **perform a **thorough** review to** identify your problem**. Any environmental issue of your interest that provides a valid hypothesis is fine. 
