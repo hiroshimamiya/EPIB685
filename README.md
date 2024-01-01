@@ -1,17 +1,16 @@
-# EPIB685: Principles of Environmental Health Sciences
-
+# EPIB685: Principles of Environmental Health Sciences II
 
 
 # Preamble   
 **Student wellness**  
-One out of three students in Canada experience some form of mental health issues during their academic journey. If you find yourself facing a mental health challenge or need to talk to someone, please find on- and off-campus resources and support: 
+One out of three students in Canada experience some form of mental health issues during their academic journey. If you find yourself facing a mental health challenge or need to talk to someone, please find on- and off-campus resources and support below: 
   - Wellness Hub:  https://pgss.mcgill.ca/en/mental-health-resources    
   - Specific needs for International students: https://www.mcgill.ca/internationalstudents/
   - See "Community Resources" for 24/7/365 support: https://ssmu.ca/resources/mental-health/    
   - Information about available resources in the Faculty of Medicine and Health Sciences maybe obtained from the Local Wellness Advisors: https://www.mcgill.ca/wellness-hub/local-wellness-advisor-medicine-health-sciences-graduate-students
   
 **Land acknowledgment**   
-McGill University is located on the unceded territory of the Kanien’keha:ka, which has long served as a site  of  meeting  and  exchange  amongst  Indigenous  peoples,  including  the  Haudenosaunee and Anishinabeg nations. McGill honors, recognizes, and respects these nations as the traditional stewards of the lands and waters on which we meet today
+McGill University is located on the unceded territory of the Kanien’keha:ka, which has long served as a site of meeting and exchange amongst Indigenous peoples,  including the Haudenosaunee and Anishinabeg nations. McGill honors, recognizes, and respects these nations as the traditional stewards of the lands and waters on which we meet today
 
 
 # Course information 
@@ -39,14 +38,16 @@ Specific learning objectives are:
   
 
 ## Course time and location
-Friday 9:35AM-12:35PM EST, interrupted by a 10-15minutes break. All teaching is in-person (subject to COVID-related regulations), and lectures will be recorded by ZOOM. 
+Friday 9:35AM-12:35PM EST, interrupted by a 10-15 minutes break. All teaching is in-person (subject to COVID-related regulations), and lectures will be recorded by ZOOM. 
+
+2001 McGill College 1140
 
 Please arrive to class on time. Chronically arriving late or leaving class early will disrupt the learning of peer students.
 
 ## Office ours 
-After the class or by appoinment. Please email the instructor or TA. 
+After the class or by appointment. Please email the instructor or TA. 
     
-## Readings and lectures 
+## Reading materials and lectures 
 Lecture slides will be available in MyCourses. 
 There is no one text for this course – lectures benefit articles provided in the class. 
 
@@ -76,14 +77,14 @@ Week |	Date |	Lecture |	Student task
 2	| January 12	| Study Design 1: cohort study I| |
 3	| January 19	| Study Design 1: Cohort study II and hands-on work for Geographic Information Systems | Instruction for Assginment 1|
 4	| January 26	| Study design 2: Case-control study | Q and A session for Assignment 1| 
-5	| February 2	| Ecological and Cross-sectional study|  Pick paper to review (group work, Assignment 2) AND the review of Assignment 1|
+5	| February 2	| Ecological and Cross-sectional study|  Pick paper to review (Assignment 2) AND the review of Assignment 1|
 6	| February 9	| Statistical analysis in environmental epidemiology | Introduction to project (Assignment 3)|	
-7	| February 16	| Measurement Error  | 3-minutes presentation of project proposal|
-8	| February 23	| Causal inference 1 | Presentation of paper review|
-9	| March 1	    | Causal inference 2 | Presentation of paper review|
+7	| February 16	| Measurement Error  | 3-minutes presentation of project proposal (Assignment 3) |
+8	| February 23	| Causal inference 1 | Presentation of paper review (Assignment 2)|
+9	| March 1	    | Causal inference 2 | Presentation of paper review (Assignment 2)|
 10	| March 8	  | NO CLASS | 
-11	| March 15	|| Presentation of projects | 
-12	| March 22	|Extra topics, if time permits| Presentation of projects|
+11	| March 15	|| Presentation of projects (Assignment 3) | 
+12	| March 22	|Extra topics, if time permits| Presentation of projects (Assignment 3) |
 13	| March 29	|NO CLASS|   |
 * Extra topics include introduction to time-series analysis, mixture analysis, or Bayesian disease mapping
 
@@ -103,18 +104,17 @@ Total	| 100%
 
 
 # Evaluation Components and Student Tasks
-### Assignment 1: Simple mapping of exposures in Montreal using GIS software (individual work) 
+### Assignment 1: Mapping exposures to urban exposome in Montreal using GIS software (individual work) 
 You will map urban exposures and social determinants of health in Montreal using GIS (Geographic Information System). 
 The objective is to be familiar with GIS software and geospatial data. 
 In Class (Week) 3 and 4, we will go through the use of GIS software using example data.  
 
-### Assignment 2 a and b Critical review of environmental epidemiology study (group work)
-With your teammate (2-3 groups of students, depending on class size), you will be asked to provide an oral presentation and written description evaluating an environmental epidemiology study. 
-The research papers to critique will be assigned to students in Week 5. 
+### Assignment 2 a and b: Critical review of environmental epidemiology study (group work)
+With your teammate (2-3 groups of students, depending on class size), you will be asked to provide a presentation and written review for an environmental epidemiology study. The research papers to critique will be assigned to students in Week 5. 
 
-The main objective of this component is to provide you with practice in evaluating the scientific quality of papers from the literature and will thus assist in consolidating and integrating the material taught in the course. This will also assist with the final project. 
+The main objective is to provide you with practice in evaluating the scientific quality of papers from the literature and will thus assist in consolidating and integrating the material taught in the course. This will also assist with the planning of final project. 
 
-Generative AI (e.g., ChatGPT) can be used to assist writing, if appropriate acknowledgment is made, and the specific use of these tools, including written prompts, are provided in the report and presentation. See the policy regarding the use of AI technologies below.  
+Generative AI (e.g., ChatGPT) can be used to assist in writing, if you make appropriate acknowledgment and provide specific use of these tools (including written prompts) in the report and oral presentation. This is to inform other students the effective use of these tools in writing a report. See the specific policy regarding the use of AI technologies below.  
 
 **Length**: The critique should be about 2 pages (suggested, excluding references) with single space and can be written out using bullets if you prefer, ensuring that the flow is logical. The critique should comprise the following elements: 
 
@@ -149,10 +149,10 @@ If your team is not proposing standard etiologic study designs (e.g., study othe
 Literature can be used to rationalize study aim, study design, and data analysis. 
 
 **Format**: 
-  - 3 min presentation of initial project proposal (ungraded)
-  - 15-20 min of presentation (3a), followd by 5 minutes questions
+  - 3 min presentation of preliminary project proposal (ungraded)
+  - 15-20 min of presentation (3a), followed by 5 minutes of questions
   - At least 5 suggestions to critique, per presentation  (3b)
-  - Single space document, 3 or 4 pages for written project, excluding reference and tables/figures (optional) (3c)
+  - Single spaced document, 3 or 4 pages for written project, excluding reference and tables/figures (optional) (3c)
 
 
 **Presentation of project proposal** (3 minutes, ungraded, Week 7) should provide: 
@@ -166,10 +166,10 @@ Literature can be used to rationalize study aim, study design, and data analysis
 Your group will be assigned two projects from other groups to review. Based on the presentation slides and oral presentation, your group will provide constructive review and suggestions. The details of this will be discussed in class. The submitted presentation and oral presentation will not be assessed, but the quality of your group's reviews of others’ will be. The course instructors will review and provide additional feedback of needed to make sure that everyone receives adequate and useful guidance in order to finalise their project writings.
 
 
-**Presentation and written descripiton of project** (Assignment 3a and 3c) should follow the following components: 
+**Presentation **and written **description** of project**** (Assignment 3a and 3c) should follow the following components: 
 1. Background section including problem statement and the importance of the study design (justification). Why do you think your research question is important?   
    
-   -**There is no need to perform a through review to identify your problem**. Any environmental issue of your interest that provides a valid hypothesis is fine. 
+   -**There is no need to **perform a **thorough** review to** identify your problem**. Any environmental issue of your interest that provides a valid hypothesis is fine. 
 
 2. Objective: Clearly state the study objective supporting your research question in the PICO format.The objective must be feasible and attainable
 
@@ -192,9 +192,9 @@ Your group will be assigned two projects from other groups to review. Based on t
 
 12. Table and figures (optional)
 
-You can find relevant research designs, problem statement and discussions to follow from journls such as: 
+You can find relevant research designs, problem statements and discussions to follow from journls such as: 
    -*Environmental Health Perspectives, Environmental Health, Environment International, Epidemiology, Environmental Epidemiology, and Environmental Science & Technology*   
-Though you project proposal documentation will be much shorer than these full-length papers.    
+Though your project proposal documentation will be much shorter than these full-length papers.    
 
 
 # Policy around the use of AI technologies for class assignments and presentations  
@@ -203,9 +203,9 @@ Some examples include ChatGPT and Bing (text generation) and Midjourney and DALL
 
 Use of these tools to complete assignments and presentations is permitted as part of learning aids, as long as the three conditions are met:    
 
-   1.   Acknowledge the use of these tools. Specifically, you must cite ChatGPT in your reference section at the end of your assignment and presentations. Instruction for citation, which you may need to familiarize yourself for future course work, publication, and report writing is provided at https://style.mla.org/citing-generative-ai/    
+   1.   Acknowledge the use of these tools. Specifically, you must cite ChatGPT in your reference section at the end of your assignment and presentations. Instruction for citation, which you may need to familiarize yourself with future course work, publication, and report writing is provided at https://style.mla.org/citing-generative-ai/    
 
-   2.   Revise and checked responses from these tools carefully. In other words, you cannot copy and paste the crude (unedited) outputs from these tools into your assignments or presentation slides, as the raw responses tend to be flawed.    
+   2.   Revise and check outputs from these tools carefully. In other words, you cannot copy and paste the crude (unedited) outputs from these tools into your assignments or presentation slides, as the raw responses tend to be flawed.    
 
    3.   Submit any content produced by an artificial intelligence tool and the prompt (or chain of prompts) used to generate the content as an appendix with their assignments.    
 
