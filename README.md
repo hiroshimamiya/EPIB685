@@ -73,20 +73,22 @@ https://www.qgis.org/en/site/forusers/download.html
 Classes consist of lectures and instyruction for assignments and student-led presentations with a break.  
 Week |	Date |	Lecture |	Student task 
 -----|-------|--------|-----------
-1	| January  5	| Introduction and overview of assignments and lectures | |
-2	| January 12	| Study Design 1: cohort study I| |
-3	| January 19	| Study Design 1: Cohort study II and hands-on work for Geographic Information Systems | Instruction for Assginment 1|
+1	| January  5	| Introduction and overview of assignments and lectures ||
+2	| January 12	| Study Design 1: cohort study I | hands-on work for Geographic Information Systems |
+3	| January 19	| Study Design 1: Cohort study II| hands-on work for Geographic Information Systems and instruction for Assginment 1|
 4	| January 26	| Study design 2: Case-control study | Q and A session for Assignment 1| 
-5	| February 2	| Ecological and Cross-sectional study|  Pick paper to review (Assignment 2) AND the review of Assignment 1|
+5	| February 2	| Ecological and Cross-sectional study |  Pick paper to review (Assignment 2) AND the review of Assignment 1|
 6	| February 9	| Statistical analysis in environmental epidemiology | Introduction to project (Assignment 3)|	
-7	| February 16	| Measurement Error  | 3-minutes presentation of project proposal (Assignment 3) |
-8	| February 23	| Causal inference 1 | Presentation of paper review (Assignment 2)|
-9	| March 1	    | Causal inference 2 | Presentation of paper review (Assignment 2)|
-10	| March 8	  | NO CLASS | 
-11	| March 15	|| Presentation of projects (Assignment 3) | 
-12	| March 22	|Extra topics, if time permits| Presentation of projects (Assignment 3) |
-13	| March 29	|NO CLASS|   |
-* Extra topics include introduction to time-series analysis, mixture analysis, or Bayesian disease mapping
+7	| February 16	| Measurement Error  |  |
+8	| February 23	| Causal inference 1 | Q and A for project proposal |
+9	| March 1	    | Causal inference 2 | 3-minutes presentation of project proposal (Assignment 3) |
+	| March 8	    | NO CLASS (Winter break)| 
+10	| March 15	| Time-series and case-crossover analysis | Presentation of paper review (Assignment 2) | 
+11	| March 22	|Extra topics, if time permits   | Presentation of paper review (Assignment 2)|
+  | March 29	  |NO CLASS (Good Friday)|  |
+12 | April 5	  |  Presentation of projects (Assignment 3) |   |
+13 | April 12   |  Presentation of projects (Assignment 3) |   |
+* Extra topics include an introduction to mixture analysis or Bayesian disease mapping
 
 
 
@@ -94,11 +96,11 @@ Week |	Date |	Lecture |	Student task
 Assignment | Grade | Deadline
 -----------|-------|------------------------
 Assignment 1: Submission of an exposure map |5% |January 30th 
-Assignment 2a: Presentation of critical review (nothing to submit) |20%| Class 8 and 9|
-Assignment 2b: Sumission of written report |25%| February 22nd |
-Assignment 3a: Project presentation - All groups should submit thier presentaion slides before march 15th so that other groups can prepare for peer review |15%| Before March 15|
-Assignment 3b: Written constructive review of other teams' projects                | 15% | March 30|
-Assignment 3c: Written project |20% | TBA, sometime in the end of April |
+Assignment 2a: In-class presentation of critical review (nothing to submit) |25%| Class 10 and 11|
+Assignment 2b: Sumission of written critical review  |20%| March 29, Before Good Friday|
+Assignment 3a: Project presentation - All groups should submit thier presentaion slides before April 1st so that other groups can prepare for peer review |15%| before April 1st|
+Assignment 3b: Written constructive review of other teams' projects                | 15% | April 16|
+Assignment 3c: Written project |20% | Very end of April or early May (TBA)|
 Total	| 100%
 
 
@@ -107,7 +109,7 @@ Total	| 100%
 ### Assignment 1: Mapping exposures to urban exposome in Montreal using GIS software (individual work) 
 You will geographically map urban exposures and social determinants of health in Montreal using GIS (Geographic Information System). 
 The objective is to be familiar with GIS software and geospatial data. 
-In Class (Week) 3 and 4, we will go through the use of GIS software using example data to prepare for the assignment.  
+In Class (Week) 2 and 3, we will go through the use of GIS software using example data to prepare for the assignment.  
 
 ### Assignment 2 a and b: Critical review of environmental epidemiology study (group work)
 With your teammate (2-3 groups of students, depending on class size), you will be asked to provide a presentation and written review for an environmental epidemiology study. The research papers to critique will be assigned to students in Week 5. 
@@ -116,7 +118,14 @@ The main objective is to provide you with practice in evaluating the scientific 
 
 Generative AI (e.g., ChatGPT) can be used to assist in writing, if you make appropriate acknowledgment and provide specific use of these tools (including written prompts) in the report and oral presentation. This is to inform other students the effective use of these tools in writing a report. See the specific policy regarding the use of AI technologies below.  
 
-**Length**: The critique should be about 2 pages (suggested, excluding references) with single space and can be written out using bullets if you prefer, ensuring that the flow is logical. The critique should comprise the following elements: 
+**Length**: The critique should be about 2 pages (suggested, excluding references) with single space and can be written out using bullets if you prefer, ensuring that the flow is logical. 
+
+**Format**: 
+  - About 20 min of presentation (2a), followed by 5 minutes of questions
+  - About 2 pages (suggested, can be longer, excluding references) with single space and can be written out using bullets if you prefer, ensuring that the flow is logical (3b). 
+Note that the presentation may be shorter in duration, depending on class size.    
+
+The presentation and written report should comprise the following elements: 
 
 1. Objectives: are the (if any) objectives clearly stated? Are they supported by the introduction and commensurate with the study design that follows? Justify your response. If the 
 objective is not in PICO format, please rewrite it accordingly.
@@ -150,10 +159,9 @@ Literature can be used to rationalize the study aim, study design, and data anal
 
 **Format**: 
   - 3 min presentation of preliminary project proposal (ungraded)
-  - 15-20 min of presentation (3a), followed by 5 minutes of questions
-  - At least 5 suggestions to critique, per presentation  (3b)
-  - Single spaced document, 3 or 4 pages for written project, excluding reference and tables/figures (optional) (3c)
-
+  - 15 min of presentation (3a), followed by 5 minutes of questions
+  - At least 5 suggestions to critique, per presentation  (3b)Single-spaced document, 3 or 4 pages for written project, excluding reference and tables/figures (optional) (3c)
+NOte that the presentation may be shorter in duration, depending on class size. 
 
 **Presentation of project proposal** (3 minutes, ungraded, Week 7) should provide: 
   1. Research question and its public health importance.    
@@ -163,7 +171,7 @@ Literature can be used to rationalize the study aim, study design, and data anal
 
 
 **Review of other projects** (Assignment 3b)   
-Your group will be assigned two projects from other groups to review. Based on the presentation slides and oral presentation, your group will provide constructive review and suggestions. The details of this will be discussed in class. The submitted presentation and oral presentation will not be assessed, but the quality of your group's reviews of others’ will be. The course instructors will review and provide additional feedback of needed to make sure that everyone receives adequate and useful guidance in order to finalize their project writing.
+Your group will be assigned two projects from other groups to review. Based on the presentation slides and oral presentation, your group will provide constructive review and suggestions. The details of this will be discussed in class. The submitted presentation and oral presentation will not be assessed, but the quality of your group's reviews of others’ will be. The course instructors will review and provide additional feedback needed to make sure that everyone receives adequate and useful guidance in order to finalize their project writing. You should submit the review before the due data so that other groups can incorporate your review into their final writing. Groups who present Week 12 will review the projects in week 13 and vice versa (though all presentations may be completed in Week12, depending on class size). 
 
 
 **Presentation **and written **description** of project**** (Assignment 3a and 3c) should follow the following components: 
