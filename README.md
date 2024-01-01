@@ -93,10 +93,10 @@ Week |	Date |	Lecture |	Student task
 ## Grading Scheme
 Assignment | Grade | Deadline
 -----------|-------|------------------------
-Assignment 1: Submission of an exposure landscape |5% |January 30th 
+Assignment 1: Submission of an exposure map |5% |January 30th 
 Assignment 2a: Presentation of critical review (nothing to submit) |20%| Class 8 and 9|
 Assignment 2b: Sumission of written report |25%| February 22nd |
-Assignment 3a: Project presentation - All groups should submit thier slides before march 15th|15%| Before March 15|
+Assignment 3a: Project presentation - All groups should submit thier presentaion slides before march 15th so that other groups can prepare for peer review |15%| Before March 15|
 Assignment 3b: Written constructive review of other teams' projects                | 15% | March 30|
 Assignment 3c: Written project |20% | TBA, sometime in the end of April |
 Total	| 100%
@@ -105,14 +105,14 @@ Total	| 100%
 
 # Evaluation Components and Student Tasks
 ### Assignment 1: Mapping exposures to urban exposome in Montreal using GIS software (individual work) 
-You will map urban exposures and social determinants of health in Montreal using GIS (Geographic Information System). 
+You will geographically map urban exposures and social determinants of health in Montreal using GIS (Geographic Information System). 
 The objective is to be familiar with GIS software and geospatial data. 
-In Class (Week) 3 and 4, we will go through the use of GIS software using example data.  
+In Class (Week) 3 and 4, we will go through the use of GIS software using example data to prepare for the assignment.  
 
 ### Assignment 2 a and b: Critical review of environmental epidemiology study (group work)
 With your teammate (2-3 groups of students, depending on class size), you will be asked to provide a presentation and written review for an environmental epidemiology study. The research papers to critique will be assigned to students in Week 5. 
 
-The main objective is to provide you with practice in evaluating the scientific quality of papers from the literature and will thus assist in consolidating and integrating the material taught in the course. This will also assist with the planning of final project. 
+The main objective is to provide you with practice in evaluating the scientific quality of papers from the literature and will thus assist in consolidating and integrating the material taught in the course. This will also assist with the planning of the project (Assignment 3). 
 
 Generative AI (e.g., ChatGPT) can be used to assist in writing, if you make appropriate acknowledgment and provide specific use of these tools (including written prompts) in the report and oral presentation. This is to inform other students the effective use of these tools in writing a report. See the specific policy regarding the use of AI technologies below.  
 
@@ -145,8 +145,8 @@ References can be used to support your points.
 ### Assignment 3a-c: Project (group work)
 Using any of the exposure(s) mapped in Assignment 1 in Montreal, students will formulate a hypothetical study design integrating the materials learned from the course. 
 
-If your team is not proposing standard etiologic study designs (e.g., study other than case-control, cohort, ecological, time-series), you should first consult the instructor and TA. 
-Literature can be used to rationalize study aim, study design, and data analysis. 
+If your team is not proposing standard etiologic study designs (e.g., studies other than case-control, cohort, ecological, time-series), you should first consult the instructor and TA. 
+Literature can be used to rationalize the study aim, study design, and data analysis. 
 
 **Format**: 
   - 3 min presentation of preliminary project proposal (ungraded)
@@ -163,7 +163,7 @@ Literature can be used to rationalize study aim, study design, and data analysis
 
 
 **Review of other projects** (Assignment 3b)   
-Your group will be assigned two projects from other groups to review. Based on the presentation slides and oral presentation, your group will provide constructive review and suggestions. The details of this will be discussed in class. The submitted presentation and oral presentation will not be assessed, but the quality of your group's reviews of others’ will be. The course instructors will review and provide additional feedback of needed to make sure that everyone receives adequate and useful guidance in order to finalise their project writings.
+Your group will be assigned two projects from other groups to review. Based on the presentation slides and oral presentation, your group will provide constructive review and suggestions. The details of this will be discussed in class. The submitted presentation and oral presentation will not be assessed, but the quality of your group's reviews of others’ will be. The course instructors will review and provide additional feedback of needed to make sure that everyone receives adequate and useful guidance in order to finalize their project writing.
 
 
 **Presentation **and written **description** of project**** (Assignment 3a and 3c) should follow the following components: 
@@ -181,7 +181,7 @@ Your group will be assigned two projects from other groups to review. Based on t
 
 6. Exposures: describe what exposures will be measured, how they will be measured, possible issues with validity/reliability of measuring these, types of measurement errors, and measurement scales (e.g., continuous, categorical).
 
-7. Health outcomes: describe what health outcomes are to be studied, how they will be ascertained, possible issues with validity/reliability of measuring these, types of measurement errors, and measurements scales (e.g., continuous, categorical).
+7. Health outcomes: describe what health outcomes are to be studied, how they will be ascertained, possible issues with validity/reliability of measuring these, types of measurement errors, and measurement scales (e.g., continuous, categorical).
 
 8. Potential confounding factors: describe what accepted or potential risk factors will be measured, how they will be measured, possible issues with validity/reliability of measuring these, and measurement scales (e.g., continuous, categorical).
 9. Brief description of statistical analysis and expected results
