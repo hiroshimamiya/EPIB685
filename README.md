@@ -71,7 +71,7 @@ https://www.qgis.org/en/site/forusers/download.html
 
 ## Class Schedule 
 Classes consist of lectures and instruction for assignments and student-led presentations with a break.  
-Week |	Date |	Lecture |	Student work abd lab 
+Week |	Date |	Lecture |	In-class assignment work  
 -----|-------|--------|-----------
 1	| January  5	| Course overview and introduction to environmental epidemiology ||
 2	| January 12	| Study Design 1: cohort study I | Introduction to Geographic Information Systems |
