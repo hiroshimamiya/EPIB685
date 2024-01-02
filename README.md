@@ -81,7 +81,7 @@ Week |	Date |	Lecture |	Student work abd lab
 6	| February 9	| Statistical analysis in environmental epidemiology | Introduction to project (Assignment 3)|	
 7	| February 16	| Measurement Error  |  |
 8	| February 23	| Causal inference 1 | Q and A for project proposal |
-9	| March 1	    | Causal inference 2 | 3-minutes presentation of prelimineary project proposal (Assignment 3) |
+9	| March 1	    | Causal inference 2 | 3-minutes presentation of preliminary project proposal (Assignment 3) |
 NA	| March 8	  | NO CLASS (Winter break)| |
 10	| March 15	| Time-series and case-crossover study | Presentation of paper review (Assignment 2) | 
 11	| March 22	|Extra topics, if time permits   | Presentation of paper review (Assignment 2)|
@@ -160,7 +160,8 @@ Literature can be used to rationalize the study aim, study design, and data anal
 **Format**: 
   - 3 min presentation of preliminary project proposal (ungraded)
   - 15 min of presentation (3a), followed by 5 minutes of questions
-  - At least 5 suggestions to critique, per presentation  (3b)Single-spaced document, 3 or 4 pages for written project, excluding reference and tables/figures (optional) (3c)
+  - At least 5 suggestions to critique, per presentation  (3b)Single-spaced document 
+  - 3 or 4 pages for written project, excluding reference and tables/figures (optional) (3c)   
   
   - The presentation may be shorter in duration, depending on class size. 
 
