@@ -12,7 +12,7 @@ Please upload to myCourses, and if the site is not working, please email the ass
 
 #### Instruction 
 1. Select two exposures of your choice and map them in QGIS (see Class 2 for the instructions for mapping).    
-As shown in the instructions, you must create the gradient of each exposure associated with each explore file provided in MyCourses. In other words, your two maps should replicate the exposure gradient seen in the example maps in the file uploaded to myCourses in Week 3 lecture folder, named `DataPrep_Exposome_hiroshiExample_additionalExposures`. 
+As shown in the instructions, you must create the gradient of each exposure associated with each exposure file provided in MyCourses. In other words, your two maps should replicate the exposure gradient seen in the example maps in the file uploaded to myCourses in Week 3 lecture folder, named `DataPrep_Exposome_hiroshiExample_additionalExposures`. 
 
 All files have a column (variable) starting with "Ex" or 'Exposure' recording the spatial intensity of each exposure. 
 
