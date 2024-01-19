@@ -5,7 +5,7 @@
 #### Due Jan 30th, midnight. 
 - Students with a medical condition(s) that prevents the completion of the assignments by the due date should reach the instructor and the SAA - Student Accessibility & Achievement office (SAA https://www.mcgill.ca/access-achieve/). SAA will subsequently communicates with the instructor to implement the accommodation.      
 - Those with an acute medical or non-medical condition that impacts this assignment should reach the instructor as early as possible.      
-- Late submission will lead to 0.5% of the total mark a day, up to 5% (thus, after the 10th day from Jan 30th, you will lose 5% of your total mark for the whole term).      
+- Late submission will lead to 0.5% of the total mark a day, up to 5% (thus, after the 10th day from Jan 30th, the student will lose 5% of your total mark for the whole term).      
 
 #### Submission 
 Please upload to myCourses, and if the site is not working, please email the assignment as an attachment to the instructor with the subject line stating `EPIB685 Assignment 1`.   
