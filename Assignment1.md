@@ -31,16 +31,3 @@ Take a snapshot of your maps with reasonable image resolution such that you can 
 #### Questions
 In Week 4 (26th of January), we will have a brief Q and A sessions for Assignment 1.     
 
-
-    
- 
-    
-
-
-
-
-
-
-
-
-
