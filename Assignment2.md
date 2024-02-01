@@ -67,10 +67,12 @@ objective is not in PICO (PECO) format, please rewrite it accordingly.
 
 10. Conclusions: Strengths and weaknesses of the study, and possible conclusions and implications to public health and medical evidence towards regulatory policy and/or clinical practice. Do you agree with the authors’ interpretation of the results? Is the information presented sufficient for you to draw your own conclusions? Do they differ from the authors’   
 
-Bonus question: What are the specific biological/physiological/psychological mechanisms in which the exposure acts on the outcome? This is often described in the paper, either in the introduction or the Discussion section. If not stated in your paper, you can find it from the literature.   
+Bonus question (additional 1% of total mark): What are the specific biological/physiological/psychological mechanisms in which the exposure acts on the outcome? This is often described in the paper, either in the introduction or the Discussion section. If not stated in your paper, you can find it from the literature.       
+Another bonus question (additional 1% of total mark): Can you create a Directed Acyclic Graph (DAG) that displays the relationships between the exposure(s), outcome, and the confounders discussed in the paper?      
 
 References can be used to support your points. 
 
-Marks will be assigned to the 10 components above uniformly (thus 2% of the total mark for each point for the oral presentation, plus 2% for the bonus questions). 
+Marks will be assigned to the 10 components above uniformly (thus 2% of the total mark for each point for the oral presentation, plus 2% for the bonus questions). Same for the written report. 
 
-Some points, in particular statistical analysis, may be challenging to grasp and present confidently (hence, I added the bonus question to make up this challenge). You can reach the instructor or TA for any clarification and what information to present. 
+Some points, in particular statistical analysis, may be challenging to grasp and present confidently and concisely (hence, I added the bonus questions to make up this challenge). You can reach the instructor or TA for any clarification and information to present. 
+Note that students cannot get greater than 20% (oral presentation) and 25% (written report) of the total mark even if all questions and bonus questions are addressed perfectly. 
