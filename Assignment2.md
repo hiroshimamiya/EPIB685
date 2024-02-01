@@ -1,24 +1,31 @@
 ### Assignment 2a (presentation) and 2b: Critical review of environmental epidemiology study 
 
 
--- To be graded, students are expected to be in person on the day of the oral presentation (March 22nd). If unable to make it, please contact the instructor ASAP to search for the possibility of a hybrid presentation (this is less likely to happen though, given the complexity of setting up a hybrid group talk, as any technical challenges will delay subsequent presentations and thus impact grading of all the groups). 
 
 
--- Accommodations     
+
+**Accommodations**      
     - Students with a medical condition(s) that prevents the submission of the written report by the due date should reach the instructor and the SAA - Student Accessibility & Achievement office (SAA https://www.mcgill.ca/access-achieve/). SAA will subsequently communicate with the instructor to implement the accommodation.    
     - Those with an acute medical or non-medical condition that impacts this assignment should reach the instructor as early as possible.     
 
 
+    
+To be graded, students are expected to be present **in person** on the day of the oral presentation (March 22nd). If unable to make it, please contact the instructor ASAP to search for the possibility of a hybrid presentation (this is less likely to happen though, given the complexity of setting up a hybrid group talk that could lead to technical challenges and thus delays subsequent presentations that impact grading of all the groups). 
 
-With your teammate (3-4 students per group), you will be asked to provide a presentation and a written review for an environmental epidemiology study assigned to your group.   
 
+
+**Learning Objectives**:   
 The main objectives are: 
     To provide you with practice in evaluating the scientific quality of papers from the literature and thus assist in consolidating and integrating the material learned in the course. 
     To assist in the planning for Assignment 3. 
     To provide opportunities to share various environmental epidemiologic studies with other groups for a broader understanding of study design and subject matters (e.g., air pollution and built environment)  
 
-Generative AI (e.g., ChatGPT) can be used to assist in writing and slide preparation if you make appropriate acknowledgments and provide specific use of these tools (including written prompts) in the report and oral presentation. This is to inform other students the effective use of these tools in writing a report. See the specific policy regarding the use of AI technologies in the course Syllabus.  
 
+With your teammate (3-4 students per group), you will be asked to provide a presentation and a written review for an environmental epidemiology study assigned to your group.   
+
+
+
+Generative AI (e.g., ChatGPT) can be used to assist in writing and slide preparation if you make appropriate acknowledgments and provide specific use of these tools (including written prompts) in the report and oral presentation. This is to inform other students the effective use of these tools in writing a report. See the specific policy regarding the use of AI technologies in the course Syllabus.  
 
 **Format**: 
   - Presentation (Assignment 2a) No more than 20 min of oral presentation (2a), followed by 5 minutes of questions (thus 25 Minutes x 6 groups = 150 min,  plus ~20 min of break).   
@@ -57,6 +64,6 @@ Bonus question: What are the specific biological/physiological/psychological mec
 
 References can be used to support your points. 
 
-Marks will be assigned to the 10 points uniformly (thus 2% of the total mark for each point for the oral presentation, plus 2% for the bonus questions). 
+Marks will be assigned to the 10 components above uniformly (thus 2% of the total mark for each point for the oral presentation, plus 2% for the bonus questions). 
 
 Some points, in particular statistical analysis, may be challenging to grasp and present confidently (hence, I added the bonus question to make up this challenge). You can reach the instructor or TA for any clarification and what information to present. 
