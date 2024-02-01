@@ -30,7 +30,7 @@ Generative AI (e.g., ChatGPT) can be used to assist in writing and slide prepara
 **Format**: 
   - Presentation (Assignment 2a) No more than 20 min of oral presentation (2a), followed by 5 minutes of questions (thus 25 Minutes x 6 groups = 150 min,  plus ~20 min of break).
 
-  - Written report (Assignment 2b) About 2 pages (suggested, can be longer, excluding references) with single space and can be written out using bullets if you prefer, ensuring that the flow is logical.
+  - Written report (Assignment 2b) About 2 pages (suggested, can be longer but no more than 3 pages, excluding references) with single space and can be written out using bullets if you prefer, ensuring that the flow is logical.
 
   - Late submission of the written report will lead to a 2.5% reduction of the total mark a day, up to 25% (thus, after the 10th day of the deadline, the student will lose 25% of your total mark for the whole term).
 
