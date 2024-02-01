@@ -5,7 +5,7 @@
 
 
 **Accommodations**      
-    -    Students with a medical condition(s) that prevents the submission of the written report by the due date should reach the instructor and the SAA - Student Accessibility & Achievement office (SAA https://www.mcgill.ca/access-achieve/). SAA will subsequently communicate with the instructor to implement the accommodation.    
+    -    Students with a medical condition(s) that prevents the submission of the written report by the due date and orally present the study should reach the instructor and the SAA - Student Accessibility & Achievement office (SAA https://www.mcgill.ca/access-achieve/). SAA will subsequently communicate with the instructor to implement the accommodation.    
     -    Those with an acute medical or non-medical condition that impacts this assignment should reach the instructor as early as possible.     
 
 
