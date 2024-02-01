@@ -2,13 +2,15 @@
 
 
 -- To be graded, students are expected to be in person on the day of the oral presentation (March 22nd). If unable to make it, please contact the instructor ASAP to search for the possibility of a hybrid presentation (this is less likely to happen though, given the complexity of setting up a hybrid group talk, as any technical challenges will delay subsequent presentations and thus impact grading of all the groups). 
--- Accommodations
-    - Students with a medical condition(s) that prevents the submission of the written report by the due date should reach the instructor and the SAA - Student Accessibility & Achievement office (SAA https://www.mcgill.ca/access-achieve/). SAA will subsequently communicate with the instructor to implement the accommodation.   
-    - Those with an acute medical or non-medical condition that impacts this assignment should reach the instructor as early as possible.   
+
+
+-- Accommodations     
+    - Students with a medical condition(s) that prevents the submission of the written report by the due date should reach the instructor and the SAA - Student Accessibility & Achievement office (SAA https://www.mcgill.ca/access-achieve/). SAA will subsequently communicate with the instructor to implement the accommodation.    
+    - Those with an acute medical or non-medical condition that impacts this assignment should reach the instructor as early as possible.     
 
 
 
-With your teammate (3-4 students per group), you will be asked to provide a presentation and a written review for an environmental epidemiology study assigned to your group. 
+With your teammate (3-4 students per group), you will be asked to provide a presentation and a written review for an environmental epidemiology study assigned to your group.   
 
 The main objectives are: 
     To provide you with practice in evaluating the scientific quality of papers from the literature and thus assist in consolidating and integrating the material learned in the course. 
@@ -27,7 +29,7 @@ Generative AI (e.g., ChatGPT) can be used to assist in writing and slide prepara
 
 After the presentations, the instructor, TA, and other groups will provide feedback and questions. Your group has an opportunity to incorporate these suggestions into the written reports 
 
-** Specific Instruction **:   
+**Specific Instruction**:   
 The presentation and written report should comprise the following elements: 
 
 1. Objectives: are the (if any) objectives clearly stated? Are they supported by the introduction and commensurate with the study design that follows? Justify your response. If the 
