@@ -96,7 +96,7 @@ NA | March 29	  |NO CLASS (Good Friday)|  |
 Assignment | Grade | Deadline
 -----------|-------|------------------------
 Assignment 1: Submission of an exposure map |5% |January 30th 
-Assignment 2a: In-class presentation of critical review (nothing to submit) |20%| Class 10 and 11|
+Assignment 2a: In-class presentation of critical review (nothing to submit) |20%| Class 11|
 Assignment 2b: Sumission of written critical review  |25%| March 29, Before Good Friday|
 Assignment 3a: Project presentation - All groups should submit thier presentaion slides before April 1st so that other groups can prepare for peer review |15%| Class 12 and 13|
 Assignment 3b: Written constructive review of other teams' projects                | 15% | April 16|
