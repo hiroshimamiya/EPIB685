@@ -3,9 +3,8 @@
 
 -- To be graded, students are expected to be in person on the day of the oral presentation (March 22nd). If unable to make it, please contact the instructor ASAP to search for the possibility of a hybrid presentation (this is less likely to happen though, given the complexity of setting up a hybrid group talk, as any technical challenges will delay subsequent presentations and thus impact grading of all the groups). 
 -- Accommodations
-    Students with a medical condition(s) that prevents the submission of the written report by the due date should reach the instructor and the SAA - Student Accessibility & Achievement office (SAA https://www.mcgill.ca/access-achieve/). SAA will subsequently communicate with the instructor to implement the accommodation.   
-
-    Those with an acute medical or non-medical condition that impacts this assignment should reach the instructor as early as possible.   
+    - Students with a medical condition(s) that prevents the submission of the written report by the due date should reach the instructor and the SAA - Student Accessibility & Achievement office (SAA https://www.mcgill.ca/access-achieve/). SAA will subsequently communicate with the instructor to implement the accommodation.   
+    - Those with an acute medical or non-medical condition that impacts this assignment should reach the instructor as early as possible.   
 
 
 
