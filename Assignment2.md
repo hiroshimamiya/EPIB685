@@ -1,4 +1,4 @@
-### Assignment 2a (presentation) and 2b: Critical review of environmental epidemiology study 
+### Assignment 2a (presentation) and 2b (written report): Critical review of environmental epidemiology study 
 
 
 
