@@ -1,4 +1,4 @@
-### Assignment 3a, 3b, and 3c: Research project development  
+### Assignment 3a, 3b, and 3c: Research project development (group work)
 
 **Accommodations**       
     -    Students with a medical condition(s) that prevents the submission of the written report by the due date and orally present the study should reach the instructor and the SAA - Student Accessibility & Achievement office (SAA https://www.mcgill.ca/access-achieve/). SAA will subsequently communicate with the instructor to implement the accommodation.    
@@ -18,26 +18,26 @@ With your teammate from Objective 3, you will be asked to provide a presentation
 
 **Learning Objectives**     
 The main objectives are: 
-    To practice the designing of environmental epidemiologic study and to consolidate and integrate the material learned in the course.   
-    To provide opportunities to share various environmental epidemiologic studies and tipics with other groups for a broader understanding.   
-    To practice the formulation of constructive feedbacks to aid other groups' study design.   
+    To design an environmental epidemiologic study and to consolidate and integrate the material learned in the course.   
+    To provide opportunities to share various environmental epidemiologic studies and topics with other groups for a broader understanding.   
+    To practice the formulation of constructive feedback to aid other groups' study design.   
 
 
 **Instruciton to start**  
-Students can use any of the exposure(s) mapped in Assignment 1 and the population in Montreal as the target population and outcome of interest. It is also possible to use any populations (e.g., outside Canada, global health) or exposure not covered in the class (e.g., pesticide, light, blue space).       
+Students can use any of the exposure(s) mapped in Assignment 1 and the population in Montreal as the population and exposure of interest. It is also possible to use any populations (e.g., outside Canada, global health) or exposure not covered in the class (e.g., pesticide, light, blue space).       
 
 If your team is not proposing standard etiologic study designs (e.g., studies other than case-control, cohort, cross-sectional, and ecological), you should first consult the instructor and TA.     
 
-As in Assignment 2, generative AI (e.g., ChatGPT) can be used to assist in writing and slide-making if you make appropriate acknowledgments and provide specific use of these tools (including written prompts) in the report and oral presentation. This is to inform other students the effective use of these tools in writing a report. See the specific policy regarding the use of AI technologies in the course Syllabus.     
+As in Assignment 2, generative AI (e.g., ChatGPT) can be used to assist in writing and slide-making if you make appropriate acknowledgments and provide specific use of these tools (including written prompts) in the report and oral presentation. This is to inform other students of the effective use of these tools in writing a report. See the specific policy regarding the use of AI technologies in the course Syllabus.     
 
 
 
 **Tasks and format**   
-  - Assignment 3a (15% of course grade): Presentation. No more than 20 min of oral presentation (2a), followed by 5 minutes of questions (thus 25 Minutes x 6 groups = 150 min,  plus ~20 min of break).   
+  - Assignment 3a (15% of course grade): Presentation. No more than 20 min of oral presentation (2a), followed by 5 minutes of questions (thus 25 Minutes x 6 groups = 150 min,  plus ~20 min of break). We are likely to finish all presentations in Week 12, conditional on class size.   
 
-  - Assignment 3b (15%): Your groups will critique two other groups to provide constructive feedback (3b) - group assignment for peer critique will be released in early March. At least 5 suggestions should be provided per presentation, though more is better to help your peer groups polish their final report. Single-spaced document.      
+  - Assignment 3b (15%): Your groups will critique two other groups's presentations to provide constructive feedback (3b) - group assignment for peer critique will be uploaded to MyCourses. At least 5 suggestions should be provided per presentation, though more is better to help your peer groups polish their final report. Single-space, no more than 1 page per talk.      
 
-  - Assignment 3c (20%):3 or 4 pages for a written project, excluding reference and tables/figures (optional) (3c). Single space. While this is group work, student will submit their own written individually to myCOurses.  
+  - Assignment 3c (20%):3 or 4 pages for a written project, excluding reference and tables/figures (optional ). Single space. While this is group work, students will submit the written report individually to myCOurses.  
 
 After the presentation, the instructor, TA, and other groups will provide feedback and questions. Your group has an opportunity to incorporate these suggestions into the written reports.   
 
@@ -53,10 +53,10 @@ After the presentation, the instructor, TA, and other groups will provide feedba
 
 
 **Review of other projects** (Assignment 3b)   
-Your group will be assigned two projects from other groups to review. Based on the presentation slides and oral presentation, your team  will provide constructive review and suggestions to your peer groups. The submitted oral presentation from other groups will not be graded, but the quality of your group's reviews  will be. The course instructors will review and provide additional feedback needed to make sure that everyone receives adequate and useful guidance in order to finalize their project writing. You should submit the review before the due date so that other groups can incorporate your review into their final writing. Groups who present Week 12 will review the projects in week 13 and vice versa (though all presentations may be completed in Week 12, depending on class size).    
+Your group will be assigned two projects from other groups to review. Based on the presentation slides and oral presentation, your team  will provide constructive review and suggestions to your peer groups. The submitted oral presentation from other groups will not be graded, but the quality of your group's reviews  will be. The course instructor will review and provide additional feedback needed to make sure that everyone receives adequate and useful guidance in order to finalize their project writing. You should submit the review before the due date so that other groups can incorporate your review into their final writing. Groups who present Week 12 will review the projects in week 13 and vice versa (though all presentations may be completed in Week 12, depending on class size).    
 
 
-**Points to address in presentation, critical review, and written report**:   
+**Points to address in presentation and written report**:   
 
 Presentation and written description of the project (Assignment 3a and 3c) should follow the following components:
 
