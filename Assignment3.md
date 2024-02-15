@@ -24,13 +24,11 @@ The main objectives are:
 
 
 **Instruciton to start**
-Students can use any of the exposure(s) mapped in Assignment 1 and the population in Montreal as the target population and outcome of interest. It is also possible to use any populations (e.g., outside Canada, global health) or exposure not covered in the class (e.g., pesticide, light, blue space).      
+Students can use any of the exposure(s) mapped in Assignment 1 and the population in Montreal as the target population and outcome of interest. It is also possible to use any populations (e.g., outside Canada, global health) or exposure not covered in the class (e.g., pesticide, light, blue space).       
 
-If your team is not proposing standard etiologic study designs (e.g., studies other than case-control, cohort, cross-sectional, and ecological), you should first consult the instructor and TA.    
+If your team is not proposing standard etiologic study designs (e.g., studies other than case-control, cohort, cross-sectional, and ecological), you should first consult the instructor and TA.     
 
-Bonus mark (2% of total course) if your group uses a different study design from the paper in your Assignment 2 i.e., those who did case-control in Assignment 2 will work on the cohort in Assignment 3 to get an extra 2% for the course.  
-
-As in Assignment 2, generative AI (e.g., ChatGPT) can be used to assist in writing and slide-making if you make appropriate acknowledgments and provide specific use of these tools (including written prompts) in the report and oral presentation. This is to inform other students the effective use of these tools in writing a report. See the specific policy regarding the use of AI technologies in the course Syllabus.    
+As in Assignment 2, generative AI (e.g., ChatGPT) can be used to assist in writing and slide-making if you make appropriate acknowledgments and provide specific use of these tools (including written prompts) in the report and oral presentation. This is to inform other students the effective use of these tools in writing a report. See the specific policy regarding the use of AI technologies in the course Syllabus.     
 
 
 
@@ -79,8 +77,8 @@ Tables and figures (optional, but visualization is always helpful)
 References should be used to support your points, especially the Background section.  
 
 
-**Grading scheme** 
-Bonus mark (2% of course grade): If your group uses a different study design from the paper in your Assignment 2 i.e., those who did case-control in Assignment 2 will work on the cohort in Assignment 3 to get an extra 2% for the course.  
+**Grading scheme**   
+- Bonus mark (2% of course grade): If your group uses a different study design from the paper in your Assignment 2 i.e., those who did case-control in Assignment 2 will work on the cohort in Assignment 3 to get an extra 2% for the course.  
 
 -- As in Assignment 2, grades will be equally broken across the points above e.g., for Assignment 3a, 15%/12 = 1.25% of the course grade. 
 
