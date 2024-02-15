@@ -80,7 +80,7 @@ References should be used to support your points, especially the Background sect
 **Grading scheme**    
 - Bonus mark (2% of course grade): If your group uses a different study design from the paper in your Assignment 2 i.e., those who did case-control in Assignment 2 will work on the cohort in Assignment 3 to get an extra 2% for the course.  
 
--- As in Assignment 2, grades will be equally broken across the points above e.g., for Assignment 3a, 15%/12 = 1.25% of the course grade. 
+-- As in Assignment 2, grades will be equally broken across the points above e.g., for Assignment 3a, 15%/11  of the course grade. 
 
 
 
