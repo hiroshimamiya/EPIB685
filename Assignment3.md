@@ -42,6 +42,20 @@ As in Assignment 2, generative AI (e.g., ChatGPT) can be used to assist in writi
 After the presentation, the instructor, TA, and other groups will provide feedback and questions. Your group has an opportunity to incorporate these suggestions into the written reports.   
 
 
+
+**Presentation of preliminary project proposal** (3-5 minutes, ungraded, Week 9) should provide: 
+  1. Research question and its public health importance.    
+  2. Objective 
+  3. Proposed study design
+  3. Population, exposure and outcome 
+   The aim of this presentation is to check the feasibility of your project with the instructor and provide opportunities to ask any questions about study design. The project can be changed even after the proposal.
+   The group should send the presentation slides to the instructor before the class.
+
+
+**Review of other projects** (Assignment 3b)   
+Your group will be assigned two projects from other groups to review. Based on the presentation slides and oral presentation, your team  will provide constructive review and suggestions to your peer groups. The submitted oral presentation from other groups will not be graded, but the quality of your group's reviews  will be. The course instructors will review and provide additional feedback needed to make sure that everyone receives adequate and useful guidance in order to finalize their project writing. You should submit the review before the due date so that other groups can incorporate your review into their final writing. Groups who present Week 12 will review the projects in week 13 and vice versa (though all presentations may be completed in Week 12, depending on class size).    
+
+
 **Points to address in presentation, critical review, and written report**:   
 
 Presentation and written description of the project (Assignment 3a and 3c) should follow the following components:
