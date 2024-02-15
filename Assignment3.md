@@ -1,14 +1,14 @@
 ### Assignment 3a, 3b, and 3c: Research project development  
 
-**Accommodations**      
+**Accommodations**       
     -    Students with a medical condition(s) that prevents the submission of the written report by the due date and orally present the study should reach the instructor and the SAA - Student Accessibility & Achievement office (SAA https://www.mcgill.ca/access-achieve/). SAA will subsequently communicate with the instructor to implement the accommodation.    
     -    Those with an acute medical or non-medical condition that impacts this assignment should reach the instructor as early as possible.     
 
-**Deadlines** 
+**Deadlines**   
 See syllabus. 
 
     
-**Overview of the task**:
+**Overview of the task**   
 Students will formulate a hypothetical study design integrating the materials learned from the course in a group.     
 
 The study design should address and elaborate on the points below (see Specific Instruction - similar points to Assignment 2).      
@@ -16,14 +16,14 @@ The study design should address and elaborate on the points below (see Specific 
 With your teammate from Objective 3, you will be asked to provide a presentation, and written review for other groups' presentations, and a written report for the study design. 
 
 
-**Learning Objectives**:   
+**Learning Objectives**     
 The main objectives are: 
     To practice the designing of environmental epidemiologic study and to consolidate and integrate the material learned in the course.   
     To provide opportunities to share various environmental epidemiologic studies and tipics with other groups for a broader understanding.   
     To practice the formulation of constructive feedbacks to aid other groups' study design.   
 
 
-**Instruciton to start**
+**Instruciton to start**  
 Students can use any of the exposure(s) mapped in Assignment 1 and the population in Montreal as the target population and outcome of interest. It is also possible to use any populations (e.g., outside Canada, global health) or exposure not covered in the class (e.g., pesticide, light, blue space).       
 
 If your team is not proposing standard etiologic study designs (e.g., studies other than case-control, cohort, cross-sectional, and ecological), you should first consult the instructor and TA.     
@@ -32,7 +32,7 @@ As in Assignment 2, generative AI (e.g., ChatGPT) can be used to assist in writi
 
 
 
-**Task and format**: 
+**Tasks and format**   
   - Assignment 3a (15% of course grade): Presentation. No more than 20 min of oral presentation (2a), followed by 5 minutes of questions (thus 25 Minutes x 6 groups = 150 min,  plus ~20 min of break).   
 
   - Assignment 3b (15%): Your groups will critique two other groups to provide constructive feedback (3b) - group assignment for peer critique will be released in early March. At least 5 suggestions should be provided per presentation, though more is better to help your peer groups polish their final report. Single-spaced document.      
@@ -77,7 +77,7 @@ Tables and figures (optional, but visualization is always helpful)
 References should be used to support your points, especially the Background section.  
 
 
-**Grading scheme**   
+**Grading scheme**    
 - Bonus mark (2% of course grade): If your group uses a different study design from the paper in your Assignment 2 i.e., those who did case-control in Assignment 2 will work on the cohort in Assignment 3 to get an extra 2% for the course.  
 
 -- As in Assignment 2, grades will be equally broken across the points above e.g., for Assignment 3a, 15%/12 = 1.25% of the course grade. 
