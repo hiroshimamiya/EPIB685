@@ -18,7 +18,7 @@ McGill University is located on the unceded territory of the Kanien’keha:ka, w
 
 ## Prerequisites
 Permission of the instructor. 
-Basic understanding in biostatistics and epidemiologic study design is helpful, but not required. 
+Basic understanding in biostatistics and epidemiologic study design is highly recommended. Students who did not complete Introduction to Epidemiology (equivalent to EPIB601), Inferenceial Statistics (EPIB607) and Introduction to Data Analysis in Health Science (understanding in generalized linear models) - equivalent to EPIB621 should contact the instructor to obtain required reading materials to prepare for the course.   
 
 ## Course description
 This course is intended to build the foundational knowledge in epidemiologic approaches to investigate the population distribution and etiologic association of environmental risk factors on health, with a focus on research design and critical appraisal.  
