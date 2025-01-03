@@ -11,7 +11,7 @@ of Epidemiology - 2013
 <http://www.ag-myresearch.com/2013_bhaskaran_ije.html>
 
 Extra lines were inserted to make the codes easier to follow and
-illustrate the assumptions of time-series data more explicit
+illustrate the assumptions of time-series data more explicit    
 
 ### Install or load libraries
 
@@ -198,7 +198,7 @@ summary(data$ozone10) # double check scaled or not , new variable ozone10
 
 ## How much autocorrelation in your outcome??, check with ACF
 
-Extremely strong across-measurement correlation in in the death count,
+Extremely strong across-measurement correlation in the count of death,
 meaning that count in one day is very similar to the counts in nearby
 days. ACF stands for autocorrealtion function
 
@@ -217,7 +217,7 @@ acf(data$ozone)
 We will use a family regression that is designed to capture count data
 that cannot be negative in value (Poisson regression)
 
-$$ logE(Y_t) = log(\lambda_t) =  \beta_0 + \beta_{ozone} X $$  
+$$ logE(Y_t) = log(\lambda_t) =  \beta_0 + \beta_{ozone} X_t $$  
 $\beta_0$ is intercept term  
 $\beta_{ozone}$ is regression coefficient representing the association
 between ozone and mortality count
@@ -330,7 +330,7 @@ acf(residuals(model2), main = "diagnosis of the model that controlled for season
 
 Rate Ratio, rate of death (# number of person-time) in response to one
 unit increase of ozone Now, the RR of ozone is positive, (or greater
-than 1.0 when exponentatied), meaning that ozone is associated with
+than 1.0 when exponentiated), meaning that ozone is associated with
 death after controlling for period effects
 
 ``` r
@@ -403,7 +403,7 @@ ci.lin(model3,subset="ozone",Exp=T)
     ##           Estimate       StdErr        z        P exp(Est.)      2.5%    97.5%
     ## ozone 0.0002884392 0.0001658114 1.739562 0.081936  1.000288 0.9999635 1.000614
 
-Does not look too much better than step 2, controling for season only
+Does not look too much better than step 2, controlling for season only
 …And ACF (autocorrelation) after accounting for temperature
 
 ``` r
@@ -467,7 +467,7 @@ acf(residuals(model4), na.action = na.omit)
 
 ![](TS_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
 
-### Finally, lets assume that death count in previous day is confoudning the death count today i.e., associated with the exposure ie.g., O3, and death count in next day. In other words, we will control for the lagged outcome of 1 day (previous day) as a confounder.
+### Finally, lets assume that death count in previous day is confoudning the count of death today i.e., associated with the exposure ie.g., O3, and death count in next day. In other words, we will control for the lagged outcome of 1 day (previous day) as a confounder.
 
 ``` r
 # RUN THE MODEL AND OBTAIN PREDICTIONS FOR OZONE LEVEL 10ug/m3
@@ -478,7 +478,7 @@ model5 <- glm(numdeaths ~ cbo3constr + cbtempunc + fourier + date + y_lag ,data,
 pred5 <- crosspred(cbo3constr,model5,at=10)
 ```
 
-### Now check ACF after controlling for the death count from previous day
+### Now check ACF after controlling for the count of death from previous day
 
 ``` r
 acf(residuals(model5), na.action = na.omit)
