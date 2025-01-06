@@ -30,102 +30,120 @@ The primary outcome is to appreciate and interpret environmental epidemiological
 
 Specific learning objectives are:    
 - To understand the design and interpretation of the main study designs in environmental epidemiology: cohort, case-control, and cross-sectional studies.
-- To understand threats to the validity of population health research: bias and confounding
-- To construct an appropriate epidemiologic research question and devise an appropriate study design using available data.    
-- To understand essential concepts in quantitative reasoning, causal inference and measurement error.    
-- To Effectively communicate research design and findings, both orally and in writing.   
-- To gain hands-on skills to map the geospatial distribution of environmental risk factors.   
-- Time permitting, a sample of advanced research methods will be covered, including exposure mixture analysis, geospatial analysis and Bayesian disease mapping, and Global Positioning Systems (GPS).     
+- To construct an appropriate epidemiologic research question and devise an appropriate study design using available data that address challenges related to the measurement of environmental data.        
+- To Effectively communicate research design and public health issues through storymaps and oral presentations .   
+- To gain hands-on skills to map the geospatial distribution of environmental risk factors using GIS software and R studio.   
+- To understand essential concepts, visualization, and assumptions in time-series study and spatial disease risk estimation.     
   
 
 ## Course time and location
-Friday 9:35AM-12:35PM EST, interrupted by a 10-15 minutes break. All teaching is in-person (subject to COVID-related regulations), and lectures will be recorded by Zoom. 
+Friday 9:35AM-12:35PM EST, interrupted by a 5 minutes break. All teaching is in-person (subject to COVID-related regulations), and lectures will be recorded by Zoom. 
 
-2001 McGill College, 11th Floor, Rm 1140
+2001 McGill College, 11th Floor, Rm 1201. 
 
 
 ## Office ours 
 After the class or by appointment. Please email the instructor or TA. 
     
 ## Reading materials and lectures 
-Lecture slides will be available in MyCourses. 
+Lecture slides and articles to read will be available in MyCourses. 
 There is no one text for this course – lectures benefit articles provided in the class. 
 
 **Supplementary readings**   
-Students wishing to pursue employment as an epidemiologist and/or conduct environmental epidemiological research may wish to obtain the following resources from course reserve or purchase: 
+  -If you did not complete EPIB601 and PPHS602, the following book (e-book available in the library) will serve as a reference for study desidgn, measures of occurence, confounding, and bias.  
 
-*Environmental Epidemiology: Principles and Methods*, RM Merrill (Jones & Bartlett Learning, 2008); 
-*Exposure assessment in occupational and environmental epidemiology*, M Nieuwenhuijsen et al. (Oxford University Press, 2015);   
-*A biological approach to environmental assessment and epidemiology*, TJ Smith and D Kriebel (Oxford University Press, 2010); and,   
-*EPA - Guidelines for Exposure Assessment*. 
+    *Epidemiology: An Introduction (3rd edn)*  
+    Kenneth J. Rothman, Krista F. Huybrechts, Eleanor J. Murray  
+    https://doi.org/10.1093/oso/9780197751541.001.0001  
 
-Other books also on the class web page including *A pocket guide to epidemiology*; *Glossary of Epidemiological Terms*; *Dictionary of environmental health*    
+- Other introductory epidemiology books also on the class web page are *A pocket guide to epidemiology*; *Glossary of Epidemiological Terms*; *Dictionary of environmental health*    
+
+
+
+-   Students wishing to pursue employment as an epidemiologist and/or conduct environmental epidemiological research may wish to obtain the following resources from course reserve or purchase: 
+
+    -*Environmental Epidemiology: Principles and Methods*, RM Merrill (Jones & Bartlett Learning, 2008); 
+
+    -Exposure assessment in occupational and environmental epidemiology*, M Nieuwenhuijsen et al. (Oxford University Press, 2015);   
+
+
+    -*A biological approach to environmental assessment and epidemiology*, TJ Smith and D Kriebel (Oxford University Press, 2010); and,   
+
+    -EPA - Guidelines for Exposure Assessment. 
+
+
+
+
+
 
 ## Software
-Please download and install qGIS software by the beginning of the second class. We will need this tool for Assignment 1. 
-https://www.qgis.org/en/site/forusers/download.html  
+In Week 2 and 3, we will use ArcGIS Enterprise, which is a web GIS software to create a story map for Assignment 1. There is no need to isntall this, but you need to bring a laptop and a mouse. 
  
-
-
+We will also use R Studio software for workhops and assignments involving areal disease risk estimation and time-series analysis, although the software codes are largely provided to you, with the main tasks being interpretation and visualization.    
+ 
+- Those who have not completed EPIB613 or equivalenet can take introductry R studio course in the Computational and Data Systems Initiative (CDSI) at https://www.mcgill.ca/cdsi/training/workshops/data-science-r. 
+- Alternatively, this is a good sit eo 
 
 
 ## Class Schedule 
-Classes consist of lectures and instruction for assignments and student-led presentations with a break.  
+Classes consist of lectures and instruction for assignments and student-led presentations with a break.   
+Students from PHAR, EXME, and NURS should notify the instructor for any departmental events that prevents in-person attendance in this class. 
+
 Week |	Date |	Lecture |	In-class assignment work  
 -----|-------|--------|-----------
-1	| January  5	| Course overview and introduction to environmental epidemiology ||
-2	| January 12	| Study Design 1: cohort study I | Introduction to Geographic Information Systems |
-3	| January 19	| Study Design 1: Cohort study II| hands-on work for Geographic Information Systems and instruction for Assginment 1|
-4	| January 26	| Study design 2: Case-control study | Q and A session for Assignment 1| 
-5	| February 2	| Ecological and Cross-sectional study |  Pick paper to review (Assignment 2) AND the review of Assignment 1|
-6	| February 9	| Statistical analysis in environmental epidemiology | Introduction to project (Assignment 3)|	
-7	| February 16	| Measurement Error  |  |
-8	| February 23	| Causal inference 1 | Q and A for project proposal |
-9	| March 1	    | Causal inference 2 | 3-minutes presentation of preliminary project proposal (Assignment 3) |
-NA	| March 8	  | NO CLASS (Winter break)| |
-10	| March 15	| Time-series and case-crossover study |  | 
-11	| March 22	|Presentation of paper review (Assignment 2) | Presentation of paper review (Assignment 2)|
-NA | March 29	  |NO CLASS (Good Friday)|  |
-12 | April 5	  |  | Presentation of projects (Assignment 3)   |
-13 | April 12   |  | Presentation of projects (Assignment 3)   |
-* Extra topics include an introduction to mixture analysis or Bayesian disease mapping
+1	| January 10	| Course overview and introduction to environmental epidemiology | Introduction to geospatial enviornmental data for Assignment 1|
+2	| January 17	| Workshop: Introduction to Geographic Information Systems (GIS)| |
+3	| January 24	| Workshop: Story mapping using GIS software| |
+4	| January 31	| Study design 1: Cohort study | Pick paper to review for Assignment 2 | 
+5	| February 7	| Study design 2: Case-control study | Quick presentation of storymap ideas (ungraded)|
+na	| February 14	| **NO CLASS** - Departmental Public Health Day | |	
+6	| February 21	| Ecological and cross-sectional study  |  Presentation of reivews - Cohort studies (Assignment 2)   |
+7	| February 28	| Measurement error and environmentrics  | Presentation of reivews - Case-Control studies (Assignment 2) |
+na	| March 7	    | **NO CLASS** (Winter break) | |
+8	| March 14	| | Presentation of Storymaps |
+9	| March 21	| Time-series analysis of continuous and intervention variables and cross-sectional study | Workshop - Time-series anlaysis |
+10	| March 22	| Areal-level disease risk estimation (non-Bayesian approach)) and ecological study|  Workshop - Disease mapping and GIS using R Studio| 
+11 | March 28	  |  | Q and A for Assignment 3 |
+12 | April 4	  |  | Presentation of mini projects (Assignment 4)   |
+13 | April 11   |  | Presentation of mini projects (Assignment 4)   |
 
 
 
 ## Grading Scheme
-Assignment | Grade | Deadline
+Assignment | Grade | Tentative Deadline
 -----------|-------|------------------------
-Assignment 1: Submission of an exposure map |5% |January 30th 
-Assignment 2a: In-class presentation of critical review (nothing to submit) |20%| Class 11|
-Assignment 2b: Sumission of written critical review  |25%| March 29, Before Good Friday|
-Assignment 3a: Project presentation - All groups should submit thier presentaion slides before April 1st so that other groups can prepare for peer review |15%| Class 12 and 13|
-Assignment 3b: Written constructive review of other teams' projects                | 15% | April 16|
-Assignment 3c: Written project |20% | Very end of April or early May (TBA)|
+Assignment 1:  Story map using ArcGIS                                      |25%  | February 28th | 
+Assignment 2: In-class presentation of critical review (nothing to submit) |25%  | Feb 21 and Feb 28|
+Assignment 3: Analysis and visulization of time-series and spatial data    |25%  | April 4 |
+Assignment 4a: Project presentation                                        |15%|  April 11|
+Assignment 4b: Written constructive review of other teams' projects        |10%| April 11|
 Total	| 100%
 
 
+# Accommodations
+- Students with demonstratable medical condition(s) that prevents the submission of the written report by the due date and orally present the study should reach the instructor and the SAA - Student Accessibility & Achievement office (SAA https://www.mcgill.ca/access-achieve/). SAA will subsequently communicate with the instructor to implement the accommodation.
+- Those with an acute medical or non-medical condition that impacts this assignment should reach the instructor as early as possible.
 
-# Evaluation Components and Student Tasks
-### Assignment 1: Mapping exposures to urban exposome in Montreal using GIS software (individual work) 
-You will geographically map urban exposures and social determinants of health in Montreal using GIS (Geographic Information System). 
+# Assignments 
+
+Use of images without proper credit and citation will lead to reduced marks, whether the images are from generative AI, scientific literature, media reports, and the internet. 
+
+## Assignment 1: Story mapping- mapping exposures anbd creating narratives using GIS software (25%)
+You will geographically map exposures and social determinants using GIS (Geographic Information System) and create story a story map. 
 The objective is to be familiar with GIS software and geospatial data. 
-In Class (Week) 2 and 3, we will go through the use of GIS software using example data to prepare for the assignment.  
+The secondary objective is to develop communication skills for the existing public health issues using geospatial images and existing litrature and media reports. 
+In Class (Week) 2 and 3, we will go through the use of GIS software and story mapping.   
+You are asked to submit the storymap (graded) to the instructor and present to the class (ungraded).   
 
-### Assignment 2 a and b: Critical review of environmental epidemiology study (group work)
-With your teammate (2-3 groups of students, depending on class size), you will be asked to provide a presentation and written review for an environmental epidemiology study. The research papers to critique will be assigned to students in Week 5. 
+## Assignment 2: Critical review of environmental epidemiology studies (group work) (25%)
+With your teammate (2-3 students, depending on class size), you will be asked to provide a presentation for an environmental epidemiology study. The research papers to critique will be assigned to students in Week 5. 
 
 The main objective is to provide you with practice in evaluating the scientific quality of papers from the literature and will thus assist in consolidating and integrating the material taught in the course. This will also assist with the planning of the project (Assignment 3). 
 
-Generative AI (e.g., ChatGPT) can be used to assist in writing, if you make appropriate acknowledgment and provide specific use of these tools (including written prompts) in the report and oral presentation. This is to inform other students the effective use of these tools in writing a report. See the specific policy regarding the use of AI technologies below.  
-
-**Length**: The critique should be about 2 pages (suggested, excluding references) with single space and can be written out using bullets if you prefer, ensuring that the flow is logical. 
-
 **Format**: 
-  - About 20 min of presentation (2a), followed by 5 minutes of questions. the presentation may be shorter in duration, depending on class size.   
-  - About 2 pages (suggested, can be longer, excluding references) with single space and can be written out using bullets if you prefer, ensuring that the flow is logical (3b). 
- 
+  - The presentation of your critical appraisal is approximately 20 minute per group, depending on class size.  
 
-The presentation and written report should comprise the following elements: 
+The presentation should comprise the following elements: 
 
 1. Objectives: are the (if any) objectives clearly stated? Are they supported by the introduction and commensurate with the study design that follows? Justify your response. If the 
 objective is not in PICO (PECO) format, please rewrite it accordingly.
@@ -148,42 +166,74 @@ objective is not in PICO (PECO) format, please rewrite it accordingly.
 
 11. Conclusions: Strengths and weaknesses of the study, and possible conclusions and implications to public health and medical evidence towards regulatory policy and/or clinical practice. Do you agree with the authors’ interpretation of the results? Is the information presented sufficient for you to draw your own conclusions? Do they differ from the authors’
 
+12. Potential alternative study design(s)
+
 References can be used to support your points. 
 
+Bonus question (additional 1% of total mark): What are the specific biological/physiological/psychological mechanisms in which the exposure acts on the outcome? This is often described in the paper, either in the introduction or the Discussion section. If not stated in your paper, you can find it from the literature.
+Another bonus question (additional 1% of total mark): Can you create a Directed Acyclic Graph (DAG) that displays the relationships between the exposure(s), outcome, and the confounders discussed in the paper?
 
-### Assignment 3a-c: Project (group work)
-Using any of the exposure(s) mapped in Assignment 1 in Montreal, students will formulate a hypothetical study design integrating the materials learned from the course. 
+References can be used to support your points.
 
-If your team is not proposing standard etiologic study designs (e.g., studies other than case-control, cohort, ecological, time-series), you should first consult the instructor and TA. 
-Literature can be used to rationalize the study aim, study design, and data analysis. 
+Marks will be assigned to the 10 components above uniformly (thus 2% of the total mark for each point for the oral presentation, plus 2% for the bonus questions). Same for the written report.
+
+Some points, in particular statistical analysis, may be challenging to grasp and present confidently and concisely (hence, I added the bonus questions to make up this challenge). You can reach the instructor or TA for any clarification and information to present. Note that students cannot get greater than 20% (oral presentation) and 25% (written report) of the total mark even if all questions and bonus questions are addressed perfectly.
+
+
+
+
+
+
+
+## Assignment 3: Data analysis and visualization (individual work) (25%)
+  - The primary objective is to understand introductory concepts for geospatial analysis and visualization and the analysis of time-series data.      
+  - The secondary ofjective is to understand challenges associated with spatially and temporally correlated data.         
+  - The main tasks are generate maps, time plots, visualization of results related to assumptions, and interprete the results using (largely pre-written) R codes. 
+  - The submmission format will be R markdown, copy/pasted results, or latex outputs, all in **pdf format**. 
+
+
+
+
+
+
+
+## Assignment 4: Study design (group work) (25%)
+Using any of the exposure(s) mapped in Assignment 1 in Montreal, student groups will formulate a hypothetical study design integrating the materials learned from the course, with a focus on study design and measurement (less focus on statistical analysis).    
+
+If your team is not proposing standard etiologic study designs (studies other than case-control, cohort, and time-series), you should first consult the instructor and TA, since rationalizing ecological and cross-sectional study require strong understanding in available data.   
+Literature can be used to rationalize the study aim, study design, and data analysis.   
+
+**Overview of the task**   
+ - Students will formulate a hypothetical study design integrating the materials learned from the course in a group, with a focus on selecting and rationalizing appropriate study design that meet the measurments and subject matter interest. 
+ - The study design should address and elaborate on the points below (see Specific Instruction - similar points to Assignment 2).
+ - With your teammate, you will be asked to provide a presentation and written review for other groups' presentations. Your groups will critique two other groups's presentations to provide constructive feedback- group assignment for peer critique will be uploaded to MyCourses   
+
+**Learning Objectives**
+ - The main objectives are: To design an environmental epidemiologic study and to consolidate and integrate the material learned in the course.
+ - To provide opportunities to share various environmental epidemiologic studies and topics with other groups for a broader understanding.   
+- To practice the formulation of constructive feedback to aid other groups' study design.
 
 **Format**: 
-  - 3 min presentation of preliminary project proposal (ungraded)
-  - 15 min of presentation (3a), followed by 5 minutes of questions
-  - At least 5 suggestions to critique, per presentation  (3b)Single-spaced document 
-  - 3 or 4 pages for written project, excluding reference and tables/figures (optional) (3c)   
-  
-  - The presentation may be shorter in duration, depending on class size. 
-
-**Presentation of preliminary project proposal** (3 minutes, ungraded, Week 9) should provide: 
-  1. Research question and its public health importance.    
-  2. Objective 
-  3. Proposed study design
-  3. Population, exposure and outcome
+  - Presenting group (Assignment 4a): 20 min of presentation (3a), followed by 5 minutes of questions, conditional on the number of groups. 
+  - Reviewing groups (Assignment 4b): At least 7 suggestions to critique, per presentation  (3b)Single-spaced document 
 
 
-**Review of other projects** (Assignment 3b)   
-Your group will be assigned two projects from other groups to review. Based on the presentation slides and oral presentation, your team  will provide constructive review and suggestions to your peer groups. The details of this will be discussed in class. The submitted presentation and oral presentation will not be assessed, but the quality of your group's reviews of others’ will be. The course instructors will review and provide additional feedback needed to make sure that everyone receives adequate and useful guidance in order to finalize their project writing. You should submit the review before the due date so that other groups can incorporate your review into their final writing. Groups who present Week 12 will review the projects in week 13 and vice versa (though all presentations may be completed in Week 12, depending on class size). 
+### Assignment 4a - Presentation of project (15%)
 
+ - Students can use any of the exposure(s), but using exposures mapped in Assignment 1 are research goal is a good start.
 
-**Presentation and written description of project** (Assignment 3a and 3c) should follow the following components: 
+ - If your team is not proposing standard etiologic study designs (e.g., studies other than case-control, cohort, cross-sectional, and ecological), you should first consult the instructor and TA.
+
+- As in Assignment 2, generative AI (e.g., ChatGPT) can be used to assist in writing and slide-making if you make appropriate acknowledgments and provide specific use of these tools (including written prompts) in the report and oral presentation. This is to inform other students of the effective use of these tools in writing a report. See the specific policy regarding the use of AI technologies in the course Syllabus.
+
+**Specific points to address (gradine scheme)** (Assignment 4a) should follow the following components: 
 1. Background section including problem statement and the importance of the study design (justification). Why do you think your research question is important?   
    
-   -**There is no need to **perform a **thorough** review to** identify your problem**. Any environmental issue of your interest that provides a valid hypothesis is fine. 
+   -**There is no need to perform thorough literature review to identify your problem at all**. Any environmental issue of your interest that provides a valid hypothesis is fine. Ideally, the project will be based on your story map from Assignment 1. 
 
 2. Objective: Clearly state the study objective supporting your research question in the PICO format.The objective must be feasible and attainable
 
-3. Study design: justification of choice and brief overview.
+3. Study design: justification of choice and brief overview. And reasons not using any other study designs. 
 
 4. Population: describe the target population and the intended study population. Describe any criteria for inclusion/exclusion and justify.
 
@@ -202,10 +252,21 @@ Your group will be assigned two projects from other groups to review. Based on t
 
 12. Table and figures (optional)
 
+**Grade** in Assignment 4a will depend on the first 10 points above, each with equal weight. 
+
+
 You can find relevant research designs, problem statements and discussions to follow from journls such as: 
    -*Environmental Health Perspectives, Environmental Health, Environment International, Epidemiology, Environmental Epidemiology, and Environmental Science & Technology*    
 
-Though your project proposal writing will be much shorter than these full-length papers.    
+
+### Assignment 4b - Review of other projects (10%)
+  - Your group will be assigned two* projects from other groups to review.   
+  - Based on the presentation slides and oral presentation, your team will provide constructive review and suggestions to your peer groups. 
+  - The submitted oral presentation from other groups will not be graded, but the quality of your group's reviews will be. The course instructor will review and provide additional feedback needed to make sure that everyone receives adequate and useful guidance. 
+- **Grade** will be determined based on the clarity and accuracy of the feedbacks. 
+*The number to review is subject to class size. 
+
+
 
 
 # Policy around the use of AI technologies for class assignments and presentations  
@@ -229,10 +290,6 @@ Note: While the use of generative AI tools is permitted in this class, many clas
 I strive to provide an inclusive learning environment. However, if you experience barriers to learning in this course or have any impairments that could impediment your learning, do not hesitate to discuss them with me and/or the Student Accessibility & Achievement Register with Student Accessibility and Achievement -SAA (you can register at https://www.mcgill.ca/access-achieve/). Eligibility for SAA is: 
 >  Students who are experiencing academic or physical barriers and have a documented disability, mental health condition,chronic health condition, or other impairment. These may be temporary, permanent, or episodic.
 > Students with documented disabilities can register at any point in the year, but we recommend registering as early as possible. We encourage students new to McGill to make an appointment before their semester begins.* 
-
-
-## Accommodations for missed assignments and presentations 
-If you need to seek accommodation for missing in-course exams, assessments, or assignments for medical and non-medical or other emergencies, please discuss the situation directly with the instructor as soon as possible. 
 
 ## Language of assessment 
 In accordance with McGill University’s Charter of Students’ Rights, students in this course have the 
