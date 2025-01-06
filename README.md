@@ -1,4 +1,6 @@
-# EPIB685: Principles of Environmental Health Sciences II
+# EPIB685: Principles of Environmental Health Sciences II, Winter 2025
+### Department of Epidemiology, Biostatistics, and Occupational Health, School of Population and Global Health, McGill University 
+
 
 
 # Preamble   
@@ -20,15 +22,15 @@ McGill University is located on the unceded territory of the Kanien’keha:ka, w
 Permission of the instructor. 
 Basic understanding in biostatistics and epidemiologic study design is highly recommended. Students who did not complete Introduction to Epidemiology (equivalent to EPIB601), Inferenceial Statistics (EPIB607) and Introduction to Data Analysis in Health Science (understanding in generalized linear models) - equivalent to EPIB621 should contact the instructor to obtain required reading materials to prepare for the course.   
 
-## Course description
-This course is intended to build the foundational knowledge in epidemiologic approaches to investigate the population distribution and etiologic association of environmental risk factors on health, with a focus on research design and critical appraisal.  
+## Course format
+ - This course is intended to build the foundational knowledge in epidemiologic study design, critical appraisal, data anlaysis, and communication to investigate and disseminate the population distribution and etiologic association of environmental risk factors on health.  
 
-Methods of instruction will feature lectures, student-led presentations, and an interactive lab session. The focus will be on the understanding and critical appraisal of modern epidemiological research. 
+ -  Methods of instruction will feature in-person lecture and small-group discussion, student-led presentation, and interactive lab session. 
 
 ## Learning Objectives 
-The primary outcome is to appreciate and interpret environmental epidemiological study designs and research methods. By the end of the course, students should be able to read a published paper in environmental epidemiology and to appreciate the methods and interpret the findings from a population health perspective. 
+The primary outcome is to appreciate and interpret environmental epidemiological study designs and research methods. By the end of the course, students should be able to read a published paper in environmental epidemiology and to appreciate the methods and interpret the findings from a population health perspective, while communicating critical public health issues using storymaps. 
 
-Specific learning objectives are:    
+**Specific learning objectives are:**
 - To understand the design and interpretation of the main study designs in environmental epidemiology: cohort, case-control, and cross-sectional studies.
 - To construct an appropriate epidemiologic research question and devise an appropriate study design using available data that address challenges related to the measurement of environmental data.        
 - To Effectively communicate research design and public health issues through storymaps and oral presentations .   
@@ -37,9 +39,9 @@ Specific learning objectives are:
   
 
 ## Course time and location
-Friday 9:35AM-12:35PM EST, interrupted by a 5 minutes break. All teaching is in-person (subject to COVID-related regulations), and lectures will be recorded by Zoom. 
+Time: Friday 9:35AM-12:35PM EST, interrupted by a 5 minutes break. All teaching is in-person (subject to COVID-related regulations), and lectures will be recorded by Zoom. 
 
-2001 McGill College, 11th Floor, Rm 1201. 
+Location: 2001 McGill College, 11th Floor, Rm 1201. 
 
 
 ## Office ours 
@@ -58,6 +60,10 @@ There is no one text for this course – lectures benefit articles provided in t
 
 - Other introductory epidemiology books also on the class web page are *A pocket guide to epidemiology*; *Glossary of Epidemiological Terms*; *Dictionary of environmental health*    
 
+- In terms of biostatistics, the course assumes basing understanding in inferential statistics described in:   
+https://github.com/hiroshimamiya/EPIB607.    
+Those who need refreshments should reach the instructor for introducty statistic book or find the recommended books in the link above.    
+Basic knowledge in generalized linear model (Mamerials equivalent to EPIB621) is preferred but not necessary.     
 
 
 -   Students wishing to pursue employment as an epidemiologist and/or conduct environmental epidemiological research may wish to obtain the following resources from course reserve or purchase: 
@@ -79,7 +85,7 @@ There is no one text for this course – lectures benefit articles provided in t
 ## Software
 In Week 2 and 3, we will use ArcGIS Enterprise, which is a web GIS software to create a story map for Assignment 1. There is no need to isntall this, but you need to bring a laptop and a mouse. 
  
-We will also use R Studio software for workhops and assignments involving areal disease risk estimation and time-series analysis, although the software codes are largely provided to you, with the main tasks being interpretation and visualization.    
+We will also use R Studio software for workhops and assignments involving areal disease risk estimation and the analysis of time-series data, although the software codes are largely provided to you, with the main tasks being interpretation and visualization.    
  
 - Those who have not completed EPIB613 or equivalenet can take introductry R studio course in the Computational and Data Systems Initiative (CDSI) at https://www.mcgill.ca/cdsi/training/workshops/data-science-r. 
 - Alternatively, this is a good sit eo 
@@ -98,9 +104,9 @@ Week |	Date |	Lecture |	In-class assignment work
 5	| February 7	| Study design 2: Case-control study | Quick presentation of storymap ideas (ungraded)|
 na	| February 14	| **NO CLASS** - Departmental Public Health Day | |	
 6	| February 21	| Ecological and cross-sectional study  |  Presentation of reivews - Cohort studies (Assignment 2)   |
-7	| February 28	| Measurement error and environmentrics  | Presentation of reivews - Case-Control studies (Assignment 2) |
+7	| February 28	| Measurement error and environmentrics  | Presentation of reivews - Case-control studies (Assignment 2) |
 na	| March 7	    | **NO CLASS** (Winter break) | |
-8	| March 14	| | Presentation of Storymaps |
+8	| March 14	| | Presentation of storymaps |
 9	| March 21	| Time-series analysis of continuous and intervention variables and cross-sectional study | Workshop - Time-series anlaysis |
 10	| March 22	| Areal-level disease risk estimation (non-Bayesian approach)) and ecological study|  Workshop - Disease mapping and GIS using R Studio| 
 11 | March 28	  |  | Q and A for Assignment 3 |
@@ -126,14 +132,16 @@ Total	| 100%
 
 # Assignments 
 
-Use of images without proper credit and citation will lead to reduced marks, whether the images are from generative AI, scientific literature, media reports, and the internet. 
+Use of images without proper credit and citation will lead to reduced marks, whether the images are sourced from generative AI, scientific literature, media reports, and the internet. 
 
 ## Assignment 1: Story mapping- mapping exposures anbd creating narratives using GIS software (25%)
-You will geographically map exposures and social determinants using GIS (Geographic Information System) and create story a story map. 
-The objective is to be familiar with GIS software and geospatial data. 
+- You will geographically map exposures and social determinants of health and potentially health outcommes using GIS (Geographic Information System) and create story a storymap. 
+The primary objective is to be familiar with GIS software to visualize geospatial data. 
 The secondary objective is to develop communication skills for the existing public health issues using geospatial images and existing litrature and media reports. 
-In Class (Week) 2 and 3, we will go through the use of GIS software and story mapping.   
-You are asked to submit the storymap (graded) to the instructor and present to the class (ungraded).   
+ - In Class (Week) 2 and 3, we will go through the use of GIS software and story mapping.   
+ - You are asked to submit the storymap (graded) to the instructor and present in the class (ungraded).   
+ -  Detailed instructions and grading scheme will be provided after GIS workshops.   
+
 
 ## Assignment 2: Critical review of environmental epidemiology studies (group work) (25%)
 With your teammate (2-3 students, depending on class size), you will be asked to provide a presentation for an environmental epidemiology study. The research papers to critique will be assigned to students in Week 5. 
@@ -185,11 +193,12 @@ Some points, in particular statistical analysis, may be challenging to grasp and
 
 
 
-## Assignment 3: Data analysis and visualization (individual work) (25%)
+## Assignment 3: Analysis, visualization, and interpretation of time-series and areal data (individual work) (25%)
   - The primary objective is to understand introductory concepts for geospatial analysis and visualization and the analysis of time-series data.      
   - The secondary ofjective is to understand challenges associated with spatially and temporally correlated data.         
   - The main tasks are generate maps, time plots, visualization of results related to assumptions, and interprete the results using (largely pre-written) R codes. 
   - The submmission format will be R markdown, copy/pasted results, or latex outputs, all in **pdf format**. 
+  - Detailed instructions, codes, and data will be provdied in February. 
 
 
 
