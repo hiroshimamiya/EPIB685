@@ -87,8 +87,10 @@ In Week 2 and 3, we will use ArcGIS Enterprise, which is a web GIS software to c
  
 We will also use R Studio software for workshops and assignments involving areal disease risk estimation and the analysis of time-series data, although the software codes are largely provided to you, with the main tasks being interpretation and visualization.    
  
-- Those who have not completed EPIB613 or equivalent can take introductory R studio course in the Computational and Data Systems Initiative (CDSI) at https://www.mcgill.ca/cdsi/training/workshops/data-science-r. 
-- Alternatively, this is a good sit eo 
+- Those who have not completed EPIB613 or equivalent can take introductory R studio course in the Computational and Data Systems Initiative (CDSI) at https://www.mcgill.ca/cdsi/training/workshops/data-science-r.   
+- Alternatively, this is a good site to get foundation: https://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro.html
+
+
 
 
 ## Class Schedule 
