@@ -108,7 +108,7 @@ na	| February 14	| **NO CLASS** - Departmental Public Health Day | |
 na	| March 7	    | **NO CLASS** (Winter break) | |
 8	| March 14	| | Presentation of storymaps |
 9	| March 21	| Time-series analysis of continuous and intervention variables and cross-sectional study | Workshop - Time-series anlaysis |
-10	| March 22	| Areal-level disease risk estimation (non-Bayesian approach)) and ecological study|  Workshop - Disease mapping and GIS using R Studio| 
+10	| March 22	| Area-level disease risk estimation (non-Bayesian approach)) and ecological study|  Workshop - Disease mapping and GIS using R Studio| 
 11 | March 28	  |  | Q and A for Assignment 3 |
 12 | April 4	  |  | Presentation of mini projects (Assignment 4)   |
 13 | April 11   |  | Presentation of mini projects (Assignment 4)   |
@@ -140,11 +140,11 @@ The primary objective is to be familiar with GIS software to visualize geospatia
 The secondary objective is to develop communication skills for the existing public health issues using geospatial images and existing litrature and media reports. 
  - In Class (Week) 2 and 3, we will go through the use of GIS software and story mapping.   
  - You are asked to submit the storymap (graded) to the instructor and present in the class (ungraded).   
- -  Detailed instructions and grading scheme will be provided after GIS workshops.   
+ - Detailed instructions and grading scheme will be provided after GIS workshops.   
 
 
 ## Assignment 2: Critical review of environmental epidemiology studies (group work) (25%)
-With your teammate (2-3 students, depending on class size), you will be asked to provide a presentation for an environmental epidemiology study. The research papers to critique will be assigned to students in Week 5. 
+With your teammates (approx 2 students, depending on class size), you will be asked to provide a presentation for an environmental epidemiology study. The research papers to critique will be assigned to students in Week 5. 
 
 The main objective is to provide you with practice in evaluating the scientific quality of papers from the literature and will thus assist in consolidating and integrating the material taught in the course. This will also assist with the planning of the project (Assignment 3). 
 
