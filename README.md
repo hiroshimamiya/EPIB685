@@ -16,11 +16,11 @@ McGill University is located on the unceded territory of the Kanien’keha:ka, w
 
 
 # Course information 
-**Restriction(s)**: Open to graduate students in the Environmental Health Sciences or permission of the course instructors. Not open to students who have taken or are taking EXMD 671 or NRSC 671 or PHAR 671.
+**Restriction**: Open to graduate students in the Environmental Health Sciences or permission of the course instructors. Not open to students who have taken or are taking EXMD 671 or NRSC 671 or PHAR 671.
 
 ## Prerequisites
 Permission of the instructor. 
-Basic understanding in biostatistics and epidemiologic study design is highly recommended. Students who did not complete Introduction to Epidemiology (equivalent to EPIB601), Inferencial Statistics (EPIB 607) and Introduction to Data Analysis in Health Science (understanding in generalized linear models) - equivalent to EPIB 621 should contact the instructor to obtain required reading materials to prepare for the course.   
+Basic understanding in biostatistics and epidemiologic study design is highly recommended. Students who did not complete Introduction to Epidemiology (equivalent to EPIB601), Inferencial Statistics (EPIB 607) and Introduction to Data Analysis in Health Science (understanding in generalized linear models and linear regression - equivalent to EPIB 621) should contact the instructor to obtain required reading materials to prepare for the course.   
 
 ## Course format
  - This course is intended to build the foundational knowledge in epidemiologic study design, critical appraisal, data analysis, and communication to investigate and disseminate the population distribution and etiologic association of environmental risk factors on health.  
