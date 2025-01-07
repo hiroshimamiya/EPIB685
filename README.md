@@ -60,7 +60,7 @@ There is no one text for this course – lectures benefit articles provided in t
 
 - Other introductory epidemiology books also on the class web page are *A pocket guide to epidemiology*; *Glossary of Epidemiological Terms*; *Dictionary of environmental health*    
 
-- In terms of biostatistics, the course assumes basing understanding in inferential statistics described in:   
+- In terms of biostatistics, the course assumes basic understanding in inferential statistics described in:   
 https://github.com/hiroshimamiya/EPIB607.    
 Those who need refreshments should reach the instructor for introductory statistic book or find the recommended books in the link above.    
 Basic knowledge in generalized linear model (Materials equivalent to EPIB 621) is preferred but not necessary.     
@@ -75,7 +75,7 @@ Basic knowledge in generalized linear model (Materials equivalent to EPIB 621) i
 
     -*A biological approach to environmental assessment and epidemiology*, TJ Smith and D Kriebel (Oxford University Press, 2010); and,   
 
-    -EPA - Guidelines for Exposure Assessment. 
+    -US Environmental Protection Agency (EPA) - Guidelines for Exposure Assessment. 
 
 
 
