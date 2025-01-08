@@ -39,9 +39,9 @@ The primary outcome is to appreciate and interpret environmental epidemiological
   
 
 ## Course time and location
-Time: Friday 9:35AM-12:35PM EST, interrupted by a 5 minutes break. All teaching is in-person (subject to COVID-related regulations), and lectures will be recorded by Zoom. 
+Time: Friday 9:35AM-12:35PM EST, interrupted by a 5 minutes break. All teaching is in-person. 
 
-Location: 2001 McGill College, 11th Floor, Rm 1201. 
+Location: 2001 McGill College, 12th Floor, Rm 1201. 
 
 
 ## Office ours 
