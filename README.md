@@ -170,7 +170,7 @@ With your teammates (approx 2 students, depending on class size), you will be as
 **Overview**   
   - The primary objective is to understand introductory concepts for geospatial analysis and visualization and the analysis of time-series data.      
   - The secondary objective is to understand challenges associated with spatially and temporally correlated data.         
-  - The main tasks are to generate maps, time plots, visualization of results related to assumptions, and interpret the results using (largely pre-written) R codes. 
+  - The main tasks are to generate maps, time plots, autocorrelation function (ACF), constrained and non-constrained distributed lag function, and visualization of results related to assumptions, and interpret the results using (largely pre-written) R codes. 
   - The submission format will be R markdown, copy/pasted results, or latex outputs, all in **pdf format**. 
   - Detailed instructions, codes, and data will be provided before lectures in time-series and spatial analysis. 
 
