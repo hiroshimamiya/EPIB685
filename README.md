@@ -110,10 +110,9 @@ na	| February 14	| **NO CLASS** - Departmental Public Health Day | |
 na	| March 7	    | **NO CLASS** (Winter break) | |
 8	| March 14	| | Presentation of story maps |
 9	| March 21	| Time-series analysis of continuous and intervention variables and cross-sectional study | Workshop - Time-series analysis |
-10	| March 22	| Area-level disease risk estimation (non-Bayesian approach) and ecological study|  Workshop - Disease mapping and GIS using R Studio| 
-11 | March 28	  |  | Q and A for Assignment 3 |
-12 | April 4	  |  | Presentation of mini projects (Assignment 4)   |
-13 | April 11   |  | Presentation of mini projects (Assignment 4)   |
+10	| March 28	| Area-level disease risk estimation (non-Bayesian approach) and ecological study|  Workshop - Disease mapping and GIS using R Studio , and Q and A for Assignment 3 | 
+11 | April 4	  |  | Presentation of mini projects (Assignment 4)   |
+12 | April 11   |  | Presentation of mini projects (Assignment 4)   |
 
 
 
