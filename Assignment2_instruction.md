@@ -7,7 +7,7 @@ With your teammates (approx 2 students, depending on class size), you will be as
 - In addition, this assignment will assist with study design in Assignment 4.   
 
 **Format**:   
-  The presentation of your critical appraisal is approximately 20 minute per group, depending on class size.  
+  The presentation of your critical appraisal is15-20 minutes per group. 
 
 The presentation should comprise the following elements: 
 
@@ -26,23 +26,21 @@ objective is not in PICO (PECO) format, please rewrite it accordingly.
 
 7. Potential confounding factors: Describe what factors were measured, how they were measured, possible issues with validity/reliability, and measurement scales (e.g., continuous, categorical). Were any important variables omitted?
 
-8. Statistical analysis: Briefly describe what statistical methods were used to analyze the data, what factors were included in the models, and what assumptions were made.
+8. Statistical analysis (see note below): Briefly describe what statistical methods were used to analyze the data and why they selected the particular methods, what variables were included in the models, and what assumptions were made if stated. 
 
-9. Results: Describe the main results, referring to the parameters that were estimated. Please ensure that you provide a clear description of the meaning of these results and what assumptions were made. Were the results presented in such a way that they reflected clearly the objectives of the study?
+9. Results: Describe the main and descriptive (typically Table 1) results. Provide a clear description of the meaning of these results and what assumptions were made. Were the results presented in such a way that they reflect the objectives of the study.
 
-10. Conclusions: Strengths and weaknesses of the study, and possible conclusions and implications to public health and medical evidence towards regulatory policy and/or clinical practice. Do you agree with the authors’ interpretation of the results? Is the information presented sufficient for you to draw your own conclusions? Do they differ from the authors’
+10. Conclusions: Strengths and weaknesses of the study, and possible conclusions and implications to public health and medical evidence towards regulatory policy and/or clinical practice. Do you agree with the authors’ interpretation of the results? Is the information presented sufficient for you to draw your own conclusions? Do they differ from the authors’ conclusion? 
 
 11. Alternative study design(s) with the given data and research question. Why your proposed alternatives are better or worse than the design used in the paper? 
 
 References can be used to support your points. 
 
 Bonus question (additional 1% of total mark): What are the specific biological/physiological/psychological mechanisms in which the exposure acts on the outcome? This is often described in the paper, either in the introduction or the Discussion section. If not stated in your paper, you can find it from the literature.
-Another bonus question (additional 1% of total mark): Can you create a Directed Acyclic Graph (DAG) that displays the relationships between the exposure(s), outcome, and the confounders discussed in the paper?
 
 References can be used to support your points.
 
-Marks will be assigned to the 12 components above uniformly (thus, each point worth 25/11% of the total grade). Same for the written report.
+Marks will be assigned to the 11 components above uniformly (thus, each point worth 25/11% of the total grade). Same for the written report.
 
-Some points, in particular statistical analysis, may be challenging to grasp and present confidently and concisely (hence, I added the bonus questions to make up this challenge). You can reach the instructor or TA for any clarification and information to present. Note that students cannot get greater than 20% (oral presentation) and 25% (written report) of the total mark even if all questions and bonus questions are addressed perfectly.
-
+Some points, in particular statistical analysis, may be challenging to grasp and present confidently and concisely. You do not need to provide any mechanisms of the statistical methods used (e.g., estimation methods, assumptions not stated in the paper). You only need to describe what the methods did and why the authors picked the method. You can reach the instructor or TA for any clarification and information to present. 
 
