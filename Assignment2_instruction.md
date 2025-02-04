@@ -1,18 +1,18 @@
 ## Assignment 2: Critical review of environmental epidemiology studies (group work) (25%)
 **Overview**  
-With your teammates (approx 2 students, depending on class size), you will be asked to orally present critical appraisal to published environmental epidemiology studies. The research papers to critique will be assigned to students around Week3. 
+With your teammates (approx 2 students, depending on class size but max 3 students), you will orally present critical appraisal to published environmental epidemiology studies. The research papers to critique will be assigned to students around Week3. 
 
  - The main objective is to provide you with practice in evaluating the scientific quality of papers from the literature and will thus assist in consolidating study designs taught in the course.    
 - The secondary objective is to share your critiques with the class through oral presentation.     
 - In addition, this assignment will assist with study design in Assignment 4.   
 
+
 **Format**:   
-  The presentation of your critical appraisal is15-20 minutes per group. 
+  The presentation of your critical appraisal is **15-20 minutes** per group. There is no limit for the number of slides.  
 
 The presentation should comprise the following elements: 
 
-1. Objectives: are the (if any) objectives clearly stated? Are they supported by the introduction and commensurate with the study design that follows? Justify your response. If the 
-objective is not in PICO (PECO) format, please rewrite it accordingly.
+1. Objectives: are the (if any) objectives clearly stated? Are they supported by the introduction and commensurate with the study design that follows? Justify your response. If the objective is not in PICO (PECO) format, please rewrite it accordingly.
 
 2. Population: Describe the target and study populations.
  
@@ -40,7 +40,14 @@ Bonus question (additional 1% of total mark): What are the specific biological/p
 
 References can be used to support your points.
 
+**Grading**
 Marks will be assigned to the 11 components above uniformly (thus, each point worth 25/11% of the total grade). Same for the written report.
 
+You need to be present in-person to receive any marks. Presentation via zoom is not allowed, unless there is a demonstoratable proof to be absent.
+
+You will be asked to provide slides for fair and objective grading after the presentation.   
+
+
+**Mis**
 Some points, in particular statistical analysis, may be challenging to grasp and present confidently and concisely. You do not need to provide any mechanisms of the statistical methods used (e.g., estimation methods, assumptions not stated in the paper). You only need to describe what the methods did and why the authors picked the method. You can reach the instructor or TA for any clarification and information to present. 
 

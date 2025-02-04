@@ -103,13 +103,13 @@ Week |	Date |	Lecture |	In-class assignment work
 2	| January 17	| Workshop: Introduction to Geographic Information Systems (GIS)| |
 3	| January 24	| Workshop: Story mapping using GIS software| |
 4	| January 31	| Study design 1: Cohort study | Pick paper to review for Assignment 2 | 
-5	| February 7	| Study design 2: Case-control study | Quick presentation of story map ideas (ungraded)|
-na	| February 14	| **NO CLASS** - Departmental Public Health Day | |	
+5	| February 7	| Study design 2: Case-control study | |
+na	| February 14	| **NO CLASS** - Departmental Public Health Day |  |	
 6	| February 21	| Ecological and cross-sectional study  |  Presentation of reviews - Cohort studies (Assignment 2)   |
 7	| February 28	| Measurement error and environmetrics  | Presentation of reviews - Case-control studies (Assignment 2) |
 na	| March 7	    | **NO CLASS** (Winter break) | |
 8	| March 14	| | Presentation of story maps |
-9	| March 21	| Time-series analysis of continuous and intervention variables and cross-sectional study | Workshop - Time-series analysis |
+9	| March 21	| Time-series analysis of continuous and intervention variables | Workshop - Time-series analysis  |
 10	| March 28	| Area-level disease risk estimation (non-Bayesian approach) and ecological study|  Workshop - Disease mapping and GIS using R Studio , and Q and A for Assignment 3 | 
 11 | April 4	  |  | Presentation of mini projects (Assignment 4)   |
 12 | April 11   |  | Presentation of mini projects (Assignment 4)   |
@@ -117,12 +117,12 @@ na	| March 7	    | **NO CLASS** (Winter break) | |
 
 
 ## Grading Scheme
-Assignment | Grade | Tentative Deadline
+Assignment | Grade | Updated deadline
 -----------|-------|------------------------
-Assignment 1:  Story map using ArcGIS                                      |25%  | February 28th | 
+Assignment 1:  Story map using ArcGIS                                      |25%  | March 7th | 
 Assignment 2: In-class presentation of critical review (nothing to submit) |25%  | Feb 21 and Feb 28|
-Assignment 3: Analysis and visualization of time-series and spatial data    |25%  | April 4 |
-Assignment 4a: Project presentation                                        |15%|  April 11|
+Assignment 3: Analysis and visualization of time-series and spatial data    |25%  | April 18 |
+Assignment 4a: Project presentation (all groups will submit slides, regardless of the date of presentation)                                        |15%|  April 4|
 Assignment 4b: Written constructive review of other teams' projects        |10%| April 11|
 Total	| 100%
 
