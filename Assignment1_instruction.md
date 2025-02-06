@@ -8,7 +8,10 @@
 
  - In Class (Week) 2 and 3, we will go through the use of GIS software and story mapping.   
  - You are asked to submit the story map (graded) to the instructor and present in the class (ungraded).   
- - Detailed instructions and grading scheme will be provided after GIS workshops.   
+ - Detailed instructions and grading scheme will be provided after GIS workshops.       
+ - You will work individually or in a pair. However, working by yourself is recommend, if you are to use the product for your portfolio to demonstrate your skills, just like being the first author counts most in a paper.   
+
+
 
 **Format**    
  - Submission of the story map (graded) and brief presentation (ungraded).   
