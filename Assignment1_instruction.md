@@ -25,14 +25,15 @@ If using Arc Enterprise portal, save in the EPIB 685 shared folder in the portal
 ## Story map evaluation criteria  
 
 **1\.Map**
- 1. Have map(s0) converted from a shape file.     
+ 1. Have map(s) converted from a shape file.     
  2. Maps are from credible source and properly cited. You cannot just use a map from unrecognized media source and paste.     
  3. Map is properly projected -recall distortion from the workshop (unprojected map look quite distorted, so you will clearly notice if it requires fix) 
 
 
 **2. Clarity of Purpose:**      
-    4.   Clearly defines the objective of the story map. The objective can be stated in the start of your storytelling starting with "Objective" (you can remove the statement after the evaluation, if you intend to modify or use as part of resume).     
-    5.   Clearly state the target audience. You need to state the target audience in the slide. Intended audience are, academia, general public, policymakers, trainees (graduate, undergraduate, elementary school or below, parents, family members etc). Normally, you do not create a story for more than two audiences. 
+
+4. Clearly defines the objective of the story map. The objective can be stated in the start of your storytelling starting with "Objective" (you can remove the statement after the evaluation, if you intend to modify or use as part of resume).      
+5. Clearly state the target audience. You need to state the target audience in the slide. Intended audience are, academia, general public, policymakers, trainees (graduate, undergraduate, elementary school or below, parents, family members etc). Normally, you do not create a story for more than two audiences. 
 
 **3. Storytelling: engages the audience with a coherent and compelling narrative - story needs to be simple and tailored to the target audience. This is similar to writing your brief in business or in public health**   
     
