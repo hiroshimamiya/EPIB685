@@ -152,7 +152,7 @@ $$ y_{dt} = y_t - y_{t-1} $$
 as the outcome will also remove trends to a large extent (this is called first order difference). 
 
 
-How much autocorrelation in our outcome??, check with ACF 
+How much autocorrelation in our 1st order differenciated outcome??, check with ACF 
 ```{r}
   plot(diff(data$numdeaths, 1), main = "Outcome (death count), first order difference")
   acf(diff(data$numdeaths, 1), main = "Outcome (death count), first order difference")
@@ -271,10 +271,11 @@ pred2 <- predict(model2,type="response")
 #############
 # FIGURE 2B in the manuscript
 #############
+par(mfrow= c(2,1))
 plot(data$date,data$numdeaths,ylim=c(100,300),col=grey(0.6),
      main="Diagnosis: Fitted sine-cosine functions (line) plus downward trend",ylab="Daily number of deaths",
      xlab="Date")
-lines(data$date,pred2,lwd=2)
+plot(data$date,pred2,lwd=2)
 ```
 
 
