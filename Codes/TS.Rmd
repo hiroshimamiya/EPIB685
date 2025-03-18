@@ -36,14 +36,19 @@ rm(list = ls())
 #install.packages("tsModel")
 #install.packages("Epi")
 #install.packages("tidyverse")
+#install.packages("imputeTS")
+#install.packages("splines")
+
 
 # laod the package installed if installed already 
 library(foreign) 
 library(tidyverse)
 library(dlnm)
-library(Epi)
+library(Epi) # if needed for fancy result display 
 library(tsModel)
-library("haven")
+library(imputeTS) # for assignment, not really neededfor this demo
+library(splines)
+library(haven) # needed to load Stata DTA file format below 
 
 ```
 
@@ -53,12 +58,11 @@ library("haven")
 # Get file directly from web URL, 
 # Download data from:    https://github.com/gasparrini/2013_bhaskaran_IJE_codedata/blob/master/londondataset2002_2006.dta
 data <- read_dta("londondataset2002_2006_bhaskaran_IJE.dta")
+#write.csv(data, "londondataset2002_2006_bhaskaran_IJE.csv")
                   
-
 # SET THE DEFAULT ACTION FOR MISSING DATA TO na.exclude
 # (MISSING EXCLUDED IN ESTIMATION BUT RE-INSERTED IN PREDICTION/RESIDUALS)
 options(na.action="na.exclude")
-
 
 # Display data, only first 5 lines  
 head(data, 5)
@@ -66,14 +70,11 @@ head(data, 5)
 # Data structure
 str(data)
 
-
 # SUMMARY
 summary(data)
 
-
 # CORRELATIONS across each variables 
-cor(data[,2:4])
-
+cor(data[,2:5])
 
 # plot correlation - takes bit of time of see this plot 
 pairs(data, main = "Pairwise correlation of varaibles")
@@ -90,7 +91,6 @@ pairs(data, main = "Pairwise correlation of varaibles")
 par(mar=c(2, 2, 2, 2), mex=0.8, mfrow=c(2,1))  # Sets smaller margins
 oldpar <- par(no.readonly=TRUE)
 par(mex=0.8,mfrow=c(4,1))
-
 
 
 # SUB-PLOT FOR DAILY DEATHS, WITH VERTICAL LINES DEFINING YEARS
