@@ -16,3 +16,5 @@ Codes/Codes.Rproj
 Codes/.Rproj.user/*
 Codes/.Rhistory
 .Rproj.user
+*.png
+Codes/TS_AssignmentTest.Rmd

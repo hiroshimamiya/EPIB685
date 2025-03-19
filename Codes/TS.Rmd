@@ -17,7 +17,7 @@ https://github.com/gasparrini/2013_bhaskaran_IJE_codedata/blob/master/londondata
    *Time series regression studies in environmental epidemiology*
    Bhaskaran, Gasparrini, Hajat, Smeeth and Armstrong 
    International Journal of Epidemiology - 2013
-   http://www.ag-myresearch.com/2013_bhaskaran_ije.html
+   http://www.ag-myresearch.com/2013_bhaskaran_ije.shtml
 
 
 
@@ -38,6 +38,7 @@ rm(list = ls())
 #install.packages("tidyverse")
 #install.packages("imputeTS")
 #install.packages("splines")
+#install.packages("haven")
 
 
 # laod the package installed if installed already 
@@ -78,6 +79,8 @@ cor(data[,2:5])
 
 # plot correlation - takes bit of time of see this plot 
 pairs(data, main = "Pairwise correlation of varaibles")
+
+data$numdeaths <- log(data$numdeaths)
 ```
 
 
@@ -153,6 +156,7 @@ as the outcome will also remove trends to a large extent (this is called first o
 
 
 How much autocorrelation in our 1st order differenciated outcome??, check with ACF 
+### Differentiation is not shown in the class and not needed for the assignment 
 ```{r}
   plot(diff(data$numdeaths, 1), main = "Outcome (death count), first order difference")
   acf(diff(data$numdeaths, 1), main = "Outcome (death count), first order difference")
@@ -167,7 +171,6 @@ How much autocorrelation in our 1st order differenciated outcome??, check with A
 # Demo codes for assignment 
 We will use the London dataset loaded above for a demo. 
 
-
 ```{r}
 #################
 # SCALE EXPOSURE
@@ -176,22 +179,32 @@ summary(data$ozone)
 data$ozone10 <- data$ozone/10
 
 summary(data$ozone10) # double check scaled or not , new variable ozone10 
+
 ```
+#### Now,  1 unit increase of the ozone exposure variable corresponds to a $10ug/m^3$ increase. 
 
 
-##Standard GLM-based Analysis (not really appropriate, but common in epidemology)
+## Linear regression-based analysis for log-transformed count data
 
 ## Model 1 - unadjusted
 Lets estimate the association between ozone and death count
 ### No confounding adjustment, just a crude association between O3 and death count 
-We will use a family regression that is designed to capture count data that cannot be negative in value (Poisson regression) 
+The outcome is count, but that is not too easy to model using transitional time-sereis approach. 
+Large count with Poisson distribution can be approximated by normal distribution (recall intro stats), but that does not mean we can use regular linear regression with normal (continuous) outcome. **WHY?**.  
+So, we will natural log-transform the count outcome, which will force the estimated regression parameters to be positive (when exponentiated). 
 
-$$ logE(Y_t) = log(\lambda_t) =  \beta_0 + \beta_{ozone} X_t + log(population)$$     
-$\beta_0$ is intercept term       
-$\beta_{ozone}$ is regression coefficient representing the association between ozone and mortality count. **It is critical to understand the interpretation of this variable when exponentiated**     
-We will remove $log(population)$ offset, as the underlying population is assumed to be constant over time (open cohort), though this offset will be very critical in spatial analysis next week.    
+$$y_t = log(countDeath_t)$$
+$$ y_t =  \beta_0 + \beta_{ozone} X_t + \epsilon_t$$     
+$\beta_0$ is the intercept term.        
+$\beta_{ozone}$ is regression coefficient representing the association between ozone and *natural log-transformed* mortality count. 
+$\epsilon_t \sim Normal(0, \sigma^2)$    
+This is called "white noise" i.e., residual time-series with zero mean and zero autocorrelation.  
+We will remove $log(population)$ offset, as the underlying population is assumed to be constant over time (open cohort), though this offset will be very critical in spatial analysis next week.     
+  
 
-Note that the coefficient below for this analysis is `-0.009364`: negative sign (if exponentiated to convert into the rate ratio interpretation, it is less than 1.0) - **Ozone is protective of death. Is this a valid result**?      
+Note that the coefficient below for this analysis is negative sign - **Ozone is protective of death. Is this a valid result**?      
+
+*Be sure* you can make the proper interpretation of $\beta_{ozone}$, as $y_t$ is natural log-transformed. 
 
 ```{r}
 ################################################################################
@@ -203,7 +216,7 @@ Note that the coefficient below for this analysis is `-0.009364`: negative sign 
 # (COMPUTED WITH THE FUNCTION ci.lin IN PACKAGE Epi, TO BE INSTALLED AND LOADED)
 
 # UNADJUSTED MODEL, only including Ozone 
-model1 <- glm(numdeaths ~ ozone,data,family=quasipoisson)  
+model1 <- lm(numdeaths ~ ozone,data)  
 summary(model1)   
 
 ```
@@ -213,7 +226,7 @@ summary(model1)
 Rate Ratio indicates the rate of death (# number death count divided by person-time) in response to one unit increase of ozone. The number look deceivingly small, because it is one unit increase (see the range of ozone in y axis) of ozone, which is tiny, though it will be a substantial count, if we are to talk about the 10-unit increase.       
 See the column for the RR `exp(Est.)`..the ratio is leass than 1.0, so ozone looks protective of dealth, when confounding is not accounted for   
 ```{r}
-ci.lin(model1,subset="ozone",Exp=T) %>%  round(digit = 3)
+ci.lin(model1,subset="ozone",Exp=T) %>%  round(digit = 4)
 ```
 ### ACF 
 Residual shows strong autocorrelation. **The model is not valid.** 
@@ -222,7 +235,7 @@ acf(residuals(model1, type = "response"), main = "ACF of Model 1, no adjustment"
 ```
 
 
-#### If you happen to approximate the outcome with a normal distribution (what condition are required for this?), we will also check the starndard assumptions linear regression, which is completely violated
+#### Aside from autcorrelation, we will also check the starndard assumptions of linear regression. 
 ```{r}
 plot(residuals(model1))
 hist(residuals(model1))
@@ -236,7 +249,7 @@ qqplot(data$numdeaths, residuals(model1))
 we will use regression techniques to control seasonality buy adding a variable that have wave shape  through a data transformation involving sine and cosine function:    
 
 
-$$ logE(Y_t) = log(\lambda_t) =  \beta_0 + \beta_{ozone} X_t + S_t + \delta t, $$ 
+$$ Y_t =  \beta_0 + \beta_{ozone} X_t + S_t + \delta t, $$ 
 $$ S_t = \gamma_{cos} cos(2kt\pi) + \gamma_{sin} sin(2kt\pi) ,$$     
 where $$k = 365.25, \pi = 3.141593$$
 $\beta_0$ is the intercept term       
@@ -260,10 +273,10 @@ fourier <- harmonic(data$time,nfreq=4,period=365.25)
 
 # FIT A POISSON MODEL FOURIER TERMS + LINEAR TERM FOR TREND
 # (USE OF quasipoisson FAMILY FOR SCALING THE STANDARD ERRORS)
-model2 <- glm(numdeaths ~ ozone + fourier + time,data,family=quasipoisson)
+model2 <- lm(numdeaths ~ ozone + fourier + time,data)
 
 # COMPUTE FITTED NUMBER OF DEATHS FROM THIS MODEL
-pred2 <- predict(model2,type="response")
+pred2 <- predict(model2)
 
 ```
 
@@ -272,7 +285,7 @@ pred2 <- predict(model2,type="response")
 # FIGURE 2B in the manuscript
 #############
 par(mfrow= c(2,1))
-plot(data$date,data$numdeaths,ylim=c(100,300),col=grey(0.6),
+plot(data$date,data$numdeaths ,col=grey(0.6),
      main="Diagnosis: Fitted sine-cosine functions (line) plus downward trend",ylab="Daily number of deaths",
      xlab="Date")
 plot(data$date,pred2,lwd=2)
@@ -297,7 +310,7 @@ Now, the RR of ozone is positive, (or greater than 1.0 when exponentiated), mean
 
 ```{r}
 # Formatted table, only visible in HTML output 
-ci.lin(model2,subset="ozone",Exp=T) %>%  round(digit = 3)
+ci.lin(model2,subset="ozone") %>%  round(digit = 4)
 ```
 
 
@@ -305,8 +318,8 @@ ci.lin(model2,subset="ozone",Exp=T) %>%  round(digit = 3)
 
 
 
-## Model 3, 
-Now control for temperature as well. For simplicity, temperature will be added as a categories variable, but spline is probably a better approach (not taught in this course) 
+## Model 3, Controlling for a categorical variable 
+Now control for temperature as well. For simplicity, temperature will be added as a categories variable, but spline is probably a better approach (see step 4 below to control temperature) 
 
 ```{r}
 # (TEMPERATURE MODELLED WITH CATEGORICAL VARIABLES FOR DECILES)
@@ -318,21 +331,21 @@ data$tempdecile <- cut(data$temperature,breaks=cutoffs,include.lowest=TRUE)
 plot(y=data$tempdecile, x = data$date, type = "l", main = "Plot of temperature level (cateogry) over time")
 
 # CONTROLLING FOR TEMPERATURE, plus ozone and seasonality 
-model3 <- glm(numdeaths ~ ozone + fourier + time + tempdecile, data,family=quasipoisson)
+model3 <- lm(numdeaths ~ ozone + fourier + time + tempdecile, data)
 
 ```
 Lets check RR 
 ```{r}
-ci.lin(model3,subset="ozone",Exp=T) %>%  round(digit = 3)
+ci.lin(model3,subset="ozone") %>%  round(digit = 4)
 ```
 
 Does not look too much better than step 2, controlling for season only 
 ...And ACF (autocorrelation) after accounting for temperature
 ```{r}
-acf(residuals(model3, type = "response"), main = "ACF of residual, after controlling for temperature")
+acf(residuals(model3), main = "ACF of residual, after controlling for temperature")
 ```
 
-### Additional info, coefficients of temperature (not so imporant imapct on death, likely because already adjusted by seasonality )
+### Additional info (not need to show in the assignment), coefficients of temperature (not so imporant imapct on death, likely because already adjusted by seasonality )
 ```{r}
 summary(model3)
 ```
@@ -342,17 +355,18 @@ summary(model3)
 
 
 
-## Model 4.   Constrained distributed lag model 
+## Model 4.   Constrained distributed lag model (DLM) 
+#### One for exposure (Ozone), and the other for the temperature confounder adjusted above
 #### Now, add a series of *time-lag* to the exposure (this is called distributed lag model). 
 This model allow the expsoure today to impact death count tomorrow, day after tomorrow..and so on using a distributed lag model.    
-Additionally, we will add lag to temperature too for a better ajustment.    
+Additionally, we will add lag to temperature too for a better adjustment.    
 
 We will give 7 days lags (this is something you have to decide before analysis from literature, not always trivial). If you actually want to learn the length of lag from data rather than literature, you would need transfer function (not discussedin the class).          
 
 Refer to the lecture slides as to why we do not use a series of regression coefficients    
-$$ log(\lambda_t) = \beta_0 + \beta_{ozone1} X_1 + \beta_{ozone2} X_2 + \beta_{ozone3} X_3 + ... + \beta_{ozone7} X_7, $$ 
+$$ y_t = \beta_0 + \beta_{ozone1} X_1 + \beta_{ozone2} X_2 + \beta_{ozone3} X_3 + ... + \beta_{ozone7} X_7, $$ 
 and instead prefer to use a constrained non-linear function below    
-$$ log(\lambda_t) = \beta_0 + f(x_{t};\beta), $$ 
+$$ y_t = \beta_0 + f(x_{t};\beta), $$ 
 where $x_t$ is the exposure, and $\beta$ is the vector of coefficient for each lag. 
 
 ### Settings for the exposure lag effect
@@ -368,8 +382,9 @@ cbtempunc <- crossbasis(data$temperature,lag=c(0,7),
                                     breaks=cutoffs[2:10]),
                         arglag=list(fun="integer"))
 ```
-### Settings for the temperature lag effect
-```{r}
+
+### Settings for the temperature lag effect (confounder) instead of the categorical variables in MOdel 4 
+```{r}                          
 ####################################
 # CONSTRAINED (LAG-STRATIFIED) DLM - Distibuted Lag Model 
 ####################################
@@ -380,42 +395,46 @@ cbo3constr <- crossbasis(data$ozone,lag=c(0,7),
                          argvar=list(fun="lin"),
                          arglag=list(fun="strata",breaks=c(1,3)))
 
+```
 
 
-model4 <- glm(numdeaths ~ cbo3constr + cbtempunc + fourier + date ,data,family=quasipoisson)
+Fitting the distributed lag model and generating estiamted lag effect 
+```{r}
+model4 <- lm(numdeaths ~ cbo3constr + cbtempunc + fourier + date ,data)
 
 
+# Generate (predict) lag patterns for visualization below
 pred4_Ozone <- crosspred(cbo3constr,model4,at=10)
 pred4_Temp <- crosspred(cbtempunc,model4,at=10)
 
 ```
 
 
-### Lets plot the lagged impact of ozone on mortality counts over days, in Relative Risk (RR). 
-The plot shows the RR of Ozone on day $t$ on the same day ($t$), next day ($t+1$), day after ($t+3 ... t+7$)...so that we will allow ozone to influence mortality as a carryover effect over days, even after ozone level goes down.      
+### Lets plot the lagged impact of ozone on mortality counts over days from the distributed lag effect above. 
+The plot shows the effect of Ozone on day $t$ on the same day ($t$), next day ($t+1$), day after ($t+3 ... t+7$)...so that we will allow ozone to influence mortality as a carryover effect over days, even after ozone level goes down.      
 ```{r}
 #############
 # FIGURE 4C
 #############
 
-plot(pred4_Ozone,var=10,type="p",ci="bars",col=1,pch=19,ylim=c(0.99,1.03),
+plot(pred4_Ozone,var=10,type="p",ci="bars",col=1,pch=19,
      main="All lag terms modelled together (with costraints)",xlab="Lag (days)",
-     ylab="RR and 95%CI per 10ug/m3 ozone increase")
+     ylab="Point estimate and 95%CI per 10ug/m3 ozone increase")
 
 ```
 
 
 
-### Impact of temperature - Compare the scale in the y-axis. 
+### Impact of temperature (onfounder) - Compare the scale in the y-axis. 
 The reduced RR 
 ```{r}
 #############
 # FIGURE 4C
 #############
 
-plot(pred4_Temp,var=10,type="p",ci="bars",col=1,pch=19,ylim=c(0.5,1.5),
+plot(pred4_Temp,var=10,type="p",ci="bars",col=1,pch=19,
      main="All lag terms modelled together (with costraints)",xlab="Lag (days)",
-     ylab="RR and 95%CI per 10ug/m3 ozone increase")
+     ylab="Point estimate and 95%CI per 1C temperature increase")
 
 ```
 
@@ -430,7 +449,8 @@ acf(residuals(model4), na.action = na.omit)
 ```
 
 
-## Model 5 - AR(1) model 
+## Model 5 - AR(1) model
+## Not really needed the assignmenbt, but give a better result
 ### Finally, lets assume that death count in previous day is confoudning the count of death today i.e., associated with the exposure ie.g., O3, and death count in next day. In other words, we will control for the lagged outcome of 1 day (previous day) as a confounder. 
 ```{r}
 # RUN THE MODEL AND OBTAIN PREDICTIONS FOR OZONE LEVEL 10ug/m3
@@ -453,8 +473,9 @@ acf(residuals(model5), na.action = na.omit)
 
 
 
-# Differenciation of Y variable makes 
-
+# Model 6, Differenciation of Y variable makes 
+### Even better results than MOdel 5 above
+### Optional info, not part of the assignment. 
 ```{r}
 
 cbtempunc <- crossbasis(data$temperature,lag=c(0,7),
@@ -478,12 +499,12 @@ pred4_Ozone <- crosspred(cbo3constr,model4,at=10)
 pred4_Temp <- crosspred(cbtempunc,model4,at=10)
 
 
-plot(pred4_Temp,var=10,type="p",ci="bars",col=1,pch=19,ylim=c(0.5,1.5),
+plot(pred4_Temp,var=10,type="p",ci="bars",col=1,pch=19,
      main="All lag terms modelled together (with costraints)",xlab="Lag (days)",
      ylab="RR and 95%CI per 10ug/m3 ozone increase")
 
 
-plot(pred4_Ozone,var=10,type="p",ci="bars",col=1,pch=19,ylim=c(0.99,1.03),
+plot(pred4_Ozone,var=10,type="p",ci="bars",col=1,pch=19,
      main="All lag terms modelled together (with costraints)",xlab="Lag (days)",
      ylab="RR and 95%CI per 10ug/m3 ozone increase")
 
