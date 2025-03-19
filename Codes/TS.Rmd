@@ -249,7 +249,7 @@ qqplot(data$numdeaths, residuals(model1))
 we will use regression techniques to control seasonality buy adding a variable that have wave shape  through a data transformation involving sine and cosine function:    
 
 
-$$ Y_t =  \beta_0 + \beta_{ozone} X_t + S_t + \delta t, $$ 
+$$ y_t =  \beta_0 + \beta_{ozone} x_t + S_t + \delta t + \epsilon_t, $$ 
 $$ S_t = \gamma_{cos} cos(2kt\pi) + \gamma_{sin} sin(2kt\pi) ,$$     
 where $$k = 365.25, \pi = 3.141593$$
 $\beta_0$ is the intercept term       
@@ -364,9 +364,9 @@ Additionally, we will add lag to temperature too for a better adjustment.
 We will give 7 days lags (this is something you have to decide before analysis from literature, not always trivial). If you actually want to learn the length of lag from data rather than literature, you would need transfer function (not discussedin the class).          
 
 Refer to the lecture slides as to why we do not use a series of regression coefficients    
-$$ y_t = \beta_0 + \beta_{ozone1} X_1 + \beta_{ozone2} X_2 + \beta_{ozone3} X_3 + ... + \beta_{ozone7} X_7, $$ 
+$$ y_t = \beta_0 + \beta_{ozone1} X_1 + \beta_{ozone2} X_2 + \beta_{ozone3} X_3 + ... + \beta_{ozone7} X_7 + \epsilon_t, $$ 
 and instead prefer to use a constrained non-linear function below    
-$$ y_t = \beta_0 + f(x_{t};\beta), $$ 
+$$ y_t = \beta_0 + f(x_{t};\beta) + \epsilon_t, $$ 
 where $x_t$ is the exposure, and $\beta$ is the vector of coefficient for each lag. 
 
 ### Settings for the exposure lag effect
@@ -474,7 +474,7 @@ acf(residuals(model5), na.action = na.omit)
 
 
 # Model 6, Differenciation of Y variable makes 
-### Even better results than MOdel 5 above
+### First order differentication makes even better results than MOdel 5 above
 ### Optional info, not part of the assignment. 
 ```{r}
 
