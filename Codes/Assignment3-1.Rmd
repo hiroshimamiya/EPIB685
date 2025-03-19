@@ -11,7 +11,34 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 
-# Assignment 3-1
+# Assignment 3-1 (12.5% of Assignment 3)
+First, load library and data 
+Data are from Mortality, air pollution, and weather data for Baltimore City, Maryland, USA, 1987–2000.
+
+Samet, Jonathan M., Scott L. Zeger, Francesca Dominici, Frank Curriero, Ivan Coursac, Douglas W. Dockery, Joel Schwartz, and Antonella Zanobetti. "The National Morbidity, Mortality, and Air Pollution Study." (2000).
+
+Some pre-processing has been done by Tobias et al: 
+https://github.com/aureliotobias/tsdatasets 
+https://doi.org/10.1016/j.dib.2024.110694
+
+
+# Instructions:    
+ You need to show all the codes.    
+ When asked to provide the results, you need to extract only the relevant part of R outputs. Cluttering the output will lead to inconsistent marking and delayed grading. **5%/25% of the grade is for the clarity of formatting**.    
+ Please submit in PDF format to maintain the consistency of format and thus grading across all students. If you submit in any other format, we will not gurantee for fair evaluation on your work, and you are not able to negotiate any marks. You can generate an Rmarkdown file in HTML and then convert into the pdf format.    
+ 
+ We might release the grade for the time-series part of the assignment, as the spatial one is more complex in terms  of the output and thus takes longer to grade. 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+
+
 ```{r pressure, message=FALSE, warning=FALSE}
 # remove all variables to clean the environment 
 rm(list = ls())
@@ -24,16 +51,7 @@ library(tsModel)
 library(haven)
 library(imputeTS)
 
-load("C:/Users/hiroshimamiya/OneDrive/Teaching/EPIB685/EPIB685_W2025/Assignments/Assignment3/tsdatasets_compilation/tsdatasets_location.RData")
-bal <- dlist$balt.us8700 # Baltimore data 
-val <- dlist$vale.sp0107
-chi <- dlist$chic.us8700
-
-bal$pm10_original <- bal$pm10
-
-# The original data has some missingness - impute them. 
-bal$pm10 <- imputeTS::na_interpolation(bal$pm10, option = "spline")
-sum(is.na(bal$pm10))
+bal <- readRDS("bal.rds")
 
 ```
 
@@ -45,7 +63,17 @@ bal$all <- log(bal$all)
 ```
 
 
-## Describe data 
+### Imputation of the PM10 variable 
+```{r} 
+bal$pm10_original <- bal$pm10
+
+# The original data has some missingness - impute them. 
+bal$pm10 <- imputeTS::na_interpolation(bal$pm10, option = "spline")
+sum(is.na(bal$pm10))
+```
+
+
+
 ```{r}
 # SET THE DEFAULT ACTION FOR MISSING DATA TO na.exclude
 # (MISSING EXCLUDED IN ESTIMATION BUT RE-INSERTED IN PREDICTION/RESIDUALS)
@@ -62,14 +90,27 @@ str(bal)
 
 # SUMMARY
 summary(bal)
+```
 
+
+# Q1 Perform the descriptive analysis     
+  - Outcome is "all" cause mortality  
+  - Exposure is PM10 (differentiated, so it has negative values)    
+  -  Confounder is temperature  
+
+Q1 - 1. What patterns are present in the outcome time-series?  
+Q1 - 2. Is the outcome autocorrelated? If so, why? 
+Q1 - 3. What types of adjustment would be needed for the etiologic analysis between all-cause mortality and PM 10?
+Q1 - 4. Do you think that autocorrelation will disappear after controlling for the patterns you mentioned above?
+
+
+```{r}
 # Remove a few missing oiutcomes , less than 1%
 #bal$pm10 <- NULL
 #bal <- bal[complete.cases(bal), ]
 
 # CORRELATIONS across each variables 
 cor(bal[,2:7], use = "complete.obs")
-
 
 # plot correlation - takes bit of time of see this plot 
 pairs(bal[,2:7], main = "Pairwise correlation of varaibles")
@@ -79,7 +120,7 @@ pairs(bal[,2:7], main = "Pairwise correlation of varaibles")
 
 
 
-### Make plots for the several time-seriesin the dataset
+### Make plots for the several time-series in the dataset
 ```{r}
 # SET THE PLOTTING PARAMETERS FOR THE PLOT (SEE ?par)
 # this allow making two pltos in one window
@@ -138,7 +179,12 @@ acf(tsDataDecomposed$random, na.action = na.pass, main = "ACF of the random comp
 
 
 
-
+# Q2 Model the log(count) of all-bause mortality on the time-series of pm10.    
+ - 2-1: Show the resulting association between the exposure and the outcome (do not just copy/paste lengthy R output). Show only the relevant section.   
+ - 2-2: Interpret the results in terms of statistical conclusiveness and the magnnitude of the association   
+ - 2-3: Show the ACF of the residuals and interpret in terms of the validity of the model. 
+ - 2-4: show the standard assumptions of linear regressions, and interpret in terms of the validity.   
+ 
 
 
 
@@ -158,8 +204,12 @@ acf(residuals(model1, type = "response"), main = "ACF of Model 1, no adjustment"
 ```
 
 
-
-
+# Q3. Adjust for both cyclic patterns (use sine and consine functions) and trend. 
+  - 3-1: Show the resulting association between the exposure and the outcome (do not just copy/paste lengthy R output) after adjustment for the cyclic patterns. Do you see any changes, in terms of the width of 95% CI and the point estimate form Model 1 above?    
+  - 3-2: Show and interpret ACF of the residual. Interpret the change(s) in autocorrelation.   
+  - Bonus question: use spline to model the trend and cyclic patterns, and show the resulting ACF. Interpret the findings. 
+  
+  
 ## Model 2 - season 
 
 ```{r}
@@ -219,6 +269,27 @@ Now, the RR of ozone is positive, (or greater than 1.0 when exponentiated), mean
 ci.lin(model2,subset="pm10") %>%  round(digit = 3)
 ```
 
+
+
+
+# Q4. Adjust for temperature, in addition to the cyclic patterns and trend above. 
+  - 4-1: Show the resulting association between the exposure and the outcome after adjustment for temperature. Do you see any changes, in terms of the width of 95% CI and the point estimate form Model 1 above?    
+  - 4-2: Show and interpret ACF of the residual. Interpret the change(s) in autocorrelation.   
+  - Bonus question: use distributed lad model to adjust for temperature. 
+
+
+# Q5. Adjust for dewpoints as well. 
+  - 4-1: Show the resulting association between the exposure and the outcome after adjustment for temperature. Do you see any changes, in terms of the width of 95% CI and the point estimate form Model 1 above? Also, do you see any chagnes in ACF of the residuals, and why or why not?  
+  
+
+
+
+# Q6. Use distributed lag function (cross-basis function with linear dose-response association, as in the case of O3 in demo) to capture the lagged effect of PM10. 
+  - 6-1: Show the resulting association between the exposure.   
+  - 6-2: Interpret the finding, in terms of the statistical conclusiveness based on 95% CI, and the shape of the estimated lag function.   
+  - 6-3: Show and interpret ACF of the residual. Interpret the change(s) in autocorrelation.   
+  
+  
 
 
 
@@ -352,12 +423,12 @@ acf(residuals(model5), na.action = na.pass)
 
 ```{r}
 
-cbtempunc <- crossbasis(bal$temperature,lag=c(0,7),
+cbtempunc <- crossbasis(bal$temp,lag=c(0,10),
                         argvar=list(fun="strata",
                                     breaks=cutoffs[2:10]),
                         arglag=list(fun="integer"))
 
-cbo3constr <- crossbasis(bal$ozone,lag=c(0,7),
+cbpmconstr <- crossbasis(bal$pm10,lag=c(0,10),
                          argvar=list(fun="lin"),
                          arglag=list(fun="strata",breaks=c(1,3)))
 
@@ -366,19 +437,19 @@ bal <- bal  %>% mutate(diff_y = all - lag(all))
 
 
 
-model6<- lm(diff_y ~ cbo3constr + cbtempunc, bal)
+model6<- lm(diff_y ~ cbpmconstr + cbtempunc, bal)
 acf(residuals(model6), na.action = na.pass)
 
-pred4_Ozone <- crosspred(cbo3constr,model4,at=10)
-pred4_Temp <- crosspred(cbtempunc,model4,at=10)
+pred4_pm10 <- crosspred(cbpmconstr,model6,at=10)
+pred4_Temp <- crosspred(cbtempunc,model6,at=10)
 
 
-plot(pred4_Temp,var=10,type="p",ci="bars",col=1,pch=19,ylim=c(0.5,1.5),
+plot(pred4_Temp,var=10,type="p",ci="bars",col=1,pch=19,
      main="All lag terms modelled together (with costraints)",xlab="Lag (days)",
      ylab="RR and 95%CI per 10ug/m3 ozone increase")
 
 
-plot(pred4_Ozone,var=10,type="p",ci="bars",col=1,pch=19,ylim=c(0.99,1.03),
+plot(pred4_pm10,var=10,type="p",ci="bars",col=1,pch=19,
      main="All lag terms modelled together (with costraints)",xlab="Lag (days)",
      ylab="RR and 95%CI per 10ug/m3 ozone increase")
 

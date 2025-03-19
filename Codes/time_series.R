@@ -82,6 +82,10 @@ pairs(data)
 
 
 
+
+
+
+
 ################################################################################
 # PRELIMINARY ANALYSIS
 #######################
@@ -114,15 +118,11 @@ layout(1)
 
 
 
-
-
-
-
 #################
 # SCALE EXPOSURE
 #################
 summary(data$ozone)
-data$ozone10 <- data$ozone/10
+data$ozone10 <- data$ozone*100
 
 summary(data$ozone10) # double check scaled or not , new variable ozone10 
 
@@ -147,12 +147,10 @@ summary(data$ozone10) # double check scaled or not , new variable ozone10
 data$month <- as.factor(months(data$date,abbr=TRUE))
 data$year <- as.factor(substr(data$date,1,4))
 
-
 # FIT A POISSON MODEL WITH A STRATUM FOR EACH MONTH NESTED IN YEAR
 # (USE OF quasipoisson FAMILY FOR SCALING THE STANDARD ERRORS)
 model1 <- glm(numdeaths ~ month/year,data,family=quasipoisson)
 summary(model1)
-
 
 # COMPUTE PREDICTED NUMBER OF DEATHS FROM THIS MODEL
 pred1 <- predict(model1,type="response")
@@ -168,14 +166,23 @@ plot(data$date,data$numdeaths,ylim=c(100,300),pch=19,cex=0.2,col=grey(0.6),
 lines(data$date,pred1,lwd=2)
 
 
-
-
-
 #############
 # Dianogsis of Model 1
 #############
 acf(residuals(model1))
 pacf(residuals(model1))
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -215,6 +222,21 @@ plot(data$date,data$numdeaths,ylim=c(100,300),pch=19,cex=0.2,col=grey(0.6),
   main="Sine-cosine functions (Fourier terms)",ylab="Daily number of deaths",
   xlab="Date")
 lines(data$date,pred2,lwd=2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #####################################
 # OPTION 3: SPLINE MODEL
@@ -264,6 +286,21 @@ plot(data$date,res3,ylim=c(-50,150),pch=19,cex=0.4,col=grey(0.6),
   main="Residuals over time",ylab="Residuals (observed-fitted)",xlab="Date")
 abline(h=1,lty=2,lwd=2)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ################################################################################
 # ESTIMATING OZONE-MORTALITY ASSOCIATION
 # (CONTROLLING FOR CONFOUNDERS)
@@ -298,6 +335,19 @@ tabeff <- rbind(eff4,eff5,eff6)[,5:7]
 dimnames(tabeff) <- list(c("Unadjusted","Plus season/trend","Plus temperature"),
   c("RR","ci.low","ci.hi"))
 round(tabeff,3)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ################################################################################
 # EXPLORING THE LAGGED (DELAYED) EFFECTS
@@ -335,6 +385,21 @@ abline(h=1)
 arrows(0:7,tablag[,2],0:7,tablag[,3],length=0.05,angle=90,code=3)
 points(0:7,tablag[,1],pch=19)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #####################
 # UNCONSTRAINED DLM
 #####################
@@ -370,6 +435,8 @@ tablag2 <- with(pred7,t(rbind(matRRfit,matRRlow,matRRhigh)))
 colnames(tablag2) <- c("RR","ci.low","ci.hi")
 tablag2
 
+
+
 # OVERALL CUMULATIVE (NET) EFFECT
 pred7$allRRfit ; pred7$allRRlow ; pred7$allRRhigh
 
@@ -380,6 +447,12 @@ pred7$allRRfit ; pred7$allRRlow ; pred7$allRRhigh
 plot(pred7,var=10,type="p",ci="bars",col=1,pch=19,ylim=c(0.99,1.03),
   main="All lag terms modelled together (unconstrained)",xlab="Lag (days)",
   ylab="RR and 95%CI per 10ug/m3 ozone increase")
+
+
+
+
+
+
 
 ####################################
 # CONSTRAINED (LAG-STRATIFIED) DLM
@@ -426,11 +499,17 @@ plot(data$date,res7,ylim=c(-5,10),pch=19,cex=0.7,col=grey(0.6),
   main="Residuals over time",ylab="Deviance residuals",xlab="Date")
 abline(h=0,lty=2,lwd=2)
 
+
 #############################
 # FIGURE A2a
 #############################
 
 pacf(res7,na.action=na.omit,main="From original model")
+
+
+
+
+
 
 # INCLUDE THE 1-DAY LAGGED RESIDUAL IN THE MODEL
 model9 <- update(model7,.~.+Lag(res7,1))

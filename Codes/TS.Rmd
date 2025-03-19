@@ -28,7 +28,6 @@ Extra lines were inserted to make the codes easier to follow and illustrate the 
 
 ```{r pressure, message=FALSE, warning=FALSE}
 # remove all variables to clean the environment 
-rm(list = ls())
 
 # First install the package - !! Once installed, remove the installation commande below or comment out by #, as there is no need to install the same lib again and again, all it takes is to use library() command to load installed library.  
 #install.packages("foreign")
@@ -57,10 +56,11 @@ library(haven) # needed to load Stata DTA file format below
 ## Describe data 
 ```{r}
 # Get file directly from web URL, 
-# Download data from:    https://github.com/gasparrini/2013_bhaskaran_IJE_codedata/blob/master/londondataset2002_2006.dta
-data <- read_dta("londondataset2002_2006_bhaskaran_IJE.dta")
-#write.csv(data, "londondataset2002_2006_bhaskaran_IJE.csv")
-                  
+data <- read.dta("https://github.com/gasparrini/2013_bhaskaran_IJE_codedata/raw/master/londondataset2002_2006.dta")
+
+# Or load from the local 
+#data <- read_dta("londondataset2002_2006_bhaskaran_IJE.dta")
+
 # SET THE DEFAULT ACTION FOR MISSING DATA TO na.exclude
 # (MISSING EXCLUDED IN ESTIMATION BUT RE-INSERTED IN PREDICTION/RESIDUALS)
 options(na.action="na.exclude")
@@ -80,6 +80,8 @@ cor(data[,2:5])
 # plot correlation - takes bit of time of see this plot 
 pairs(data, main = "Pairwise correlation of varaibles")
 
+
+# Make the outcome log count (so that we constrain to the positive value in interpretation of regression coefficients)
 data$numdeaths <- log(data$numdeaths)
 ```
 
@@ -176,7 +178,7 @@ We will use the London dataset loaded above for a demo.
 # SCALE EXPOSURE
 #################
 summary(data$ozone)
-data$ozone10 <- data$ozone/10
+data$ozone10 <- data$ozone*10
 
 summary(data$ozone10) # double check scaled or not , new variable ozone10 
 
@@ -398,7 +400,8 @@ cbo3constr <- crossbasis(data$ozone,lag=c(0,7),
 ```
 
 
-Fitting the distributed lag model and generating estiamted lag effect 
+Fitting the distributed lag model and generating estimated lag effect 
+See changes when you add/remove the cyclic terms (Fourier and date) and trend from the previous model 
 ```{r}
 model4 <- lm(numdeaths ~ cbo3constr + cbtempunc + fourier + date ,data)
 
@@ -419,7 +422,7 @@ The plot shows the effect of Ozone on day $t$ on the same day ($t$), next day ($
 
 plot(pred4_Ozone,var=10,type="p",ci="bars",col=1,pch=19,
      main="All lag terms modelled together (with costraints)",xlab="Lag (days)",
-     ylab="Point estimate and 95%CI per 10ug/m3 ozone increase")
+     ylab="Change in log(y) and its 95%CI per 10ug/m3 ozone increase")
 
 ```
 
@@ -434,7 +437,7 @@ The reduced RR
 
 plot(pred4_Temp,var=10,type="p",ci="bars",col=1,pch=19,
      main="All lag terms modelled together (with costraints)",xlab="Lag (days)",
-     ylab="Point estimate and 95%CI per 1C temperature increase")
+     ylab="Change in log(y) and its 95%CI per 1C temperature increase")
 
 ```
 
@@ -501,12 +504,12 @@ pred4_Temp <- crosspred(cbtempunc,model4,at=10)
 
 plot(pred4_Temp,var=10,type="p",ci="bars",col=1,pch=19,
      main="All lag terms modelled together (with costraints)",xlab="Lag (days)",
-     ylab="RR and 95%CI per 10ug/m3 ozone increase")
+     ylab="Change in log(y) and its 95%CI per 10ug/m3 ozone increase")
 
 
 plot(pred4_Ozone,var=10,type="p",ci="bars",col=1,pch=19,
      main="All lag terms modelled together (with costraints)",xlab="Lag (days)",
-     ylab="RR and 95%CI per 10ug/m3 ozone increase")
+     ylab="Change in log(y) and its 95%CI per 10ug/m3 ozone increase")
 
 ```
 
