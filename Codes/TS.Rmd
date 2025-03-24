@@ -138,7 +138,7 @@ plot(tsDataDecomposed)
 ## How much autocorrelation in our outcome??, check with ACF 
 Extremely strong temporal correlation in the count of death, meaning that count in one day is very similar to the counts in nearby days. ACF stands for autocorrealtion function     
 ```{r}
-acf(data$ozone, main = "Autocorrelation function (ACF) of the outcome")
+acf(data$ozone, main = "Autocorrelation function (ACF) of the outcome", lag.max = 100)
 ```
 
 
@@ -332,7 +332,6 @@ plot(y=data$tempdecile, x = data$date, type = "l", main = "Plot of temperature l
 
 # CONTROLLING FOR TEMPERATURE, plus ozone and seasonality 
 model3 <- lm(numdeaths ~ ozone + fourier + time + tempdecile, data)
-
 ```
 Lets check RR 
 ```{r}
@@ -378,7 +377,7 @@ where $x_t$ is the exposure, and $\beta$ is the vector of coefficient for each l
 # PRODUCE THE CROSS-BASIS FOR TEMPERATURE
 # AS ABOVE, BUT WITH STRATA DEFINED BY INTERNAL CUT-OFFS
 cbtempunc <- crossbasis(data$temperature,lag=c(0,7),
-                        argvar=list(fun="strata",
+                        argvar=list(fun="strata", 
                                     breaks=cutoffs[2:10]),
                         arglag=list(fun="integer"))
 ```
@@ -386,27 +385,25 @@ cbtempunc <- crossbasis(data$temperature,lag=c(0,7),
 ### Settings for the temperature lag effect (confounder) instead of the categorical variables in MOdel 4 
 ```{r}                          
 ####################################
-# CONSTRAINED (LAG-STRATIFIED) DLM - Distibuted Lag Model 
+# CONSTRAINED (LAG-STRATIFIED) DLM - Distributed Lag Model 
 ####################################
 
 # PRODUCE A DIFFERENT CROSS-BASIS FOR OZONE
 # USE STRATA FOR LAG STRUCTURE, WITH CUT-OFFS DEFINING RIGHT-OPEN INTERVALS 
 cbo3constr <- crossbasis(data$ozone,lag=c(0,7),
                          argvar=list(fun="lin"),
-                         arglag=list(fun="strata",breaks=c(1,3)))
-
+                         arglag=list(fun="strata",
+                                     breaks=c(1,3)))
 ```
 
 
-Fitting the distributed lag model and generating estiamted lag effect 
+Fitting the distributed lag model and generating estimated lag effect 
 ```{r}
-model4 <- lm(numdeaths ~ cbo3constr + cbtempunc + fourier + date ,data)
-
+model4 <- lm(numdeaths ~ cbo3constr + cbtempunc + fourier + time ,data)
 
 # Generate (predict) lag patterns for visualization below
 pred4_Ozone <- crosspred(cbo3constr,model4,at=10)
 pred4_Temp <- crosspred(cbtempunc,model4,at=10)
-
 ```
 
 
@@ -416,9 +413,9 @@ The plot shows the effect of Ozone on day $t$ on the same day ($t$), next day ($
 #############
 # FIGURE 4C
 #############
-
 plot(pred4_Ozone,var=10,type="p",ci="bars",col=1,pch=19,
-     main="All lag terms modelled together (with costraints)",xlab="Lag (days)",
+     main="All lag terms modelled together (with costraints)",
+     xlab="Lag (days)",
      ylab="Point estimate and 95%CI per 10ug/m3 ozone increase")
 
 ```
