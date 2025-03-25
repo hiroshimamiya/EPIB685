@@ -236,24 +236,41 @@ text(st_coordinates(hospPointIsland), labels = hospPointIsland$pc, cex=0.8, pos 
 
 # define number of color bins to group continuous measure of median family income 
 # Here, I am not using GGPLOT library but using the base R plot package, but the way you use to fill category is same as non-spatil ggplot
-nclr = 5
+par(mfrow = c(1,2))
 
+numGroup = 5
 # define color palette -- see http://colorbrewer2.org 
-plotclr = brewer.pal(nclr,"Greens")
+plotclr = brewer.pal(numGroup,"Greens")
 
 # define the classes or breaks for the data
-class = classIntervals(fsaMtl$med_income, nclr, style="quantile", dataPrecision=0)
+class = classIntervals(fsaMtl$med_income, n = numGroup, style="quantile", dataPrecision=0)
 
 # create a vector of colors for each region
 colcode = findColours(class,plotclr)
 
 # plot the region boundaries - again, run all the three lines as a chunk if using R markdown
 plot(st_geometry(fsaMtl), col=colcode)
-title(main='Classed Choropleth, Median Family Income')
+title(main='Classed Choropleth, \n Median Family Income \n quantile ')
 legend('topleft', legend=names(attr(colcode, "table")), fill=attr(colcode,"palette"), cex=0.9, bty='n')
 
 
 
+# Equal interval plot 
+class <- classIntervals(fsaMtl$med_income, n = numGroup, style = "equal")
+colcode = findColours(class,brewer.pal(numGroup,"Blues"))
+plot(st_geometry(fsaMtl), col=colcode)
+title(main='Classed Choropleth, \n Median Family Income, \n equal interval')
+legend('topleft', legend=names(attr(colcode, "table")), fill=attr(colcode,"palette"), cex=0.9, bty='n')
+
+
+# GG plot way of plotting for the first image 
+breaks_qt <- classIntervals(fsaMtl$med_income, n = numGroup, style = "quantile", dataPrecision = 0)
+fsaMtl%>% 
+  mutate(income_category = cut(med_income, breaks_qt$brks, include.lowest = TRUE)) %>% 
+  ggplot() + 
+  geom_sf(aes(fill=income_category)) +
+  scale_fill_brewer(palette = "OrRd") + 
+  theme_map()
 
 
 
@@ -263,7 +280,8 @@ legend('topleft', legend=names(attr(colcode, "table")), fill=attr(colcode,"palet
 # number of residents in each FSA) 
 
 #color bin to categorize the intensity of GI visits
-nclr = 5
+dev.off()
+numGroup = 5
 
 # Plot map with four different levels of grouping of the outcome
 groups = c(3,5,7,9)
@@ -271,15 +289,17 @@ par(mfrow=c(2,2))
 
 for (group in groups) {
   plotclr = brewer.pal(nclr, 'Reds')
-  class.crude = classIntervals((fsaMtl@data$giFsaRate*1000), group, style='quantile', dataPrecision=0)
+  class.crude = classIntervals((fsaMtl$giFsaRate*1000), group, style='quantile', dataPrecision=0)
   colcode.crude = findColours(class.crude, plotclr)
   
-  plot(fsaMtl)
-  plot(fsaMtl, col=colcode.crude, add=T)
+  plot(st_geometry(fsaMtl), col=colcode.crude)
   title(sub="Crude Rates of GI Visits by FSA 
         (Annual Visits per 1,000)")
   legend('topleft', legend=names(attr(colcode.crude, "table")), fill=attr(colcode.crude,"palette"), cex=0.9, bty='n')
 } # for - levels
+
+
+
 
 
 
@@ -300,6 +320,14 @@ fsaMtl@data[fsaMtl$giCount == 0, "giCount"] <- 1
 ## Question 2. Comment on the spatial patterns you do or do not observe at each level of 
 ##             grouping. Is there any relationship between the number of groups and the concept 
 ##             of smoothing? Explain. 
+
+
+
+
+
+
+
+
 
 
 
