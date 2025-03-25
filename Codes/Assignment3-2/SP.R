@@ -4,21 +4,77 @@
 rm(list= ls()) 
 
 # Install and Load the necessary packages 
-#library("rgeos")
 library("spdep")
-#library("rgdal")
 library("sp")
 library("sf")
 library("classInt") # For mapping 
 library("RColorBrewer") # For mapping
 library("CARBayes") # Library to run conditional autoregressive model for areal data 
+library(tidyverse)
+library(ggthemes)
+
+
+
+
+
+### Load area data 
+
+#https://ised-isde.canada.ca/site/office-superintendent-bankruptcy/en/statistics-and-research/forward-sortation-area-fsa-and-north-american-industry-classification-naics-reports/forward-sortation-area-definition
+
+# TAKES TIME TO DOWNLOAD! so you might as well save and comment this to skip this  once saved. 
+# SOurce of FSA - statistics canada, 2011 File. NOte that there are 2021 data too, so this example use old data. 
+#"https://www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/bound-limit-2011-eng.cfm"
+URL <- "https://www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/files-fichiers/gfsa000b11a_e.zip"
+download.file(url=URL,destfile='CanadaFSA.zip')
+
+
+# Create a filder for FSA shapefile 
+dir.create("fsaFolder", showWarnings = FALSE)
+unzip('CanadaFSA.zip', exdir = "fsaFolder")
+fsaCan <- read_sf("fsaFolder/gfsa000b11a_e.shp")
+
+                             
+# pre-downloaded data - water cropped 
+#fsaCan_water <- read_sf("data/fsaCan_waterversion/gfsa000b11a_e.shp")
+
+# Takes time to display! 
+# Display Canada 
+plot(st_transform(fsaCan %>% select(CFSAUID)), main = "FSAs in Canada, default CRS")
+plot(st_transform(fsaCan, crs = 3978) %>% select(CFSAUID), main = "Use of SRID 3978")
+
+# Display Quebec, with and without projection 
+# I added filter(PRUID == 24) to select QC (Province ID = 24) 
+plot(st_transform(fsaCan %>%  filter(PRUID == 24) %>% select(CFSAUID), crs = 3978), main = "QC, projected nationally")
+plot(st_transform(fsaCan %>%  filter(PRUID == 24), crs = 32198) %>% select(CFSAUID), main = "QC, projected to QC")
+
+# Extract postabl codes and display Census Metro Area of Montreal  
+fsa2001 <- read_sf("data/FSA_Montreal_2001/shapefile_FSA_Montreal_2001.shp")
+targetFSA_island <- unique(fsa2001$FSA)
+
+targetFSA_island <- c("H1S","H1Y","H2J","H2N","H2R","H2X","H3G","H3P","H3T","H3Z","H4B","H4L","H4S","H4W","H4Z","H9A","H1M","H1Z","H2G","H2P","H2T","H2Z","H3A","H3J","H3R","H3V","H3X","H4T","H4X","H5A","H9G","H1J","H1X","H2E","H2H","H2V","H3K","H3W","H4M","H4V","H4Y","H5B","H1K","H1P","H2A","H2M","H2S","H2W","H3B","H3S","H4A","H4N","H4R","H1R","H1T","H3N","H3Y","H4P","H9B","H3H","H4C","H9P","H9R","H1A","H1E","H1H","H1L","H1V","H2C","H3E","H3M","H8P","H9J","H9S","H1B","H1G","H1W","H2L","H3L","H4G","H4K","H8Z","H9E","H9W","H1C","H1N","H2B","H2Y","H4H","H4J","H9C","H9K","H2K","H8N","H8S","H8Y","H9H","H3C","H8R","H8T","H9X","H4E")
+
+# Extract the island of Montreal only
+fsaMtl <- fsaCan[fsaCan$CFSAUID %in% targetFSA_island, ]
+fsaMtl_water   <- fsaCan_water[fsaCan_water$CFSAUID %in% targetFSA_island, ]
+
+# Plot minimal info, two ways for Montreal
+plot(fsaMtl['PRUID'], main = "FSA in Mtl, ignoring water boundary")
+ggplot() + geom_sf(data = fsaMtl , fill = "white", col = "black") + 
+  theme_minimal() + 
+  ggtitle("FSAs in Mtl") + 
+  theme_map()
+
+#plot(fsaMtl_water['PRUID'], main = "FSA in Mtl, respecting the water boundary")
+
+
+
+
 
 
 
 
 
 ### 1. Load and prepare data  ######################
-
 # load GI count data by fsa, sex, and age. 
 giData <- read.csv("data/giMontreal2006_quarter.csv", header = TRUE, stringsAsFactors = FALSE)
 str(giData) #inspect 
@@ -33,10 +89,10 @@ head(fsaCensus2011) #inspect
 # Load shapefile (point of hospitals). The dsn argument indicates the path to
 # the file, and the layer argument indicates the name of shapefile, usually
 # without file extension.
-hospPoint <- readOGR(dsn = "./data/Hospitals_Montreal", layer = "shapefile_Hospitals_Mtl")
+hospPoint <- read_sf("data/Hospitals_Montreal/shapefile_Hospitals_Mtl.shp")
+plot(hospPoint['ramq_id'], pch = 16, col = "black", main = "Location of hospitals in Mtl")
 
-# Load polygons for Forward Sortation Area in Monteral.
-fsaShape <- readOGR(dsn = "./data/FSA_Montreal_2001", layer = "shapefile_FSA_Montreal_2001")
+
 
 # FSA shape is prepared for you, but for your future study or fun activity can
 # be downloaded from here too (2011 file below)
@@ -44,22 +100,46 @@ fsaShape <- readOGR(dsn = "./data/FSA_Montreal_2001", layer = "shapefile_FSA_Mon
 
 
 
+
+
+
+
+
+
+
+
 ### Example showing re-projection of spatial data ######################
 
-# Are they in the same coordinate refernce system (CRS)? If not, one needs to be
+# Are they in the same coordinate reference system (CRS)? If not, one needs to be
 # re-projected to the same shape of the earth.
-proj4string(fsaShape)
-proj4string(hospPoint)
-identicalCRS(fsaShape, hospPoint)
+
+
 # If false, they cannot be overlaid (can't be plot on the same map), and
 # distance/area-based analysis (e.g. distance between points) can be incorrect
 
-fsaShape  <- spTransform(fsaShape, CRS("+init=epsg:2959"))
-hospPoint <- spTransform(hospPoint, CRS("+init=epsg:2959"))
+plot(st_geometry(fsaMtl))
+plot(st_geometry(hospPoint), pch = 16,  add = TRUE)
+
+
+# Answer 
+st_crs(fsaMtl)
+st_crs(hospPoint)
+hospPoint <- st_transform(hospPoint, 2959)
+fsaMtl <-  st_transform(fsaMtl, 2959)
+plot(st_geometry(fsaMtl))
+plot(st_geometry(hospPoint), pch = 16,  add = TRUE)
+
+
+ggplot() + 
+  geom_sf(data = fsaMtl, color = "black", fill = "white") + 
+  geom_sf(data = hospPoint, color = "red") + 
+  theme_minimal()
+
+
+identical(st_crs(fsaMtl2), st_crs(hospPoint2))
 # coordinate reference system I used for Montreal is found here:
 # http://spatialreference.org/ref/epsg/nad83csrs-utm-zone-18n/
 
-identicalCRS(fsaShape, hospPoint)
 
 
 ## Question 1. Could the assessment of relative risk in section 3 of the 
@@ -70,20 +150,17 @@ identicalCRS(fsaShape, hospPoint)
 # If interested in gaining advanced understainding in R and S4 class, see this:
 # "Software for Data Analysis - Programming with R" by John Chambers
 
-typeof(fsaShape) 
-class(fsaShape) 
-summary(fsaShape) #show summary of spatial and attribute data 
-summary(fsaShape@data) #show summary attribute data (census data for each fsa)
+class(fsaMtl) 
+summary(fsaMtl) #show summary of spatial and attribute data 
+class(hospPoint)
+summary(hospPoint)
 
-# FSA-level population in 1996 census as an example
-summary(fsaShape$POP96) 
-summary(fsaShape@data$POP96) 
-summary(fsaShape@data[, "POP96"]) 
-fsaShape[["POP96"]]
 
-# Unlike attribute data, polygon (spatial data) is saved like this...example
-fsaShape@polygons[[1]] #first polygon (area, H1A postal code) 
-fsaShape@proj4string # Projection 
+
+
+
+
+
 
 
 
@@ -91,19 +168,40 @@ fsaShape@proj4string # Projection
 
 # Analysis will be based on FSA, so first aggregate the observed 
 # and expected GI count into FSA-level across age and sex groups in the GI outcome table
-giDataFsa <- aggregate(data = giData, cbind(giCount, denomCount, giExpectedCount) ~ fsa, FUN = sum)
+giDataFsa <- giData %>% 
+  group_by(fsa) %>% 
+  summarise(giCount = sum(giCount), denomCount = sum(denomCount), giExpectedCount = sum(giExpectedCount))
+
+head(giDataFsa)
+hist(giDataFsa$giCount)
 
 # Additionally, we will calculte FSA-level rate of GI
+# Answer 
 giDataFsa$giFsaRate <- giDataFsa$giCount / giDataFsa$denomCount
+
 
 # NOW perform attriute join 
 # Merge FSA shapefle and GI count data.
-fsaShape@data <- data.frame(fsaShape@data, giDataFsa[match(fsaShape$FSA, giDataFsa$fsa), ])
+fsaMtl <- fsaMtl %>% 
+  left_join(giDataFsa, by = c("CFSAUID" = "fsa"))
 # Alternatively, do this, but never refer data frame using @data if using "merge" function
-# fsaShape <- merge(fsaShape, giDataFsa, by.x= "FSA", by.y = "fsa")
+# fsaMtl <- merge(fsaMtl, giDataFsa, by.x= "FSA", by.y = "fsa")
 
-# Merge FSA shapefile with 2011 census data i.e. attach census attributes to the shapefle 
-fsaShape@data <- data.frame(fsaShape@data, fsaCensus2011[match(fsaShape$FSA, fsaCensus2011$fsa), ])
+# Likewise, merge FSA shapefile with 2011 census data i.e. attach census attributes to the shapefle 
+fsaMtl <- fsaMtl %>% 
+  left_join(fsaCensus2011, by = c("CFSAUID" = "fsa"))
+
+
+glimpse(fsaMtl)
+plot(fsaMtl['giFsaRate'], main = "Disease rate, assuming...?")
+plot(fsaMtl['giExpectedCount'], main = "expected count, age-sex adjusted")
+plot(fsaMtl['prop_ps'], main = "proportion of post-secondary graduates")
+plot(fsaMtl['med_income'], main = "Median household income in 1000 CAD")
+
+
+
+
+
 
 
 
@@ -114,56 +212,48 @@ fsaShape@data <- data.frame(fsaShape@data, fsaCensus2011[match(fsaShape$FSA, fsa
 # Plot FSA shape first, then try to overlay with hospital points - Remember if
 # using markdown, the two plot commands need to be executed together (not line
 # by line)
-plot(fsaShape)#plot shape of Montreal partitioned by FSA
-plot(hospPoint, add=TRUE, col= "blue") # I am trying to overlay point (hospital) data to fsa polygon 
+plot(st_geometry(fsaMtl))#plot shape of Montreal partitioned by FSA
+plot(hospPoint, add=TRUE, col= "blue", pch = 16) # I am trying to overlay point (hospital) data to fsa polygon 
 
 # Subset hopsital data by island
-hospPointIsland <- hospPoint[fsaShape, ]
-plot(fsaShape, main="FSA and hospitals"); plot(hospPointIsland, col = "blue", add=TRUE)
+hospPointIsland <- hospPoint[fsaMtl, ]
+
+plot(st_geometry(fsaMtl), main="FSA and hospitals, hospitals are subset by the island"); 
+plot(hospPointIsland, col = "blue", pch = 16, add=TRUE)
 
 # if you like, display FSA label 
-text(coordinates(fsaShape),as.character(fsaShape@data$FSA),cex=0.6)
+text(st_coordinates(hospPointIsland), labels = hospPointIsland$pc, cex=0.8, pos = 1)
 
 
 
-## 2.2 Plot Risk Factor as Choropleth
+
+
+
+
+### 2.2 Plot Risk Factor as Choropleth ####
 # Now use census attributes that you joined (merged) to the FSA spatial polygon
 # data, and make a map of one of these attributes, median family income, by FSA.
 
 # define number of color bins to group continuous measure of median family income 
+# Here, I am not using GGPLOT library but using the base R plot package, but the way you use to fill category is same as non-spatil ggplot
 nclr = 5
 
 # define color palette -- see http://colorbrewer2.org 
 plotclr = brewer.pal(nclr,"Greens")
 
 # define the classes or breaks for the data
-class = classIntervals(fsaShape@data$med_income, nclr, style="quantile", dataPrecision=0)
+class = classIntervals(fsaMtl$med_income, nclr, style="quantile", dataPrecision=0)
 
 # create a vector of colors for each region
 colcode = findColours(class,plotclr)
 
 # plot the region boundaries - again, run all the three lines as a chunk if using R markdown
-plot(fsaShape, col=colcode)
-title(sub="Median Family Income", main='Classed Choropleth')
+plot(st_geometry(fsaMtl), col=colcode)
+title(main='Classed Choropleth, Median Family Income')
 legend('topleft', legend=names(attr(colcode, "table")), fill=attr(colcode,"palette"), cex=0.9, bty='n')
 
 
-## 2.3 Plot median family income as a proportional symbol or 'bubble map'
-max.symbol.size=5
-min.symbol.size=1
-plotvar = fsaShape@data$med_income
-# create symbols for each FSA with size scaled to income in FSA
-symbol.size = ((plotvar-min(plotvar))/(max(plotvar)-min(plotvar))*(max.symbol.size-min.symbol.size) + min.symbol.size)
-# plot FSA boundaries
-plot(fsaShape)
-# get coordinates for centroids of FSA
-mtl.cntr = coordinates(fsaShape)
-# plot circles of graduate size and color at centroids
-points(mtl.cntr, pch=16, col=colcode, cex=symbol.size)
-# outline the circles
-points(mtl.cntr, cex=symbol.size)
-title(sub="Median Family Income", main="Bubble Plot")
-legend('topleft', legend=names(attr(colcode, "table")), fill=attr(colcode,"palette"), cex=0.9, bty='n')
+
 
 
 
@@ -181,11 +271,11 @@ par(mfrow=c(2,2))
 
 for (group in groups) {
   plotclr = brewer.pal(nclr, 'Reds')
-  class.crude = classIntervals((fsaShape@data$giFsaRate*1000), group, style='quantile', dataPrecision=0)
+  class.crude = classIntervals((fsaMtl@data$giFsaRate*1000), group, style='quantile', dataPrecision=0)
   colcode.crude = findColours(class.crude, plotclr)
   
-  plot(fsaShape)
-  plot(fsaShape, col=colcode.crude, add=T)
+  plot(fsaMtl)
+  plot(fsaMtl, col=colcode.crude, add=T)
   title(sub="Crude Rates of GI Visits by FSA 
         (Annual Visits per 1,000)")
   legend('topleft', legend=names(attr(colcode.crude, "table")), fill=attr(colcode.crude,"palette"), cex=0.9, bty='n')
@@ -198,13 +288,13 @@ for (group in groups) {
 # for most diseases that are rare
 # Display areas without observed count
 par(mfrow=c(1,1))
-fsaShape@data[fsaShape$giCount == 0, c("denom_totalpop", "giCount", "giExpectedCount")]
-plot(fsaShape, border = "grey", col=grey(c(1,0))[as.factor(fsaShape@data$giFsaRate == 0)], 
+fsaMtl@data[fsaMtl$giCount == 0, c("denom_totalpop", "giCount", "giExpectedCount")]
+plot(fsaMtl, border = "grey", col=grey(c(1,0))[as.factor(fsaMtl@data$giFsaRate == 0)], 
      main = "Areas with no observed gi count in Jan - March of 2006
      Note that there are three very small 
      business districts with a small # of inhabitants", cex.main = 0.8)
 # For nuw, imputed with 1 
-fsaShape@data[fsaShape$giCount == 0, "giCount"] <- 1
+fsaMtl@data[fsaMtl$giCount == 0, "giCount"] <- 1
 
 
 ## Question 2. Comment on the spatial patterns you do or do not observe at each level of 
@@ -225,7 +315,7 @@ fsaShape@data[fsaShape$giCount == 0, "giCount"] <- 1
 # SMR of GI visits for area i is: SMR_i = Observed_count_i/Expected_count_i
 # Where age-sex standardized expected count of GI in area i can be calculated
 # by indirect standardization. Expected count of area i is already provided to you and stored in
-# the column `fsaShape@data$giExpectedCount`. This is a sum of expected count,
+# the column `fsaMtl@data$giExpectedCount`. This is a sum of expected count,
 # where stratum-specific population (age and sex in this excercise) in each FSA
 # is multiplied by the stratum-specific GI rate across the entire study region
 # of Montreal.
@@ -242,8 +332,8 @@ fsaShape@data[fsaShape$giCount == 0, "giCount"] <- 1
 # We will map SMR, a maximum likelihood estimator of area-level relative risk  
 
 # Using the expected and oversed GI count, caulcate SMR and its variance 
-fsaShape@data$SMR <- fsaShape@data$giCount / fsaShape@data$giExpectedCount
-fsaShape@data$varSMR <- fsaShape@data$SMR / fsaShape@data$giExpectedCount
+fsaMtl@data$SMR <- fsaMtl@data$giCount / fsaMtl@data$giExpectedCount
+fsaMtl@data$varSMR <- fsaMtl@data$SMR / fsaMtl@data$giExpectedCount
 
 
 ## Question 3 - Plot SMR, its variance, population counts, and disease counts 
@@ -256,41 +346,41 @@ fsaShape@data$varSMR <- fsaShape@data$SMR / fsaShape@data$giExpectedCount
 par(mfrow=c(2,2))
 #Map 3.1 - SMR
 plotclr = brewer.pal(nclr, 'BuPu')
-class.crude = classIntervals((fsaShape@data$SMR), 4, style='fixed', fixedBreaks=c(0,0.5,1,2,3), dataPrecision = 2)
+class.crude = classIntervals((fsaMtl@data$SMR), 4, style='fixed', fixedBreaks=c(0,0.5,1,2,3), dataPrecision = 2)
 colcode.crude = findColours(class.crude, plotclr)
 
-plot(fsaShape)
-plot(fsaShape, col = colcode.crude, add=T)
+plot(fsaMtl)
+plot(fsaMtl, col = colcode.crude, add=T)
 title(sub="Standardized Morbidity Ratio") 
 legend('topleft', legend=names(attr(colcode.crude, "table")), fill=attr(colcode.crude,"palette"), cex=0.6, bty='n')
 
 #Map 3.2 - Variance 
 plotclr = brewer.pal(nclr, 'BuPu')
-class = classIntervals((fsaShape@data$varSMR), 2, style='fixed', fixedBreaks = c(0, 0.001, 0.05, 0.092), dataprecision = 3)
+class = classIntervals((fsaMtl@data$varSMR), 2, style='fixed', fixedBreaks = c(0, 0.001, 0.05, 0.092), dataprecision = 3)
 colcode.crude = findColours(class.crude, plotclr)
 
-plot(fsaShape)
-plot(fsaShape, col=colcode.crude, add=T)
+plot(fsaMtl)
+plot(fsaMtl, col=colcode.crude, add=T)
 title(sub="SMR Variance") 
 legend('topleft', legend=names(attr(colcode.crude, "table")), fill=attr(colcode.crude,"palette"), cex=0.6, bty='n')
 
 #Map 3.3 - Population Counts!
 plotclr = brewer.pal(nclr, 'BuPu')
-class.crude = classIntervals((fsaShape@data$denom_totalpop), 6, style='quantile', dataPrecision = 0)
+class.crude = classIntervals((fsaMtl@data$denom_totalpop), 6, style='quantile', dataPrecision = 0)
 colcode.crude= findColours(class.crude, plotclr)
 
-plot(fsaShape)
-plot(fsaShape, col=colcode.crude, add=T)
+plot(fsaMtl)
+plot(fsaMtl, col=colcode.crude, add=T)
 title(sub="Population Counts") 
 legend('topleft', legend=names(attr(colcode.crude, "table")), fill=attr(colcode.crude,"palette"), cex=0.6, bty='n')
 
 #Map 3.4 - Disease Counts!
 plotclr = brewer.pal(nclr, 'BuPu')
-class.crude <- classIntervals((fsaShape@data$giCount), 5, style='quantile', dataPrecision=0)
+class.crude <- classIntervals((fsaMtl@data$giCount), 5, style='quantile', dataPrecision=0)
 colcode.crude <- findColours(class.crude, plotclr)
 
-plot(fsaShape)
-plot(fsaShape, col=colcode.crude, add=T)
+plot(fsaMtl)
+plot(fsaMtl, col=colcode.crude, add=T)
 title(sub="Disease Counts")
 legend('topleft', legend=names(attr(colcode.crude, "table")), fill=attr(colcode.crude,"palette"), cex=0.6, bty='n') 
 
@@ -322,7 +412,7 @@ par(mfrow=c(1,1))
 
 
 # Create an R object (list) showing which FSA is adjacent to which
-fsaNb = poly2nb(fsaShape, queen=FALSE) # this function creates a neighorhood object called nb 
+fsaNb = poly2nb(fsaMtl, queen=FALSE) # this function creates a neighorhood object called nb 
 
 
 # Inspect the list for the neighbourhood structure.  
@@ -331,8 +421,8 @@ summary(fsaNb) # Note that one region has no link (neighbour) -- is this realist
 is.symmetric.nb(fsaNb) # Neighborhood needs to be symmetric (i.e. area i is neighbour of j, and vice versa)
 
 # Plot and see how connection is defined 
-plot(fsaShape, border='darkgrey', las=1, main='Connectivity by Shared Borders', sub = "not quite correct definition of neighorhood")
-plot(fsaNb, coordinates(fsaShape), add=TRUE)
+plot(fsaMtl, border='darkgrey', las=1, main='Connectivity by Shared Borders', sub = "not quite correct definition of neighorhood")
+plot(fsaNb, coordinates(fsaMtl), add=TRUE)
 
 
 # The spatial structure above is not valid due to the presence of an isolated
@@ -342,9 +432,9 @@ plot(fsaNb, coordinates(fsaShape), add=TRUE)
 fsaNbBridge <- read.gal('data/fsaNbBridge')
 summary(fsaNbBridge) #now empty neighbour shoud be gone
 
-plot(fsaShape, border='lightgrey',  las=1, main='Neighborhood definition by Shared Borders')
-plot(fsaNbBridge, coordinates(fsaShape), col="red", add=TRUE, cex = 0.3) #new spatial relationship
-plot(fsaNb, coordinates(fsaShape), pch = 0.1, cex = 0.1, points=FALSE, add=TRUE, col="black") #old (and invalid) spatial relationship
+plot(fsaMtl, border='lightgrey',  las=1, main='Neighborhood definition by Shared Borders')
+plot(fsaNbBridge, coordinates(fsaMtl), col="red", add=TRUE, cex = 0.3) #new spatial relationship
+plot(fsaNb, coordinates(fsaMtl), pch = 0.1, cex = 0.1, points=FALSE, add=TRUE, col="black") #old (and invalid) spatial relationship
 
 # Finally generate a spatial weight matrix containing spatial structure 
 # Matrix whose elements are coded 1 if two areas are adjacent(column and row are
@@ -353,12 +443,12 @@ W <- nb2mat(fsaNbBridge, style = "B")
 
 
 # Center and scale covariates - helps convergence of MCMC 
-fsaShape$income_center <- scale(fsaShape@data$med_income, center = TRUE, scale = TRUE)[,1]
-fsaShape$immig_center <- scale((fsaShape@data$prop_immig), center = TRUE, scale = TRUE)[,1]
-fsaShape$young_center <- scale((fsaShape@data$prop_age_under18), center = TRUE, scale = TRUE)[,1]
-fsaShape$old_center <- scale((fsaShape@data$prop_age_over65), center = TRUE, scale = TRUE)[,1]
-fsaShape$education_center <- scale((fsaShape@data$prop_ps), center = TRUE, scale = TRUE)[,1]
-fsaShape$popdensity_center <- scale((fsaShape@data$popdensity_km), center = TRUE, scale = TRUE)[,1]
+fsaMtl$income_center <- scale(fsaMtl@data$med_income, center = TRUE, scale = TRUE)[,1]
+fsaMtl$immig_center <- scale((fsaMtl@data$prop_immig), center = TRUE, scale = TRUE)[,1]
+fsaMtl$young_center <- scale((fsaMtl@data$prop_age_under18), center = TRUE, scale = TRUE)[,1]
+fsaMtl$old_center <- scale((fsaMtl@data$prop_age_over65), center = TRUE, scale = TRUE)[,1]
+fsaMtl$education_center <- scale((fsaMtl@data$prop_ps), center = TRUE, scale = TRUE)[,1]
+fsaMtl$popdensity_center <- scale((fsaMtl@data$popdensity_km), center = TRUE, scale = TRUE)[,1]
 
 
 
@@ -374,7 +464,7 @@ set.seed(123456) # pick any number you like
 # This could take a long time 
 giFitCar <- S.CARbym(giCount~income_center + immig_center + young_center + education_center + popdensity_center + offset(log(giExpectedCount)), 
               family="poisson", 
-              data=fsaShape@data, 
+              data=fsaMtl@data, 
               W = W, # Add the spatial structure here 
               # prior probability for precision of spatial and non-spatial random effect 
               prior.tau2 = c(1,0.01), # inverse gamma prior parametrized by shape and scale 
@@ -412,7 +502,7 @@ print(giFitCar)
 ##             in fitted.values in the model output.  Map the RR, and compare
 ##              the estimated risk surface with that of the crude (non-model based) 
 ##              SMR. (Hint: after you caulcte the RR, you must join the results to
-##              the fsaShape spatial data frame for mapping as demonstrated above).
+##              the fsaMtl spatial data frame for mapping as demonstrated above).
 
 
 
@@ -449,8 +539,8 @@ library("maptools")
 library("sf")
 
 # get RR and plot - here using spplot rather than generic plot function 
-fsaShape@data$RR.smooth <- giFitCar$fitted.values / fsaShape@data$giExpectedCount
-spplot(fsaShape, c("RR.smooth", "SMR"))
+fsaMtl@data$RR.smooth <- giFitCar$fitted.values / fsaMtl@data$giExpectedCount
+spplot(fsaMtl, c("RR.smooth", "SMR"))
 
 ### 95% CI and risk map 
 # To compute credible interval (of fitted values) in Bayesian estimation, I first need posterior sample of fitted values from MCMC
@@ -461,20 +551,20 @@ ci <- sapply(postSampleFitted, function(x)quantile(x, probs = c(0.025, 0.975)))
 
 
 # Resulting ci dataframe contains upper and lower 2.5percentile
-fsaShape@data$RR.smooth_lower <- ci["2.5%", ] / fsaShape@data$giExpectedCount
-fsaShape@data$RR.smooth_upper <- ci["97.5%", ] / fsaShape@data$giExpectedCount
+fsaMtl@data$RR.smooth_lower <- ci["2.5%", ] / fsaMtl@data$giExpectedCount
+fsaMtl@data$RR.smooth_upper <- ci["97.5%", ] / fsaMtl@data$giExpectedCount
 
 # Create an indicator for high, low and indeterminate risk area 
-fsaShape@data$RR.smooth_classify <- 0
-fsaShape@data$RR.smooth_classify[fsaShape@data$RR.smooth_lower > 1] <- 1
-fsaShape@data$RR.smooth_classify[fsaShape@data$RR.smooth_upper < 1] <- -1
+fsaMtl@data$RR.smooth_classify <- 0
+fsaMtl@data$RR.smooth_classify[fsaMtl@data$RR.smooth_lower > 1] <- 1
+fsaMtl@data$RR.smooth_classify[fsaMtl@data$RR.smooth_upper < 1] <- -1
 
-fsaShape@data$RR.smooth_classify <- factor(fsaShape@data$RR.smooth_classify, 
+fsaMtl@data$RR.smooth_classify <- factor(fsaMtl@data$RR.smooth_classify, 
                                            levels = c(-1,1,0), 
                                            labels =c("Low-risk", "High-risk", "Indeterminate"))
 
 # And plot 
-spplot(fsaShape, "RR.smooth_classify", col.regions = c( "#000000", "white", "lightgrey"), 
+spplot(fsaMtl, "RR.smooth_classify", col.regions = c( "#000000", "white", "lightgrey"), 
        col = "darkgrey", lwd = 1, colorkey = FALSE, 
        main = "Classification of areas by high, low and indeterminate risk of GI visits", 
        sub = "Areas are classifed by inclusion of null value (RR=1) into posterior 95% credible interval
@@ -483,12 +573,12 @@ spplot(fsaShape, "RR.smooth_classify", col.regions = c( "#000000", "white", "lig
 
 # As well, compare distribution of relative risk (y-axis) and population count in each area
 par(mfrow = c(1,2))
-plot(fsaShape$totalpop, fsaShape$RR.smooth, 
-     ylim = c(min(fsaShape$SMR), max(fsaShape$SMR)),
+plot(fsaMtl$totalpop, fsaMtl$RR.smooth, 
+     ylim = c(min(fsaMtl$SMR), max(fsaMtl$SMR)),
      xlab = "Population at risk", ylab = "Smoothed RR", 
      main = "Smoothed relative risk by BYM-CAR model")
-plot(fsaShape$totalpop, fsaShape$SMR, 
-     ylim = c(min(fsaShape$SMR), max(fsaShape$SMR)), 
+plot(fsaMtl$totalpop, fsaMtl$SMR, 
+     ylim = c(min(fsaMtl$SMR), max(fsaMtl$SMR)), 
      xlab = "Population at risk", ylab = "Crude SMR", 
      main = "Crude relative risk")
 dev.off()
