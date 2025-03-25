@@ -10,8 +10,8 @@ library("sf")
 library("classInt") # For mapping 
 library("RColorBrewer") # For mapping
 library("CARBayes") # Library to run conditional autoregressive model for areal data 
-library(tidyverse)
-library(ggthemes)
+
+
 
 
 
@@ -35,7 +35,7 @@ fsaCan <- read_sf("fsaFolder/gfsa000b11a_e.shp")
 
                              
 # pre-downloaded data - water cropped 
-#fsaCan_water <- read_sf("data/fsaCan_waterversion/gfsa000b11a_e.shp")
+fsaCan_water <- read_sf("data/fsaCan_waterversion/gfsa000b11a_e.shp")
 
 # Takes time to display! 
 # Display Canada 
@@ -51,20 +51,15 @@ plot(st_transform(fsaCan %>%  filter(PRUID == 24), crs = 32198) %>% select(CFSAU
 fsa2001 <- read_sf("data/FSA_Montreal_2001/shapefile_FSA_Montreal_2001.shp")
 targetFSA_island <- unique(fsa2001$FSA)
 
-targetFSA_island <- c("H1S","H1Y","H2J","H2N","H2R","H2X","H3G","H3P","H3T","H3Z","H4B","H4L","H4S","H4W","H4Z","H9A","H1M","H1Z","H2G","H2P","H2T","H2Z","H3A","H3J","H3R","H3V","H3X","H4T","H4X","H5A","H9G","H1J","H1X","H2E","H2H","H2V","H3K","H3W","H4M","H4V","H4Y","H5B","H1K","H1P","H2A","H2M","H2S","H2W","H3B","H3S","H4A","H4N","H4R","H1R","H1T","H3N","H3Y","H4P","H9B","H3H","H4C","H9P","H9R","H1A","H1E","H1H","H1L","H1V","H2C","H3E","H3M","H8P","H9J","H9S","H1B","H1G","H1W","H2L","H3L","H4G","H4K","H8Z","H9E","H9W","H1C","H1N","H2B","H2Y","H4H","H4J","H9C","H9K","H2K","H8N","H8S","H8Y","H9H","H3C","H8R","H8T","H9X","H4E")
-
 # Extract the island of Montreal only
 fsaMtl <- fsaCan[fsaCan$CFSAUID %in% targetFSA_island, ]
 fsaMtl_water   <- fsaCan_water[fsaCan_water$CFSAUID %in% targetFSA_island, ]
 
 # Plot minimal info, two ways for Montreal
 plot(fsaMtl['PRUID'], main = "FSA in Mtl, ignoring water boundary")
-ggplot() + geom_sf(data = fsaMtl , fill = "white", col = "black") + 
-  theme_minimal() + 
-  ggtitle("FSAs in Mtl") + 
-  theme_map()
+ggplot() + geom_sf(data = fsaMtl , fill = "white", col = "red") + theme_minimal() + ggtitle("FSA in Mtl, ignoring water boundary")
 
-#plot(fsaMtl_water['PRUID'], main = "FSA in Mtl, respecting the water boundary")
+plot(fsaMtl_water['PRUID'], main = "FSA in Mtl, respecting the water boundary")
 
 
 
@@ -124,10 +119,10 @@ plot(st_geometry(hospPoint), pch = 16,  add = TRUE)
 # Answer 
 st_crs(fsaMtl)
 st_crs(hospPoint)
-hospPoint <- st_transform(hospPoint, 2959)
-fsaMtl <-  st_transform(fsaMtl, 2959)
-plot(st_geometry(fsaMtl))
-plot(st_geometry(hospPoint), pch = 16,  add = TRUE)
+hospPoint2 <- st_transform(hospPoint, 2959)
+fsaMtl2 <-  st_transform(fsaMtl, st_crs(hospPoint2))
+plot(st_geometry(fsaMtl2))
+plot(st_geometry(hospPoint2), pch = 16,  add = TRUE)
 
 
 ggplot() + 
@@ -193,14 +188,10 @@ fsaMtl <- fsaMtl %>%
 
 
 glimpse(fsaMtl)
-plot(fsaMtl['giFsaRate'], main = "Disease rate, assuming...?")
+plot(fsaMtl['giFsaRate'], main = "rate")
 plot(fsaMtl['giExpectedCount'], main = "expected count, age-sex adjusted")
 plot(fsaMtl['prop_ps'], main = "proportion of post-secondary graduates")
-plot(fsaMtl['med_income'], main = "Median household income in 1000 CAD")
-
-
-
-
+plot(fsaMtl['med_income'], main = "Median household income")
 
 
 
@@ -212,65 +203,61 @@ plot(fsaMtl['med_income'], main = "Median household income in 1000 CAD")
 # Plot FSA shape first, then try to overlay with hospital points - Remember if
 # using markdown, the two plot commands need to be executed together (not line
 # by line)
-plot(st_geometry(fsaMtl))#plot shape of Montreal partitioned by FSA
-plot(hospPoint, add=TRUE, col= "blue", pch = 16) # I am trying to overlay point (hospital) data to fsa polygon 
+plot(fsaMtl)#plot shape of Montreal partitioned by FSA
+plot(hospPoint, add=TRUE, col= "blue") # I am trying to overlay point (hospital) data to fsa polygon 
 
 # Subset hopsital data by island
-hospPointIsland <- hospPoint[fsaMtl, ]
+if(st_crs(hospPoint) == st_crs(fsaMtl)){
+  hospPointIsland <- hospPoint[fsaMtl, ]
+}else{
+  stop("Two maps have different projection, cannot proceed")
+}
 
-plot(st_geometry(fsaMtl), main="FSA and hospitals, hospitals are subset by the island"); 
-plot(hospPointIsland, col = "blue", pch = 16, add=TRUE)
+plot(fsaMtl, main="FSA and hospitals"); plot(hospPointIsland, col = "blue", add=TRUE)
 
 # if you like, display FSA label 
-text(st_coordinates(hospPointIsland), labels = hospPointIsland$pc, cex=0.8, pos = 1)
+text(coordinates(fsaMtl),as.character(fsaMtl@data$FSA),cex=0.6)
 
 
 
-
-
-
-
-### 2.2 Plot Risk Factor as Choropleth ####
+## 2.2 Plot Risk Factor as Choropleth
 # Now use census attributes that you joined (merged) to the FSA spatial polygon
 # data, and make a map of one of these attributes, median family income, by FSA.
 
 # define number of color bins to group continuous measure of median family income 
-# Here, I am not using GGPLOT library but using the base R plot package, but the way you use to fill category is same as non-spatil ggplot
-par(mfrow = c(1,2))
+nclr = 5
 
-numGroup = 5
 # define color palette -- see http://colorbrewer2.org 
-plotclr = brewer.pal(numGroup,"Greens")
+plotclr = brewer.pal(nclr,"Greens")
 
 # define the classes or breaks for the data
-class = classIntervals(fsaMtl$med_income, n = numGroup, style="quantile", dataPrecision=0)
+class = classIntervals(fsaMtl@data$med_income, nclr, style="quantile", dataPrecision=0)
 
 # create a vector of colors for each region
 colcode = findColours(class,plotclr)
 
 # plot the region boundaries - again, run all the three lines as a chunk if using R markdown
-plot(st_geometry(fsaMtl), col=colcode)
-title(main='Classed Choropleth, \n Median Family Income \n quantile ')
+plot(fsaMtl, col=colcode)
+title(sub="Median Family Income", main='Classed Choropleth')
 legend('topleft', legend=names(attr(colcode, "table")), fill=attr(colcode,"palette"), cex=0.9, bty='n')
 
 
-
-# Equal interval plot 
-class <- classIntervals(fsaMtl$med_income, n = numGroup, style = "equal")
-colcode = findColours(class,brewer.pal(numGroup,"Blues"))
-plot(st_geometry(fsaMtl), col=colcode)
-title(main='Classed Choropleth, \n Median Family Income, \n equal interval')
+## 2.3 Plot median family income as a proportional symbol or 'bubble map'
+max.symbol.size=5
+min.symbol.size=1
+plotvar = fsaMtl@data$med_income
+# create symbols for each FSA with size scaled to income in FSA
+symbol.size = ((plotvar-min(plotvar))/(max(plotvar)-min(plotvar))*(max.symbol.size-min.symbol.size) + min.symbol.size)
+# plot FSA boundaries
+plot(fsaMtl)
+# get coordinates for centroids of FSA
+mtl.cntr = coordinates(fsaMtl)
+# plot circles of graduate size and color at centroids
+points(mtl.cntr, pch=16, col=colcode, cex=symbol.size)
+# outline the circles
+points(mtl.cntr, cex=symbol.size)
+title(sub="Median Family Income", main="Bubble Plot")
 legend('topleft', legend=names(attr(colcode, "table")), fill=attr(colcode,"palette"), cex=0.9, bty='n')
-
-
-# GG plot way of plotting for the first image 
-breaks_qt <- classIntervals(fsaMtl$med_income, n = numGroup, style = "quantile", dataPrecision = 0)
-fsaMtl%>% 
-  mutate(income_category = cut(med_income, breaks_qt$brks, include.lowest = TRUE)) %>% 
-  ggplot() + 
-  geom_sf(aes(fill=income_category)) +
-  scale_fill_brewer(palette = "OrRd") + 
-  theme_map()
 
 
 
@@ -280,8 +267,7 @@ fsaMtl%>%
 # number of residents in each FSA) 
 
 #color bin to categorize the intensity of GI visits
-dev.off()
-numGroup = 5
+nclr = 5
 
 # Plot map with four different levels of grouping of the outcome
 groups = c(3,5,7,9)
@@ -289,17 +275,15 @@ par(mfrow=c(2,2))
 
 for (group in groups) {
   plotclr = brewer.pal(nclr, 'Reds')
-  class.crude = classIntervals((fsaMtl$giFsaRate*1000), group, style='quantile', dataPrecision=0)
+  class.crude = classIntervals((fsaMtl@data$giFsaRate*1000), group, style='quantile', dataPrecision=0)
   colcode.crude = findColours(class.crude, plotclr)
   
-  plot(st_geometry(fsaMtl), col=colcode.crude)
+  plot(fsaMtl)
+  plot(fsaMtl, col=colcode.crude, add=T)
   title(sub="Crude Rates of GI Visits by FSA 
         (Annual Visits per 1,000)")
   legend('topleft', legend=names(attr(colcode.crude, "table")), fill=attr(colcode.crude,"palette"), cex=0.9, bty='n')
 } # for - levels
-
-
-
 
 
 
@@ -320,14 +304,6 @@ fsaMtl@data[fsaMtl$giCount == 0, "giCount"] <- 1
 ## Question 2. Comment on the spatial patterns you do or do not observe at each level of 
 ##             grouping. Is there any relationship between the number of groups and the concept 
 ##             of smoothing? Explain. 
-
-
-
-
-
-
-
-
 
 
 
