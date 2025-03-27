@@ -104,7 +104,7 @@ fsaCan <- read_sf("tempFolder/gfsa000b11a_e.shp")
 ```
 
 
-## **Question 1 -1**: Compare the two maps and describe any differences, and explan the source of differences.   
+## **Question1_1**: Compare the two maps and describe any differences, and explan the source of differences.   
 Ignore the color coded legend....     
 You can check the CRS of loaded maps by `st_crs(yourMapData)`, replace yourMapData with the data frame.    
 ```{r}
@@ -115,7 +115,7 @@ plot(st_transform(fsaCan['PRUID'], crs = 3978) , main = "FSAs by province, CRD =
 par(mfrow = c(1,1))
 ```
 
-## **Question 1 -2** Compare the two maps below, state which map is more appropraite and why
+## **Question1_2** Compare the two maps below, state which map is more appropraite and why
 ```{r}
 # I added filter(PRUID == 24) to select QC (Province ID = 24) 
 par(mfrow = c(1,2))
@@ -157,7 +157,7 @@ plot(hospPoint['ramq_id'], pch = 16, col = "black", main = "Location of hospital
 ```
 
 
-## **Question 1 -3**: Align the hospital (point data) and FSA  
+## **Question1_3**: Align the hospital (point data) and FSA  
 #### Currently, you cannot overlay hospital with FSA map in Montreal. You need to fix the codes. **Some points will float in the river** after you align FSA and points, as some pospitals you loaded are located in the north and south shores, but most will lie on the island.    
 
 Note: `add = TRUE` allows two plots to layered over each other, but currently the point data are way outside the FSA map, so you need to bring the points back to the center of the FSA map. 
@@ -242,7 +242,7 @@ fsaMtl <- fsaHiroshi %>%
 #### Question 2 is about the visualization of spatial attributes      
 Two plots whose income category is based on quantile income and equal interval   
 
-## **Question 2-1** State which of the two map is appropriate to present the spatial distribution of income, and explain why.        
+## **Question2_1** State which of the two map is appropriate to present the spatial distribution of income, and explain why.        
 
 ```{r, fig.width=10, fig.height=10}
 par(mfrow = c(1,2))
@@ -292,7 +292,7 @@ fsaMtl%>%
  
  
  
-## **Question 2-2** See the red shaded map  below showing the rate of gi count per area in 2006, and explain what condition is needed to call these numbers annual "rate"? 
+## **Question2_2** See the red shaded map  below showing the rate of gi count per area in 2006, and explain what condition is needed to call these numbers annual "rate"? 
 
 
 ```{r}
@@ -350,7 +350,7 @@ fsaMtl$varSMR <- fsaMtl$SMR / fsaMtl$giExpectedCount
 ```
 
 
-## **Question 2-3**  Based on the plot of SMR and its Variance, population size, and the crude disease counts below, answer qustions a-f below.      
+## **Question2_3**  Based on the plot of SMR and its Variance, population size, and the crude disease counts below, answer qustions a-f below.      
   a) Describe the spatial trends of SMR.   
   b) Describe the trends of variance.  
   c) Describe the trends of population count.    
@@ -529,16 +529,16 @@ plot(fittedModel$samples$beta, main = "MCMC diagnosis") #Important to check conv
  - You can copy and paste appropriate codes to the code chunk (box) below.   
  - Hint: after you caulcte the RR, you must join the results to the fsaShape spatial data frame for mapping as demonstrated. 
 
-## **Question 3-1.** Among the three types of spatial anlaysis, which one is closest to our current task and why?    
+## **Question3_1.** Among the three types of spatial anlaysis, which one is closest to our current task and why?    
 
-## **Question 3-2.** Create a variable in `fsaMtl` that stores the model-smoothed SMR.     
+## **Question3_2.** Create a variable in `fsaMtl` that stores the model-smoothed SMR.     
 Hint: fitted count values from model are available as `fittedModel$fitted.values`. 
 
-## **Question 3-3.** Map the smoothed SMR. Add a proper legend.        
+## **Question3_3.** Map the smoothed SMR. Add a proper legend.        
 
-## **Question 3-4.** Discribe the spatial distribution of model-smoothed SMR, in contrast to the un-smoothed original SMR. Which SMR surface is likely to be correct and why?     
+## **Question3_4.** Discribe the spatial distribution of model-smoothed SMR, in contrast to the un-smoothed original SMR. Which SMR surface is likely to be correct and why?     
 
-## **Question 3-5.** How many areas have statistically significantly higher relative risk than the region-level risk (RR=1)?   
+## **Question3_5.** How many areas have statistically significantly higher relative risk than the region-level risk (RR=1)?   
 Hint. Recall the interpretation of confidence (crdible) interval. Those who did not take EPIB 607 should reach me to get help for this.             
 
 
