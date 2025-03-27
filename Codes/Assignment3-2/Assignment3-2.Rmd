@@ -1,0 +1,559 @@
+---
+title: "Assignment3_2: Spatial analysis"
+author: "Hiroshi"
+date: "2025-03-25"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+
+
+
+
+
+
+## Grade (12.5% of the total mark) 
+Assignment 3-1 takes the rest of 12.5%
+
+  Data are from simulated GI (Gastrointestinal) Cases from the McGill Clinical and Health Informatics, the Surveillance Lab. 
+  Anya Okhmatovskaia et al. (2010) https://pubmed.ncbi.nlm.nih.gov/21347040/
+  
+  
+## Instructions:     
+ - First, load (install) libraries and data   
+ - You need to show all the codes. If you write only answers to each Q but not codes, you are unlikely to get partial mark. 
+ - Some questions, in particular Q4s ask you to provide simple codes as answers.   
+ - When asked to provide the results, you need to extract only the relevant part of R outputs.   
+ - **5%/25% of the grade is for the clarity of formatting: 2.5% for Assignment 3-2 , and the remanding 2.5% for Assignment 3-1**.         
+ - After Question 1 , you need to delete all the data (see `rm(list=ls()` below), else you will get wrong answer for all the subsequent questions.      
+ 
+ - Please submit in PDF format to maintain the consistency of format and thus grading across all students. You can generate an Rmarkdown file in HTML and then convert into the pdf format.        
+
+ We might release the grade for the time-series part of the assignment, as the spatial one is more complex in terms  of the output and thus takes longer to grade.     
+
+
+## Evaluation (total 12.5%):    
+  - Each questions have equal weights, thus 17 questions/10 percent of total marks. Note that Question 2-3 contains multiple sub-questions.    
+  - The renaming 2.5% are formats (too small font size to read in maps, maps not friendly to color blind people, answers are hard to find in the codes).
+  - There are two bonus questions, each with 0.3%.   
+
+## Suggested format:   
+If you want to ensure scores for the format part in Assignment 3-2, I recommend following the submission instructions below:         
+ - Submit the answers and codes separately, so that the instructor and TA can grade consistently and rapidly by focusing on answers, and when ambiguities arise, we will look at your codes to see the potential for partial mark.    
+   - If you like, you can copy and paste answers (images, texts, codes) on an MS word document and convert to pdf. 
+   - Codes and outputs not related to answers consist of R outputs and code chunks. If using Rmd, generate your work in usual .html format and convert to pdf. 
+   - This format only applies to Assignment 3-2 as it has a longer inputs and outputs and thus embedding answers in the codes will lead to confusion. However, if you like you can also submit in this format for Assignment 3-1 (time series).     
+   - **If you do not submit in this format (and importantly both in pdf), we will still accept the answer, but we will not grantee and negotiate for any partial marks**, and your mark for formatting could  be lower too.       
+
+ 
+ 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+ 
+ ## Target geography, time, and outcome for this assignment      
+ - Area: Forward Sortation Area (FSA), first 3 digits of Canadian Postal codes     
+ - Time: year 2011  
+ - Outcome: Cases of gastrointestinal diseases at the level of FSA   
+ - Study region (geography) - Island of Montreal   
+
+ 
+```{r pressure, message=FALSE, warning=FALSE}
+# remove all variables to clean the environment 
+rm(list = ls())
+# Install and Load the necessary packages 
+library(spdep)
+library(sp)
+library(sf)
+library(classInt) # For mapping 
+library(RColorBrewer) # For mapping
+library(CARBayes) # Library to run conditional autoregressive model for areal data 
+library(tidyverse)
+library(ggthemes)
+```
+
+ 
+  
+
+### Download areal data for Question 1.   
+Question 1s are spatial data management and descriptive analysis, with a focus on polygon and point data (but not raster).  
+**You may download only once**, and save the FSA data in your computer, and comment out the download codes so that you do not need to run it again. Else you need to download it every time you run the codes, which will drastically slow down your work.   
+
+Source of FSA - statistics canada, 2011 File. NOte that there are 2021 data too, so this example use old data.   
+ 
+"https://www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/bound-limit-2011-eng.cfm"    
+https://ised-isde.canada.ca/site/office-superintendent-bankruptcy/en/statistics-and-research/forward-sortation-area-fsa-and-north-american-industry-classification-naics-reports/forward-sortation-area-definition   
+
+
+```{r} 
+URL <- "https://www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/files-fichiers/gfsa000b11a_e.zip"
+download.file(url=URL,destfile='CanadaFSA.zip')
+
+
+# Create a filder for FSA shapefile 
+dir.create("tempFolder", showWarnings = FALSE)
+unzip('CanadaFSA.zip', exdir = "tempFolder")
+
+# once downloaed and unzipped, you can keep using them without downloading. 
+fsaCan <- read_sf("tempFolder/gfsa000b11a_e.shp")
+```
+
+
+## **Question 1 -1**: Compare the two maps and describe any differences, and explan the source of differences.   
+Ignore the color coded legend....     
+You can check the CRS of loaded maps by `st_crs(yourMapData)`, replace yourMapData with the data frame.    
+```{r}
+# Takes time to display! 
+par(mfrow = c(1,2))
+plot(fsaCan['PRUID'], main = "FSAs by province")
+plot(st_transform(fsaCan['PRUID'], crs = 3978) , main = "FSAs by province, CRD = 3978")
+par(mfrow = c(1,1))
+```
+
+## **Question 1 -2** Compare the two maps below, state which map is more appropraite and why
+```{r}
+# I added filter(PRUID == 24) to select QC (Province ID = 24) 
+par(mfrow = c(1,2))
+fsa1 <- st_transform(fsaCan %>%  dplyr::filter(PRUID == 24),  crs = 3978)
+fsa2 <- st_transform(fsaCan %>%  dplyr::filter(PRUID == 24),  crs = 32198)
+
+# St_geometry allow extracting outline of each area. 
+plot(st_geometry(fsa1), col = "red", main = "QC map 1")
+plot(st_geometry(fsa2), col = "red", main = "QC map 2")
+```
+
+
+
+#### Subset to Montreal based on first 3 digits of postal codes 
+```{r}
+# Extract postabl codes and display Census Metro Area of Montreal, most of them start with H 
+targetFSA_island <- c("H1S","H1Y","H2J","H2N","H2R","H2X","H3G","H3P","H3T","H3Z","H4B","H4L","H4S","H4W","H4Z","H9A","H1M","H1Z","H2G","H2P","H2T","H2Z","H3A","H3J","H3R","H3V","H3X","H4T","H4X","H5A","H9G","H1J","H1X","H2E","H2H","H2V","H3K","H3W","H4M","H4V","H4Y","H5B","H1K","H1P","H2A","H2M","H2S","H2W","H3B","H3S","H4A","H4N","H4R","H1R","H1T","H3N","H3Y","H4P","H9B","H3H","H4C","H9P","H9R","H1A","H1E","H1H","H1L","H1V","H2C","H3E","H3M","H8P","H9J","H9S","H1B","H1G","H1W","H2L","H3L","H4G","H4K","H8Z","H9E","H9W","H1C","H1N","H2B","H2Y","H4H","H4J","H9C","H9K","H2K","H8N","H8S","H8Y","H9H","H3C","H8R","H8T","H9X","H4E")
+
+# Extract the island of Montreal only
+fsaMtl <- fsaCan[fsaCan$CFSAUID %in% targetFSA_island, ]
+
+# Plot minimal info, two ways for Montreal
+plot(st_geometry(fsaMtl), main = "FSAs in Mtl, \n normal plot")
+
+# same, using ggplot 
+ggplot() + geom_sf(data = fsaMtl , fill = "white", col = "black") + 
+  theme_map() + 
+  ggtitle("FSAs in Mtl using ggplot") 
+```
+
+
+
+
+#### Load point data indicating hospitals
+```{r}
+hospPoint <- read_sf("data/Hospitals_Montreal/shapefile_Hospitals_Mtl.shp")
+# show the dots 
+plot(hospPoint['ramq_id'], pch = 16, col = "black", main = "Location of hospitals in Mtl")
+```
+
+
+## **Question 1 -3**: Align the hospital (point data) and FSA  
+#### Currently, you cannot overlay hospital with FSA map in Montreal. You need to fix the codes. **Some points will float in the river** after you align FSA and points, as some pospitals you loaded are located in the north and south shores, but most will lie on the island.    
+
+Note: `add = TRUE` allows two plots to layered over each other, but currently the point data are way outside the FSA map, so you need to bring the points back to the center of the FSA map. 
+
+
+
+```{r}
+# Show FSA  
+plot(st_geometry(fsaMtl))#plot shape of Montreal partitioned by FSA
+
+# You can add the points on the FSA map, but currently, points are somewhere outside the map window 
+plot(st_geometry(hospPoint), add=TRUE, col= "blue", pch = 16, main = "hospitals (blue dots) scatters over montreal") # I am trying to overlay point 
+
+# Crop the location of points by area. But the codes will not work, until you aligh the two maps. 
+if(st_crs(hospPoint) == st_crs(fsaMtl)){
+  hospPointIsland <- st_intersection(hospPoint, fsaMtl)
+}else{
+  stop("Two maps have different projection, cannot proceed")
+}
+
+plot(st_geometry(fsaMtl), main="FSA and hospitals, hospitals are subset by the island"); 
+plot(hospPointIsland, col = "blue", pch = 16, add=TRUE)
+
+# if you like, display FSA label 
+text(st_coordinates(hospPointIsland), labels = hospPointIsland$pc, cex=0.8, pos = 1)
+
+```
+
+
+ 
+ 
+#### End of Question 1  
+Remove all data and load new data for analysis below
+```{r}
+rm(list=ls())
+```
+
+
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+
+### Data prep before starting Question 2 to Q4: Load clearner data for spatial analysis prepared by Hiroshi 
+```{r}
+# Hiroshi's cleaned FSA data in Montreal 
+fsaHiroshi <- st_read("data/FSA_Montreal_2001/shapefile_FSA_Montreal_2001.shp")
+
+# Outcome data, age-sex-FSA stratified 
+giData <- read.csv("data/giMontreal2006_quarter.csv", header = TRUE, stringsAsFactors = FALSE)
+
+# load 2011 census data containing socio-economic and demographic data at FSA level 
+fsaCensus2011 <- read.csv("./data/fsaCensusMontreal2011_imputed.csv", header = TRUE, stringsAsFactors = FALSE)
+
+```
+
+### Data Prep: Attribute join i.e. Adding census attributes and outcome data to FSA shape file
+After this, you can mpa the GI counts and census variables 
+```{r}
+# Analysis will be based on FSA, so first aggregate the observed 
+# and expected GI count into FSA-level across age and sex groups in the GI outcome table
+giDataFsa <- giData %>% 
+  group_by(fsa) %>% 
+  summarise(giCount = sum(giCount), denomCount = sum(denomCount), giExpectedCount = sum(giExpectedCount))
+
+
+# Additionally, we will calculate FSA-level rate of GI
+giDataFsa$giFsaRate <- giDataFsa$giCount / giDataFsa$denomCount
+
+
+# NOW perform attriute join 
+# Merge FSA shapefle and GI count data.
+fsaMtl <- fsaHiroshi %>% 
+  left_join(giDataFsa, by = c("FSA" = "fsa")) %>%  
+  left_join(fsaCensus2011, by = c("FSA" = "fsa"))
+```
+
+
+
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+
+#### Question 2 is about the visualization of spatial attributes      
+Two plots whose income category is based on quantile income and equal interval   
+
+## **Question 2-1** State which of the two map is appropriate to present the spatial distribution of income, and explain why.        
+
+```{r, fig.width=10, fig.height=10}
+par(mfrow = c(1,2))
+# number of categories  
+numGroup = 5
+
+# define color palette -- see http://colorbrewer2.org 
+plotclr = brewer.pal(numGroup,"Greens")
+
+# define the classes or breaks for the data
+class = classIntervals(fsaMtl$med_income, n = numGroup, style="quantile", dataPrecision=0)
+
+# create a vector of colors for each region
+colcode = findColours(class,plotclr)
+
+# plot the region boundaries - again, run all the three lines as a chunk if using R markdown
+plot(st_geometry(fsaMtl), col=colcode)
+title(main='Classed Choropleth, \n Median Family Income ')
+legend('topleft', legend=names(attr(colcode, "table")), fill=attr(colcode,"palette"), cex=0.9, bty='n')
+
+
+
+
+
+
+# The second map show binned income based on equal distance 
+class <- classIntervals(fsaMtl$med_income, n = numGroup, style = "equal")
+colcode = findColours(class,brewer.pal(numGroup,"Blues"))
+plot(st_geometry(fsaMtl), col=colcode)
+title(main='Choropleth, \n Median Family Income')
+legend('topleft', legend=names(attr(colcode, "table")), fill=attr(colcode,"palette"), cex=0.9, bty='n')
+```
+
+### Optional info. GGplot approach to plot the first image (quantile).   
+```{r}
+breaks_qt <- classIntervals(fsaMtl$med_income, n = numGroup, style = "quantile", dataPrecision = 0)
+fsaMtl%>% 
+  mutate(income_category = cut(med_income, breaks_qt$brks, include.lowest = TRUE)) %>% 
+  ggplot() + 
+  geom_sf(aes(fill=income_category)) +
+  scale_fill_brewer(palette = "OrRd") + 
+  ggtitle('Classed Choropleth, \n Median Family Income \n quantile ') + 
+  theme_map() + 
+  theme(legend.position = "left")
+
+```
+ 
+ 
+ 
+## **Question 2-2** See the red shaded map  below showing the rate of gi count per area in 2006, and explain what condition is needed to call these numbers annual "rate"? 
+
+
+```{r}
+
+par(mfrow=c(1,2))
+numGroup = 5
+
+plotclr = brewer.pal(numGroup, 'Reds')
+
+class = classIntervals((fsaMtl$giFsaRate*1000), numGroup, style='quantile', dataPrecision=0)
+
+colcode = findColours(class, plotclr)
+  
+plot(st_geometry(fsaMtl), col=colcode)
+  title(main = "Crude Rates of GI Visits by FSA \n (Annual Visits per 1,000 residents)")
+  legend('topleft', legend=names(attr(colcode, "table")), fill=attr(colcode,"palette"), cex=0.9, bty='n')
+
+## 2.4 Plot disease outcomes as choropleth
+
+# Create a map showing crude GI visits by FSA as rate (Number of GI visits over
+# number of residents in each FSA) 
+
+
+fsaMtl[fsaMtl$giCount == 0, c("denom_totalpop", "giCount", "giExpectedCount")]
+plot(st_geometry(fsaMtl), border = "grey", col=grey(c(1,0))[as.factor(fsaMtl$giFsaRate == 0)], 
+     main = "Areas with no observed gi count in Jan - March of 2006
+     Note that there are five very small 
+     business districts with a small or zero # of inhabitants", cex.main = 0.8)
+# For nuw, imputed with 1 
+#fsaMtl[fsaMtl$giCount == 0, "giCount"] <- 1
+
+
+```
+## **Bonus question** There are five areas that had zero count of gi (see the black white map above), as there are too few residents. Do you include or exclude these areas from the analysis? Example why or why not.    
+
+
+
+
+#### Now , we will plot SMR
+SMR adjustment by age and sex (Please review the lecture)
+
+SMR of GI visits for area i is: $$SMR_i = Observed_count_i/Expected_count_i , $$
+where age-sex standardized expected count of GI in area $i$ is calculated
+by indirect standardization. Expected count of area $i$ is already provided to you and stored inthe column `fsaMtl$giExpectedCount`. This is a sum of expected count, where stratum-specific population (age and sex in this excercise) in each FSA is multiplied by the stratum-specific GI rate across the entire study region of Montreal.
+ 
+Note that the variance of SMR is; 
+ $$VAR(SMR) = SMR/Expected Count$$
+ 
+Thus, the smaller the expected count, larger the variance. We will map SMR, a maximum likelihood estimator of area-level relative risk, along with the variance.      
+ 
+```{r}
+# Using the expected and oversed GI count, caulcate SMR and its variance 
+fsaMtl$SMR <- fsaMtl$giCount / fsaMtl$giExpectedCount
+fsaMtl$varSMR <- fsaMtl$SMR / fsaMtl$giExpectedCount
+```
+
+
+## **Question 2-3**  Based on the plot of SMR and its Variance, population size, and the crude disease counts below, answer qustions a-f below.      
+  a) Describe the spatial trends of SMR.   
+  b) Describe the trends of variance.  
+  c) Describe the trends of population count.    
+  d) Describe the trends of case count.     
+  e) Is there an issue in presenting SMR? If so, what is the problem? explain in relation to its variance.  
+  f) What is the source of the problem in e)? Explain in relation to the population and case count.       
+  g) Base on your explanation in f), do you think that the SMR below is useful to describe the spatial occurrence of GI? 
+  
+```{r}
+
+par(mfrow=c(2,2), mar = c(1,1,2,1))
+numGroup = 5 
+
+#Map 3.1 - SMR
+plotclr = brewer.pal(numGroup, 'BuPu')
+class = classIntervals((fsaMtl$SMR), 5, style='fixed', fixedBreaks=c(0,0.5,1,2,3), dataPrecision = 2)
+colcode = findColours(class, plotclr)
+
+plot(st_geometry(fsaMtl), col = colcode)
+title(main="Standardized Morbidity Ratio (SMR)") 
+legend('topleft', legend=names(attr(colcode, "table")), fill=attr(colcode,"palette"), cex=1, bty='n')
+
+#Map 3.2 - Variance 
+plotclr = brewer.pal(numGroup, 'BuPu')
+class = classIntervals((fsaMtl$varSMR), 4, style='fixed', fixedBreaks = c(0, 0.001, 0.01, 0.1, 0.36), dataprecision = 3)
+colcode = findColours(class, plotclr)
+
+plot(st_geometry(fsaMtl), col=colcode)
+title(main="VAR(SMR)") 
+legend('topleft', legend=names(attr(colcode, "table")), fill=attr(colcode,"palette"), cex=1, bty='n')
+
+
+#Map 3.3 - Population Counts!
+plotclr = brewer.pal(6, 'BuPu')
+class = classIntervals((fsaMtl$denom_totalpop), 6, style='quantile', dataPrecision = 0)
+colcode= findColours(class, plotclr)
+
+plot(st_geometry(fsaMtl), col=colcode)
+title(main="Population Counts") 
+legend('topleft', legend=names(attr(colcode, "table")), fill=attr(colcode,"palette"), cex=1, bty='n')
+
+#Map 3.4 - Disease Counts
+plotclr = brewer.pal(6, 'BuPu')
+class <- classIntervals((fsaMtl$giCount), 6, style='quantile', dataPrecision=0)
+colcode <- findColours(class, plotclr)
+
+plot(st_geometry(fsaMtl), col=colcode)
+title( main="Disease Counts")
+legend('topleft', legend=names(attr(colcode, "table")), fill=attr(colcode,"palette"), cex=1, bty='n') 
+
+par(mfrow=c(1,1))
+```
+
+
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+#### Constrution of spatial dependency data (weight matrix), as it is need to model SMR that reflect the spatial dependency of the outcome 
+
+## **Bonus question:** what is wrong with the spatial dependency information below, in terms of reflecting the movement of poeple, relative to the second one (red network) created by Hiroshi? Explain in no more than 2 sentenses.    
+Hint: you may need to zoom in and inspect the underlying areas, and compare with the correct one prepared by me. 
+```{r}
+
+# Create an R object (list) showing which FSA is adjacent to which
+fsaNb = poly2nb(fsaMtl, queen=FALSE) # this function creates a neighorhood object called nb 
+
+# Inspect the list for the neighbourhood structure.  
+  #head(fsaNb) # list of areas showing neighbor ID
+  #summary(fsaNb) # Note that one region has no link (neighbour) -- is this realistic? 
+
+  #is.symmetric.nb(fsaNb) # Neighborhood needs to be symmetric (i.e. area i is neighbour of j, and vice versa)
+
+# Plot and see how connection is defined 
+plot(st_geometry(fsaMtl), border='darkgrey', las=1, main='Connectivity by Shared Borders \n not quite corect')
+plot(fsaNb, st_coordinates(st_centroid(st_geometry(fsaMtl))), add=TRUE)
+```
+
+
+#### Load the correct spatial nearness information prepared by Hiroshi 
+```{r}
+# The spatial structure above is not valid due to...(bonus question). 
+#Already done for you and ready to load. Read
+# another neighbour list where the connection was manually created
+fsaNbBridge <- read.gal('data/fsaNbBridge')
+    #summary(fsaNbBridge) #now empty neighbour shoud be gone
+
+plot(st_geometry(fsaMtl), border='darkgrey', las=1, main='Definition of neighbour, \n corect version created by Hiroshi')
+
+plot(fsaNbBridge, st_coordinates(st_centroid(st_geometry(fsaMtl))), col="red", add=TRUE, cex = 0.5) #new spatial relationship
+
+
+# Finally generate a spatial weight matrix containing spatial structure 
+# Matrix whose elements are coded 1 if two areas are adjacent(column and row are
+# contiguous), otherwise zero
+W <- nb2mat(fsaNbBridge, style = "B") 
+
+```
+
+
+#### Create covariates. We will center them, as it is easier to model centered variables for a technical reason. 
+```{r}
+# Center and scale covariates - helps convergence of MCMC 
+
+# Median family income at area
+fsaMtl$income_center <- scale(fsaMtl$med_income, center = TRUE, scale = TRUE)[,1]
+
+# Proportion of immigrants 
+fsaMtl$immig_center <- scale((fsaMtl$prop_immig), center = TRUE, scale = TRUE)[,1]
+
+# Proportion of age under 18 
+fsaMtl$young_center <- scale((fsaMtl$prop_age_under18), center = TRUE, scale = TRUE)[,1]
+
+# Proportion of seniors as defined by age > 65
+fsaMtl$old_center <- scale((fsaMtl$prop_age_over65), center = TRUE, scale = TRUE)[,1]
+
+# Proprotion of those who compelted post-secondary 
+fsaMtl$education_center <- scale((fsaMtl$prop_ps), center = TRUE, scale = TRUE)[,1]
+
+# Population density - # of residents per ^2 km 
+fsaMtl$popdensity_center <- scale((fsaMtl$popdensity_km), center = TRUE, scale = TRUE)[,1]
+```
+
+#### Plot the correlation of FSA-level census variables and case count 
+```{r}
+covariates <- fsaMtl %>%  dplyr::select(med_income, prop_immig, prop_age_under18, prop_age_over65, prop_ps, popdensity_km, giCount) %>% st_drop_geometry()
+
+pairs(covariates, main = "Correlation of the covaraites and GI count")
+
+```
+
+
+#### Model the GI count using a Bayesian spatial model, where the dependeency of GI counts are captured by Conditional Autoregression (CAR) Prior and the non-spatial effects are captured by spatially independnet random effects. Normally, you need prior sensitivity test, but we will omit here. 
+```{r}
+# Before running the model, set a random seed so that you could get the identical results when repated, at least for the same computer. 
+set.seed(2121) # pick any number you like 
+
+# Run Besag-York-Mollie Conditional Autoregressive (BYM-CAR) model for areal data
+# This could take a long time 
+fittedModel <- S.CARbym(giCount~income_center + immig_center + young_center + education_center + popdensity_center + offset(log(giExpectedCount)), 
+              family="poisson", 
+              data=fsaMtl, 
+              W = W, # Add the spatial structure here 
+              # prior probability for precision of spatial and non-spatial random effect 
+              prior.tau2 = c(1,0.01), # inverse gamma prior parametrized by shape and scale 
+              prior.sigma2 = c(1,0.01), # inverse gamma prior parametrized by shape and scale
+
+              burnin = 10000, # number of sample to be discarded as value before sationality (sign of convergence) of MCMC does not constitute posteriro distribution 
+              
+              n.sample =200000, 
+              thin = 20) # thinning wil often reduce autocorrelation of MCMC chain
+
+#  MCMC can take a long time to run, you may not have the time to repeat again when the software or computer crashes. So I would recommend saving the file  
+# this saves the model fit object to your current directory. You can load this object later by read.RDS command or double click in R studio file window
+saveRDS(fittedModel, file = "results_myBYM_CAR_modelFit.rds") # about 34 megabytes
+```
+
+
+#### Model diagnosis, regression coefficients and hyperpriors. 
+```{r}
+# Now a quick diagnosis of MCMC and generate summary
+colnames(fittedModel$samples$beta) <- colnames(fittedModel$X)
+
+# plottting could take a few min depending on computer - do they look erratic or stationary?
+plot(fittedModel$samples$beta, main = "MCMC diagnosis") #Important to check convergence before seeing results  
+#plot(fittedModel$samples$psi[, sample(1:ncol(fittedModel$samples$psi), 6)], main = "MCMC diagnosis") #Check convergence of some spatial random effects
+```
+
+
+
+
+
+#### Question 3s will involve the calculation of the SMR (or area-level RR) and mapping of SMR for each area   
+ - Remember that SMR = disease count/Expected count), where model-estimated smoothed disease count is now in in `fitted.values` in the model output.   
+ - You will map the SMR, and compare the estimated risk surface with that of the crude (non-model based) SMR.  
+ - You can copy and paste appropriate codes to the code chunk (box) below.   
+ - Hint: after you caulcte the RR, you must join the results to the fsaShape spatial data frame for mapping as demonstrated. 
+
+## **Question 3-1.** Among the three types of spatial anlaysis, which one is closest to our current task and why?    
+
+## **Question 3-2.** Create a variable in `fsaMtl` that stores the model-smoothed SMR.     
+Hint: fitted count values from model are available as `fittedModel$fitted.values`. 
+
+## **Question 3-3.** Map the smoothed SMR. Add a proper legend.        
+
+## **Question 3-4.** Discribe the spatial distribution of model-smoothed SMR, in contrast to the un-smoothed original SMR. Which SMR surface is likely to be correct and why?     
+
+## **Question 3-5.** How many areas have statistically significantly higher relative risk than the region-level risk (RR=1)?   
+Hint. Recall the interpretation of confidence (crdible) interval. Those who did not take EPIB 607 should reach me to get help for this.             
+
+
+```{r}
+#Q4-1: Calculate SMR here  
+
+
+#Q4-2write a cod for mapping here  
+
+
+
+```
+
+
+
+
+
+ 
