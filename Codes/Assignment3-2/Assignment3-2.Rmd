@@ -350,14 +350,14 @@ fsaMtl$varSMR <- fsaMtl$SMR / fsaMtl$giExpectedCount
 ```
 
 
-## **Question2_3**  Based on the plot of SMR and its Variance, population size, and the crude disease counts below, answer qustions a-f below.      
+## **Question2_3**  Based on the plot of SMR and its Variance, population size, and the crude disease counts below, answer qustions a-g below.      
   a) Describe the spatial trends of SMR.   
   b) Describe the trends of variance.  
   c) Describe the trends of population count.    
   d) Describe the trends of case count.     
   e) Is there an issue in presenting SMR? If so, what is the problem? explain in relation to its variance.  
   f) What is the source of the problem in e)? Explain in relation to the population and case count.       
-  g) Base on your explanation in f), do you think that the SMR below is useful to describe the spatial occurrence of GI? 
+  g) Based on your explanation in f), do you think that the SMR below is useful to describe the spatial occurrence of GI? 
   
 ```{r}
 
