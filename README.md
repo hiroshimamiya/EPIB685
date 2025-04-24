@@ -106,7 +106,7 @@ Week |	Date |	Lecture |	In-class assignment work
 5	| February 7	| Study design 2: Case-control study | |
 na	| February 14	| **NO CLASS** - Departmental Public Health Day |  |	
 6	| February 21	| Ecological and cross-sectional study  |  Presentation of reviews - Cohort studies (Assignment 2)   |
-7	| February 28	| Measurement error and environmetrics  | Presentation of reviews - Case-control studies (Assignment 2) |
+7	| February 28	| Measurement error and environmetrics  | Presentation of reviews - Case-control studies (Assignment 2) and introduction to Assignment 4|
 na	| March 7	    | **NO CLASS** (Winter break) | |
 8	| March 14	| | Presentation of story maps |
 9	| March 21	| Time-series analysis of continuous and intervention variables |Codes and Assignment 3 introduction - Autocorrelation function, form-free and constrained DLM, R studio  |
@@ -116,7 +116,9 @@ na	| March 7	    | **NO CLASS** (Winter break) | |
 
 
 
-## Grading Scheme
+## Grading Scheme and assignment deadlines 
+Many materials in this course are new or take time to learn. Thus most deadlines are pushed toward the end of the course (April). Please start working early (study design in particular), so that you will not have need to manage multiple deadlines along with other assessments from other courses.  
+
 Assignment | Grade | Updated deadline
 -----------|-------|------------------------
 Assignment 1:  Story map using ArcGIS Enterprise                                     |25%  | March 7th | 
