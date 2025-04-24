@@ -117,7 +117,7 @@ na	| March 7	    | **NO CLASS** (Winter break) | |
 
 
 ## Grading Scheme and assignment deadlines 
-Many materials in this course are new or take time to learn. Thus most deadlines are pushed toward the end of the course (April). Please start working early (study design in particular), so that you will not have need to manage multiple deadlines along with other assessments from other courses.  
+Many materials in this course are new and take time to learn. Thus the deadlines are pushed toward the end of the course (April). Please plan your time and start working early (study design in particular), so that you will not have to manage multiple deadlines in the last min along with assessments from other courses.  
 
 Assignment | Grade | Updated deadline
 -----------|-------|------------------------
