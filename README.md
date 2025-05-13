@@ -106,22 +106,20 @@ Week |	Date |	Lecture |	In-class assignment work
 5	| February 7	| Study design 2: Case-control study | |
 na	| February 14	| **NO CLASS** - Departmental Public Health Day |  |	
 6	| February 21	| Ecological and cross-sectional study  |  Presentation of reviews - Cohort studies (Assignment 2)   |
-7	| February 28	| Measurement error and environmetrics  | Presentation of reviews - Case-control studies (Assignment 2) and introduction to Assignment 4|
+7	| February 28	| Measurement error and environmetrics  | Presentation of reviews - Case-control studies (Assignment 2) |
 na	| March 7	    | **NO CLASS** (Winter break) | |
 8	| March 14	| | Presentation of story maps |
-9	| March 21	| Time-series analysis of continuous and intervention variables |Codes and Assignment 3 introduction - Autocorrelation function, form-free and constrained DLM, R studio  |
-10	| March 28	| Area-level disease risk estimation and ecological study|  Codes and Assignment 3 introduction - Bayesian disease mapping and GIS using R Studio , and Q and A for Assignment 3 | 
-11 | April 4	  |  | Presentation of mini projects and peer critical appraisal (Assignment 4)   |
-12 | April 11   |  | Presentation of mini projects and peer critical appraisal (Assignment 4)   | Guest presentation, intervention analysis (time permitting)
+9	| March 21	| Time-series analysis of continuous and intervention variables | Workshop - Time-series analysis  |
+10	| March 28	| Area-level disease risk estimation and ecological study|  Workshop - Bayesian disease mapping and GIS using R Studio , and Q and A for Assignment 3 | 
+11 | April 4	  |  | Presentation of mini projects (Assignment 4)   |
+12 | April 11   |  | Presentation of mini projects (Assignment 4)   |
 
 
 
-## Grading Scheme and assignment deadlines 
-Many materials in this course are new and take time to learn. Thus the deadlines are pushed toward the end of the course (April). Please plan your time and start working early (study design in particular), so that you will not have to manage multiple deadlines in the last min along with assessments from other courses.  
-
+## Grading Scheme
 Assignment | Grade | Updated deadline
 -----------|-------|------------------------
-Assignment 1:  Story map using ArcGIS Enterprise                                     |25%  | March 7th | 
+Assignment 1:  Story map using ArcGIS                                      |25%  | March 7th | 
 Assignment 2: In-class presentation of critical review (nothing to submit) |25%  | Feb 21 and Feb 28|
 Assignment 3: Analysis and visualization of time-series and spatial data    |25%  | April 18 |
 Assignment 4a: Project presentation (all groups will submit slides, regardless of the date of presentation)                                        |15%|  April 4|
@@ -170,10 +168,10 @@ With your teammates (approx 2 students, depending on class size), you will be as
 ## Assignment 3: Analysis, visualization, and interpretation of time-series and areal data (individual work) (25%)
 **Overview**   
   - The primary objective is to understand introductory concepts for geospatial analysis and visualization and the analysis of time-series data.      
-  - The secondary objective is to understand challenges associated with spatially and temporally correlated data and perform analysis to account for the dependency of measurement, such as Conditional Autoregressive Model.         
-  - The main tasks are to generate maps, time plots, autocorrelation function (ACF), and to estimate constrained and non-constrained distributed lag functions, visualization of results related to assumptions, and interpret the results using (largely pre-written) R codes.
+  - The secondary objective is to understand challenges associated with spatially and temporally correlated data.         
+  - The main tasks are to generate maps, time plots, autocorrelation function (ACF), and to estimate constrained and non-constrained distributed lag functions, and visualization of results related to assumptions, and interpret the results using (largely pre-written) R codes. 
   - The submission format will be R markdown, copy/pasted results, or latex outputs, all in **pdf format**. 
-  - Detailed instructions, codes, and data will be provided before and during lectures in time-series and spatial analysis. 
+  - Detailed instructions, codes, and data will be provided before lectures in time-series and spatial analysis. 
 
 **Format**:   
   - Submission of pdf file providing results from R studio and written description of findings.    
