@@ -99,20 +99,20 @@ Students from PHAR, EXME, and NURS should notify the instructor for any departme
 
 Week |	Date |	Lecture |	In-class assignment work  
 -----|-------|--------|-----------
-1	| January 10	| Course overview and introduction to environmental epidemiology | Introduction to geospatial environmental data for Assignment 1|
-2	| January 17	| Workshop: Introduction to Geographic Information Systems (GIS)| |
-3	| January 24	| Workshop: Story mapping using GIS software| |
-4	| January 31	| Study design 1: Cohort study | Pick paper to review for Assignment 2 | 
-5	| February 7	| Study design 2: Case-control study | |
-na	| February 14	| **NO CLASS** - Departmental Public Health Day |  |	
-6	| February 21	| Ecological and cross-sectional study  |  Presentation of reviews - Cohort studies (Assignment 2)   |
-7	| February 28	| Measurement error and environmetrics  | Presentation of reviews - Case-control studies (Assignment 2) and introduction to Assignment 4|
-na	| March 7	    | **NO CLASS** (Winter break) | |
-8	| March 14	| | Presentation of story maps |
-9	| March 21	| Time-series analysis of continuous and intervention variables |Codes and Assignment 3 introduction - Autocorrelation function, form-free and constrained DLM, R studio  |
-10	| March 28	| Area-level disease risk estimation and ecological study|  Codes and Assignment 3 introduction - Bayesian disease mapping and GIS using R Studio , and Q and A for Assignment 3 | 
-11 | April 4	  |  | Presentation of mini projects and peer critical appraisal (Assignment 4)   |
-12 | April 11   |  | Presentation of mini projects and peer critical appraisal (Assignment 4)   | Guest presentation, intervention analysis (time permitting)
+1	 | January 9	| Course overview and introduction to environmental epidemiology | Introduction to geospatial environmental data for Assignment 1|
+2	 | January 16	| Workshop: Introduction to Geographic Information Systems (GIS)| |
+3	 | January 23	| Workshop: Story mapping using GIS software| |
+4	 | January 31	| Study design 1: Cohort study | Pick paper to review for Assignment 2 | 
+5	 | February 6	| Study design 2: Case-control study | |
+na | February 13	| Ecological and cross-sectional study  |  Presentation of reviews - Cohort studies (Assignment 2)   |
+6	 | February 20	| **NO CLASS** - Departmental Public Health Day |  |	
+7	 | February 27	| Measurement error and environmetrics  | Presentation of reviews - Case-control studies (Assignment 2) and introduction to Assignment 4|
+na | March 6	    | **NO CLASS** (Winter break) | |
+8	 | March 13	| | Presentation of story maps |
+9	 | March 20| Time-series analysis of continuous and intervention variables |Codes and Assignment 3 introduction - Autocorrelation function, form-free and constrained DLM, R studio  |
+10 | March 27	| Area-level disease risk estimation and ecological study|  Codes and Assignment 3 introduction - Bayesian disease mapping and GIS using R Studio , and Q and A for Assignment 3 | 
+11 | April 3	  |  | Presentation of mini projects and peer critical appraisal (Assignment 4)   |
+12 | April 10   |  | Presentation of mini projects and peer critical appraisal (Assignment 4)   | Guest presentation, intervention analysis (time permitting)
 
 
 
