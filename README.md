@@ -108,9 +108,9 @@ na | February 13	| Study design 3 Ecological and cross-sectional study  | Q and 
 6	 | February 20	| **NO CLASS** - Departmental Public Health Day |  |	
 7	 | February 27	| | Presentation of story maps and peer assessment (**Assignment 2 deadline**)|
 na | March 6	    | **NO CLASS** (Winter break) | |
-8	 | March 13  | Time-series analysis of continuous and intervention variables |Codes and Assignment 3 introduction - Autocorrelation function, form-free and constrained DLM, R studio  |	
+8	 | March 13  | Time-series analysis of continuous and intervention variables: extreme heat and cold |Codes and Assignment 3 introduction - Autocorrelation function, form-free and constrained DLM, R studio  |	
 9	 | March 20  | |Discussion of time-series (**Assignment 3 deadline**) |
-10 | March 27	 | Area-level disease risk estimation and ecological study|  Codes and Assignment 3 introduction - Bayesian disease mapping and GIS using R Studio| 
+10 | March 27	 | Area-level disease risk estimation and ecological study: Mapping gastroenteritis in Montreal|  Codes and Assignment 3 introduction - Bayesian disease mapping and GIS using R Studio| 
 11 | April 3	 | |Discussion of geospatial analysis in R  (**Assignment 4 deadline**)|
 12 | April 10  | Guest presentation, global health and environmental work |  |
 
