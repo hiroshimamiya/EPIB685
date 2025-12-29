@@ -40,7 +40,6 @@ The primary outcome is to appreciate and interpret environmental epidemiological
 
 ## Course time and location
 Time: Friday 9:35AM-12:35PM EST, interrupted by a 5 minutes break. All teaching is in-person. 
-
 Location: 2001 McGill College, 12th Floor, Rm 1201. 
 
 
@@ -52,11 +51,20 @@ Lecture slides and articles to read will be available in MyCourses.
 There is no one text for this course – lectures benefit articles provided in the class. 
 
 **Supplementary readings**   
-  -If you did not complete EPIB 601 and PPHS 602, the following book (e-book available in the library) will serve as a reference for study design, measures of occurrence, confounding, and bias.  
+If you did not complete EPIB 601 and PPHS 602, the following book (e-book available in the library) will serve as a reference for study design, measures of occurrence, confounding, and bias.  
 
-    *Epidemiology: An Introduction (3rd edn)*  
+    Epidemiology: An Introduction (3rd edn)  
     Kenneth J. Rothman, Krista F. Huybrechts, Eleanor J. Murray  
     https://doi.org/10.1093/oso/9780197751541.001.0001  
+
+  -And a book for intermediate-level epidemiology
+
+    Epidemiology:Beyond the Basics 4th Edition   
+    Moyses Szklo and F. Javier Nieto
+    Print ISBN: 9781284116595
+
+
+
 
 - Other introductory epidemiology books also on the class web page are *A pocket guide to epidemiology*; *Glossary of Epidemiological Terms*; *Dictionary of environmental health*    
 
@@ -66,16 +74,20 @@ Those who need refreshments should reach the instructor for introductory statist
 Basic knowledge in generalized linear model (Materials equivalent to EPIB 621) is preferred but not necessary.     
 
 
--   Students wishing to pursue employment as an epidemiologist and/or conduct environmental epidemiological research may wish to obtain the following resources from course reserve or purchase: 
+Students wishing to pursue employment as an epidemiologist and/or conduct environmental epidemiological research may wish to obtain the following resources from course reserve or purchase:    
 
-    -*Environmental Epidemiology: Principles and Methods*, RM Merrill (Jones & Bartlett Learning, 2008); 
+      Environmental Epidemiology: Principles and Methods
+      RM Merrill, Jones & Bartlett Learning, 2008   
 
-    -Exposure assessment in occupational and environmental epidemiology*, M Nieuwenhuijsen et al. (Oxford University Press, 2015);   
+      Exposure assessment in occupational and environmental epidemiology, 
+      M Nieuwenhuijsen et al. Oxford University Press, 2015   
 
+      A biological approach to environmental assessment and epidemiology
+      TJ Smith and D Kriebel 
+      Oxford University Press, 2010   
 
-    -*A biological approach to environmental assessment and epidemiology*, TJ Smith and D Kriebel (Oxford University Press, 2010); and,   
-
-    -US Environmental Protection Agency (EPA) - Guidelines for Exposure Assessment. 
+      US Environmental Protection Agency (EPA)
+      Guidelines for Exposure Assessment. 
 
 
 
@@ -87,7 +99,7 @@ In Week 2 and 3, we will use *ArcGIS Enterprise*, which is a web GIS software to
  
 We will also use R Studio software for workshops and assignments involving areal disease risk estimation and the analysis of time-series data, although the software codes are largely provided to you, with the main tasks being interpretation and visualization.    
  
-- Those who have not completed EPIB613 or equivalent can take introductory R studio course in the Computational and Data Systems Initiative (CDSI) at https://www.mcgill.ca/cdsi/training/workshops/data-science-r.   
+- Those who have not completed EPIB613 or equivalent can take introductory R Studio course in the Computational and Data Systems Initiative (CDSI) at https://www.mcgill.ca/cdsi/training/workshops/data-science-r.   
 - Alternatively, this is a good site to get foundation: https://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro.html
 
 
@@ -111,18 +123,19 @@ na | March 6	    | **NO CLASS** (Winter break) | |
 8	 | March 13  | Time-series analysis of continuous and intervention variables: extreme heat and cold |Codes and Assignment 3 introduction - Autocorrelation function, form-free and constrained DLM, R studio  |	
 9	 | March 20  | |Discussion of time-series (**Assignment 3 deadline**) |
 10 | March 27	 | Area-level disease risk estimation and ecological study: Mapping gastroenteritis in Montreal|  Codes and Assignment 3 introduction - Bayesian disease mapping and GIS using R Studio| 
-11 | April 3	 | |Discussion of geospatial analysis in R  (**Assignment 4 deadline**)|
-12 | April 10  | Guest presentation, global health and environmental work |  |
+11 | April 3	 | No Class (Easter) ||
+11 | April 10	 | |Discussion of geospatial analysis in R  (**Assignment 4 deadline**)|
+12 | April 14 (**TUESDAY**)  | Guest presentation, global health and environmental work |  |
 
 
 
 ## Grading Scheme and assignment deadlines 
-Many materials in this course are new and take time to learn. Thus the deadlines are pushed toward the end of the course (April). Please plan your time and start working early (study design in particular), so that you will not have to manage multiple deadlines in the last min along with assessments from other courses.  
+
 
 Assignment | Grade | Deadline
 -----------|-------|------------------------
 Assignment 1: In-class presentation of critical review and submitting slides |25% | February 6|
-Assignment 2: Story map using ArcGIS Enterprise and peer review              |35% | February 27 | 
+Assignment 2: Story map using ArcGIS Enterprise (25%) and peer review (10%)              |35% | February 27 | 
 Assignment 3: Analysis and visualization of time-series data     |20%  | April 18 |
 Assignment 4: Analysis and visualization of  spatial data        |20%  | |
 
@@ -136,7 +149,7 @@ Assignment 4: Analysis and visualization of  spatial data        |20%  | |
 Use of images without proper credit and citation will lead to reduced marks, whether the images are sourced from generative AI, scientific literature, media reports, and the internet. 
 
 
-### Assignment 1: Critical review of environmental epidemiology studies (group work) (25%)
+### Assignment 1: Critical review of environmental epidemiology studies (25%)
 **Overview**  
 With your teammates (approx 2 students, depending on class size), you will be asked to orally present critical appraisal to published environmental epidemiology studies. The research papers to critique will be assigned to students around Week3. 
 
@@ -167,7 +180,7 @@ With your teammates (approx 2 students, depending on class size), you will be as
 
 
 
-### Assignments 3 and 4: Analysis, visualization, and interpretation of time-series and areal data (individual work) (20% each)
+### Assignments 3 and 4: Analysis, visualization, and interpretation of time-series and (areal) spatial data (20% each)
 **Overview**   
   - The primary objective is to understand introductory concepts for geospatial analysis and visualization and the analysis of time-series data.      
   - The secondary objective is to understand challenges associated with spatially and temporally correlated data and perform analysis to account for the dependency of measurement, such as autoregressives models.         
