@@ -166,6 +166,7 @@ With your teammates (approx 2 students, depending on class size), you will be as
 
 
 
+
 ### Assignments 3 and 4: Analysis, visualization, and interpretation of time-series and areal data (individual work) (20% each)
 **Overview**   
   - The primary objective is to understand introductory concepts for geospatial analysis and visualization and the analysis of time-series data.      
@@ -186,8 +187,7 @@ With your teammates (approx 2 students, depending on class size), you will be as
 
 
 # Policy around the use of AI technologies for class assignments and presentations  
-Generative AI is a type of artificial intelligence that uses machine learning to create new types of media, including text, images, software codes, sound, and video in response to user prompts (inputs). Many tools exist that use generative AI to create new content. 
-Some examples include ChatGPT and Bing (text generation) and Midjourney and DALL-E (image generation).   
+Generative AI is a type of artificial intelligence that uses machine learning to create new types of media, including text, images, software codes, sound, and video in response to user prompts (inputs). Many tools exist that use generative AI to create new content.    
 
 Use of these tools to complete assignments and presentations is permitted as part of learning aids, as long as the three conditions are met:    
 
