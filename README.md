@@ -50,7 +50,7 @@ After the class or by appointment. Please email the instructor or TA.
 Lecture slides and articles to read will be available in MyCourses. 
 There is no one text for this course – lectures benefit articles provided in the class. 
 
-**Supplementary readings**   
+**Supplementary readings for non-epidemiology/public health students**   
 If you did not complete EPIB 601 and PPHS 602, the following book (e-book available in the library) will serve as a reference for study design, measures of occurrence, confounding, and bias.  
 
     Epidemiology: An Introduction (3rd edn)  
@@ -73,7 +73,7 @@ https://github.com/hiroshimamiya/EPIB607.
 Those who need refreshments should reach the instructor for introductory statistic book or find the recommended books in the link above.    
 Basic knowledge in generalized linear model (Materials equivalent to EPIB 621) is preferred but not necessary.     
 
-
+**Supplementary readings for Environmental Population Health Science**   
 Students wishing to pursue employment as an epidemiologist and/or conduct environmental epidemiological research may wish to obtain the following resources from course reserve or purchase:    
 
       Environmental Epidemiology: Principles and Methods
@@ -95,7 +95,7 @@ Students wishing to pursue employment as an epidemiologist and/or conduct enviro
 
 
 ## Software
-In Week 2 and 3, we will use *ArcGIS Enterprise*, which is a web GIS software to create a story map for Assignment 1. There is no need to install this, but you need to bring a laptop and a mouse. 
+In Weeks 2 and 3, we will use *ArcGIS Enterprise*, which is a web GIS software to create a story map for Assignment 1. There is no need to install this, but you need to bring a laptop and a mouse. 
  
 We will also use R Studio software for workshops and assignments involving areal disease risk estimation and the analysis of time-series data, although the software codes are largely provided to you, with the main tasks being interpretation and visualization.    
  
@@ -112,8 +112,8 @@ Students from PHAR, EXME, and NURS should notify the instructor for any departme
 Week |	Date |	Lecture |	In-class assignment work  
 -----|-------|--------|-----------
 1	 | January 9	| Course overview and introduction to environmental epidemiology | Selecting papers for Assignment 1 and Introduction to geospatial environmental data for Assignment 2|
-2	 | January 16	| Workshop: Introduction to Geographic Information Systems (GIS)| |
-3	 | January 23	| Workshop: Story mapping using GIS software| |
+2	 | January 16	| Hands-on workshop 1: Introduction to Geographic Information Systems (GIS)| |
+3	 | January 23	| Hands-on workshop 2: Story mapping using GIS software| |
 4	 | January 31	| Study designs 1 and 2: Cohort study and case-control study |  | 
 5	 | February 6	| | Presentation of critical appraisal (**Assignment 1 deadline**) |
 na | February 13	| Study design 3 Ecological and cross-sectional study  | Q and A for storymaps  |
@@ -121,11 +121,11 @@ na | February 13	| Study design 3 Ecological and cross-sectional study  | Q and 
 7	 | February 27	| | Presentation of story maps and peer assessment (**Assignment 2 deadline**)|
 na | March 6	    | **NO CLASS** (Winter break) | |
 8	 | March 13  | Time-series analysis of continuous and intervention variables: extreme heat and cold |Codes and Assignment 3 introduction - Autocorrelation function, form-free and constrained DLM, R studio  |	
-9	 | March 20  | |Discussion of time-series (**Assignment 3 deadline**) |
-10 | March 27	 | Area-level disease risk estimation and ecological study: Mapping gastroenteritis in Montreal|  Codes and Assignment 3 introduction - Bayesian disease mapping and GIS using R Studio| 
+9	 | March 20  | |Discussion of time-series|
+10 | March 27	 | Area-level disease risk estimation and ecological study: Mapping gastroenteritis in Montreal|  Codes and Assignment 4 introduction - Bayesian disease mapping and GIS using R Studio  (**Assignment 3 deadline**) | 
 11 | April 3	 | No Class (Easter) ||
 11 | April 10	 | |Discussion of geospatial analysis in R  (**Assignment 4 deadline**)|
-12 | April 14 (**TUESDAY**)  | Guest presentation, global health and environmental work |  |
+12 | April 14 (**makeup Tuesday**)  | Guest presentation, global health and environmental work in the field |  |
 
 
 
@@ -136,8 +136,8 @@ Assignment | Grade | Deadline
 -----------|-------|------------------------
 Assignment 1: In-class presentation of critical review and submitting slides |25% | February 6|
 Assignment 2: Story map using ArcGIS Enterprise (25%) and peer review (10%)              |35% | February 27 | 
-Assignment 3: Analysis and visualization of time-series data     |20%  | April 18 |
-Assignment 4: Analysis and visualization of  spatial data        |20%  | |
+Assignment 3: Analysis and visualization of time-series data     |20%  |March 27 |
+Assignment 4: Analysis and visualization of  spatial data        |20%  | April 10|
 
 
 # Accommodations
@@ -151,14 +151,12 @@ Use of images without proper credit and citation will lead to reduced marks, whe
 
 ### Assignment 1: Critical review of environmental epidemiology studies (25%)
 **Overview**  
-With your teammates (approx 2 students, depending on class size), you will be asked to orally present critical appraisal to published environmental epidemiology studies. The research papers to critique will be assigned to students around Week3. 
-
+You will be asked to orally present critical appraisal to published environmental epidemiology studies. The research papers to critique will be assigned on Week 1. 
  - The main objective is to provide you with practice in evaluating the scientific quality of papers from the literature and will thus assist in consolidating study designs taught in the course.    
 - The secondary objective is to share your critiques with the class through oral presentation.     
-- In addition, this assignment will assist with study design in Assignment 4.   
 
 **Format**:   
-  Oral presentation of critical appraisal, approximately 20 minute per group, depending on class size.  
+  Oral presentation of critical appraisal, approximately 20 minutes, depending on class size along with written report.  
 
 
 
@@ -166,7 +164,7 @@ With your teammates (approx 2 students, depending on class size), you will be as
 ### Assignment 2: Story mapping- mapping exposures and creating narratives using GIS software (25% for your work, and 10% for peer review of other's work)
 **Overview**  
 
-- You will geographically map exposures and social determinants of health and potentially health outcomes using GIS (Geographic Information System) and create story a storymap. 
+- You will geographically map exposures and social determinants of health and potentially health outcomes using GIS (Geographic Information System) and create story an interactive and multimedia storymap. 
   - The primary objective is to be familiar with GIS software to visualize geospatial data.  
   - The secondary objective is to develop communication skills for the existing public health issues using geospatial images and existing literature and media reports.  
  - In classes 2 and 3, we will go through the use of GIS software and story mapping.   
@@ -175,25 +173,22 @@ With your teammates (approx 2 students, depending on class size), you will be as
  - Detailed instructions and grading for map building and peer review  will be provided after GIS workshops.   
 
 **Format**    
-   Submission of the story map (graded) and brief presentation (ungraded).   
+   Submission of the story map (graded) and brief presentation (ungraded), along with written peer review.   
 
 
 
 
-### Assignments 3 and 4: Analysis, visualization, and interpretation of time-series and (areal) spatial data (20% each)
+### Assignments 3 and 4: Analysis, visualization, and interpretation of time-series and (areal) spatial data using R studio (20% each)
 **Overview**   
   - The primary objective is to understand introductory concepts for geospatial analysis and visualization and the analysis of time-series data.      
-  - The secondary objective is to understand challenges associated with spatially and temporally correlated data and perform analysis to account for the dependency of measurement, such as autoregressives models.         
+  - The secondary objective is to understand challenges associated with spatially and temporally correlated data and perform analysis to account for the dependency of measurements due to temporal and spatial autocorrelation.         
   - The main tasks are to generate maps, time plots, autocorrelation function (ACF), and to estimate constrained and non-constrained distributed lag functions, visualization of results related to assumptions, and interpret the results using (largely pre-written) R codes.
   - The submission format will be R markdown, copy/pasted results, or latex outputs, all in **pdf format**. 
   - Detailed instructions, codes, and data will be provided before and during lectures in time-series and spatial analysis. 
-  -Student group who discuss the results in one of the assignments will get extra 10% for each assignment
+  -Students who discuss the results in one of the assignments will get extra 10% for each assignment
 
 **Format**:   
   - Submission of pdf file providing results from R studio and written description of findings.    
-
-
-
 
 
 
